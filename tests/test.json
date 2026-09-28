@@ -1,0 +1,19 @@
+{
+  "kind": "OperatorUnitTest",
+  "name": "test",
+  "namespace": "ds0",
+  "inputDataUri": "input.csv",
+  "outputDataUri": [
+    "expected.csv"
+  ],
+  "columns": [],
+  "rows": [
+    "Observation"
+  ],
+  "colors": [],
+  "labels": [],
+  "yAxis": "Measurement",
+  "xAxis": "",
+  "equalityMethod": "R2",
+  "r2": 0.99
+}
