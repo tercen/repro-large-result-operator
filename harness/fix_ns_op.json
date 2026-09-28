@@ -1,0 +1,1 @@
+{"kind": "PatchRecords", "oI": "a449773b-5bb3-44f4-8540-ca087c8e3b09", "rs": [{"kind": "PatchRecord", "p": "/steps/@[id=15a80587-15fc-43b9-9874-357bb7dba21d]/model/operatorSettings/namespace", "t": "s", "d": "\"ds1\""}]}

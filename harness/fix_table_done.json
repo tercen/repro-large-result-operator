@@ -1,0 +1,1 @@
+{"kind": "PatchRecords", "oI": "a449773b-5bb3-44f4-8540-ca087c8e3b09", "rs": [{"kind": "PatchRecord", "p": "/steps/@[id=71e6e0bd-233b-490f-a95a-26066b5f3774]/state/taskState", "t": "s", "d": "{\"kind\": \"DoneState\"}"}]}

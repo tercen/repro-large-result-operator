@@ -1,0 +1,102 @@
+Main : 2026-09-28 12:19:43.735640 : 4997764 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:19:43.735675 : 33 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:19:43.736923 : 1249 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:19:43.736936 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:19:43.738306 : 1371 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:19:43.738315 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:19:43.738378 : 63 : FINEST : [34mHTTP : 2026-09-28T12:19:43.735519  0:00:00.002852 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:19:44.220714 : 482337 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Received ExecuteTask request for task: 65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Main : 2026-09-28 12:19:44.220734 : 19 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Executing task 65f3686e-edfc-444e-be2c-1e4d6d73e230...[0m
+Main : 2026-09-28 12:19:44.221653 : 918 : FINE : [34mTaskService : Cache MISS for task 65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Main : 2026-09-28 12:19:44.234607 : 12954 : FINEST : [34mCouchService : Start isolate task RunWorkflowTask(65f3686e-edfc-444e-be2c-1e4d6d73e230, 2-534f4e28-6c9f-4028-ae02-32556dd9c672, Instance of 'InitState') -- taskMemory = 500000000.0 -- availableMemory = 5070000000.0 -- cpuMillicores = 1000m -- availableCpuMillicores = 4000m -- cpuset-cpus = [0m
+Main : 2026-09-28 12:19:44.234683 : 76 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task 65f3686e-edfc-444e-be2c-1e4d6d73e230 completed successfully[0m
+Worker : 2026-09-28 12:19:44.234999 : 104023090 : INFO : [34mParams : runZone -- workerUri=http://10.64.7.4:5400 -- task=65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Worker : 2026-09-28 12:19:44.235038 : 39 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Starting task --owner admin --user /admin --runtimeType RunWorkflowTask --id 65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Worker : 2026-09-28 12:19:44.290425 : 55387 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:19:44.290634 : 209 : FINE : [34mTaskService : Cache MISS for task 65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Worker : 2026-09-28 12:19:44.296103 : 5468 : FINEST : [34mCouchService : sendChannel -- ef504953-df59-4d50-803c-d415e17af5b2 -- evt TaskStateEvent(2026-09-28T12:19:44.296084Z, 65f3686e-edfc-444e-be2c-1e4d6d73e230, Instance of 'RunningState')[0m
+Worker : 2026-09-28 12:19:44.296383 : 281 : FINEST : [34mEventService : Published TSON event to Redis channel ef504953-df59-4d50-803c-d415e17af5b2 (208 bytes)[0m
+Worker : 2026-09-28 12:19:44.305468 : 9084 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:19:44.305482 : 15 : INFO : [34mTaskRunnerInstance : WorkflowRunner -- loaded wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 rev=26-e260cd9f-4d75-4f82-b795-97f35c5b34c3 aclDomain= steps=TableStep:DoneState,DataStep:InitState[0m
+Worker : 2026-09-28 12:19:44.310154 : 4672 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:19:44.310171 : 16 : FINE : [34mWorkflowService : _routedUpdate: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 objectRev=26-e260cd9f-4d75-4f82-b795-97f35c5b34c3 storedRev=26-e260cd9f-4d75-4f82-b795-97f35c5b34c3[0m
+Worker : 2026-09-28 12:19:44.316746 : 6576 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:19:44.321692 : 4946 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Main : 2026-09-28 12:19:44.330487 : 95805 : FINEST : [34mHTTP : 2026-09-28T12:19:44.327545  0:00:00.002936 GET     [200] -- {null} -- /api/v1/operator?id=ee2d939e-37ae-4a9f-915d-9664a1b3952f&useFactory=true[0m
+Worker : 2026-09-28 12:19:44.330915 : 9223 : FINEST : [34mCrosstab : asCubeQuery -- start[0m
+Main : 2026-09-28 12:19:44.334249 : 3762 : FINEST : [34mHTTP : 2026-09-28T12:19:44.331231  0:00:00.003012 POST    [200] -- {null} -- /api/v1/schema/list?useFactory=true[0m
+Worker : 2026-09-28 12:19:44.334655 : 3740 : FINEST : [34mCrosstab : asCubeQuery -- done[0m
+Main : 2026-09-28 12:19:44.385464 : 51215 : FINEST : [34mHTTP : 2026-09-28T12:19:44.334937  0:00:00.050519 GET     [200] -- {null} -- /api/v1/operator?id=ee2d939e-37ae-4a9f-915d-9664a1b3952f&useFactory=true[0m
+Main : 2026-09-28 12:19:44.405322 : 19858 : FINE : [34mTaskService : findFirstTaskByHash -- 14 ms[0m
+Main : 2026-09-28 12:19:44.405340 : 17 : FINER : [34mTaskService : found task with hash EAj8QRQEw3mjEjQRJeahVBqpV1o2SDicrBPUc7u0EsQ= state done[0m
+Main : 2026-09-28 12:19:44.598671 : 193333 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:19:44.598795 : 122 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:19:44.598866 : 71 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:19:44.598932 : 66 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:19:44.598983 : 51 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:19:44.620971 : 21989 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:19:44.621050 : 78 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:19:44.623939 : 2890 : FINE : [34mTaskService : Cache MISS for task e5f81c42-47ec-4f31-bd74-38bd6a7520cc[0m
+Main : 2026-09-28 12:19:44.632876 : 8937 : FINE : [34mTaskService : create -- 246 ms[0m
+Main : 2026-09-28 12:19:44.633048 : 171 : FINEST : [34mHTTP : 2026-09-28T12:19:44.386110  0:00:00.246931 PUT     [200] -- {null} -- /api/v1/task[0m
+Worker : 2026-09-28 12:19:44.633532 : 298877 : FINEST : [34mCouchService : sendChannel -- ef504953-df59-4d50-803c-d415e17af5b2 -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:19:44.633844 : 312 : FINEST : [34mCouchService : sendChannel -- ef504953-df59-4d50-803c-d415e17af5b2 -- evt TaskStateEvent(2026-09-28T12:19:44.633498Z, e5f81c42-47ec-4f31-bd74-38bd6a7520cc, Instance of 'DoneState')[0m
+Worker : 2026-09-28 12:19:44.634043 : 199 : FINEST : [34mEventService : Published TSON event to Redis channel ef504953-df59-4d50-803c-d415e17af5b2 (250 bytes)[0m
+Worker : 2026-09-28 12:19:44.634213 : 170 : FINEST : [34mEventService : Published TSON event to Redis channel ef504953-df59-4d50-803c-d415e17af5b2 (361 bytes)[0m
+Main : 2026-09-28 12:19:44.634628 : 1580 : FINE : [34mTaskService : Cache MISS for task e5f81c42-47ec-4f31-bd74-38bd6a7520cc[0m
+Main : 2026-09-28 12:19:44.637177 : 2549 : FINEST : [34mHTTP : 2026-09-28T12:19:44.634163  0:00:00.003008 GET     [200] -- {null} -- /api/v1/task?id=e5f81c42-47ec-4f31-bd74-38bd6a7520cc&useFactory=true[0m
+Worker : 2026-09-28 12:19:44.684844 : 50630 : FINEST : [34mCouchService : sendChannel -- ef504953-df59-4d50-803c-d415e17af5b2 -- evt PatchRecords(57b203e6-5516-4f10-a24e-08c22ef1ddd8)[0m
+Worker : 2026-09-28 12:19:44.685456 : 613 : FINEST : [34mEventService : Published TSON event to Redis channel ef504953-df59-4d50-803c-d415e17af5b2 (1647 bytes)[0m
+Worker : 2026-09-28 12:19:44.690433 : 4977 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:19:44.690491 : 57 : FINE : [34mWorkflowService : _routedUpdate: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 objectRev=27-6226f1a7-1086-4b57-9f09-bc12e983da65 storedRev=27-6226f1a7-1086-4b57-9f09-bc12e983da65[0m
+Worker : 2026-09-28 12:19:44.695714 : 5223 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:19:44.703979 : 8265 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:19:44.714308 : 10329 : FINEST : [34mCouchService : sendChannel -- ef504953-df59-4d50-803c-d415e17af5b2 -- evt PatchRecords(940fd8d3-f314-47cb-8e17-5d07fbad7615)[0m
+Worker : 2026-09-28 12:19:44.714689 : 381 : FINER : [34mTaskRunnerInstance : EnsureTaskCompletion -- task RunWorkflowTask(65f3686e-edfc-444e-be2c-1e4d6d73e230, 3-99500b2e-4a94-48ac-8b61-5f2d308a20f7, Instance of 'RunningState') -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:19:44.714716 : 27 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: DoneState} -- duration 0:00:00.480082[0m
+Worker : 2026-09-28 12:19:44.714804 : 89 : FINEST : [34mEventService : Published TSON event to Redis channel ef504953-df59-4d50-803c-d415e17af5b2 (847 bytes)[0m
+Worker : 2026-09-28 12:19:44.715092 : 288 : FINE : [34mTaskService : Cache MISS for task 65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Worker : 2026-09-28 12:19:44.720212 : 5120 : FINEST : [34mCouchService : sendChannel -- ef504953-df59-4d50-803c-d415e17af5b2 -- evt TaskStateEvent(2026-09-28T12:19:44.720203Z, 65f3686e-edfc-444e-be2c-1e4d6d73e230, Instance of 'DoneState')[0m
+Worker : 2026-09-28 12:19:44.720486 : 273 : FINEST : [34mEventService : Published TSON event to Redis channel ef504953-df59-4d50-803c-d415e17af5b2 (205 bytes)[0m
+Worker : 2026-09-28 12:19:44.722087 : 1601 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Task completed in 487ms --owner admin --user /admin --runtimeType RunWorkflowTask --id 65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Main : 2026-09-28 12:19:44.722136 : 84960 : FINEST : [34mCouchService : isolateRunner complete -- releasing memory and cpus[0m
+Main : 2026-09-28 12:19:44.722393 : 256 : FINE : [34mTaskService : Cache MISS for task 65f3686e-edfc-444e-be2c-1e4d6d73e230[0m
+Main : 2026-09-28 12:19:44.724882 : 2490 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Reporting task 65f3686e-edfc-444e-be2c-1e4d6d73e230 completion to scheduler (state: TASK_STATE_DONE)[0m
+Main : 2026-09-28 12:19:44.761020 : 36138 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task 65f3686e-edfc-444e-be2c-1e4d6d73e230 completion reported successfully[0m
+Main : 2026-09-28 12:19:48.735118 : 3974100 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:19:48.735146 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:19:48.736365 : 1220 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:19:48.736378 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:19:48.737760 : 1383 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:19:48.737770 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:19:48.737837 : 67 : FINEST : [34mHTTP : 2026-09-28T12:19:48.735012  0:00:00.002818 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:19:53.298489 : 4560654 : FINEST : [34mHTTP : 2026-09-28T12:19:53.298329  0:00:00.000148 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:19:53.735536 : 437047 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:19:53.735562 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:19:53.736830 : 1269 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:19:53.736845 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:19:53.738259 : 1415 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:19:53.738269 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:19:53.738333 : 64 : FINEST : [34mHTTP : 2026-09-28T12:19:53.735431  0:00:00.002895 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:19:57.225840 : 3487510 : WARNING : [34msarno : [2026-09-28T12:19:57.179Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:19:58.735581 : 1509741 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:19:58.736207 : 623 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:19:58.738326 : 2119 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:19:58.738364 : 38 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:19:58.739708 : 1344 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:19:58.739717 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:19:58.739751 : 34 : FINEST : [34mHTTP : 2026-09-28T12:19:58.735438  0:00:00.004306 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:20:03.735071 : 4995323 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:20:03.735095 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:20:03.736377 : 1283 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:20:03.736391 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:20:03.737825 : 1435 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:20:03.737837 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:20:03.737911 : 75 : FINEST : [34mHTTP : 2026-09-28T12:20:03.734965  0:00:00.002939 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:20:08.734989 : 4997080 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:20:08.735015 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:20:08.736187 : 1171 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:20:08.736199 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:20:08.737581 : 1383 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:20:08.737590 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:20:08.737620 : 30 : FINEST : [34mHTTP : 2026-09-28T12:20:08.734884  0:00:00.002731 GET     [200] -- {null} -- /_health[0m

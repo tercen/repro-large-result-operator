@@ -1,0 +1,391 @@
+Main : 2026-09-28 12:53:22.179871 : 3441750 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Received ExecuteTask request for task: 52295b32-c53e-423d-927b-98510ba0bb83[0m
+Main : 2026-09-28 12:53:22.179896 : 23 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Executing task 52295b32-c53e-423d-927b-98510ba0bb83...[0m
+Main : 2026-09-28 12:53:22.180755 : 859 : FINE : [34mTaskService : Cache MISS for task 52295b32-c53e-423d-927b-98510ba0bb83[0m
+Main : 2026-09-28 12:53:22.194924 : 14169 : FINEST : [34mCouchService : Start isolate task RunWorkflowTask(52295b32-c53e-423d-927b-98510ba0bb83, 2-b7e2098d-8ea1-488d-97d6-3d9876d07070, Instance of 'InitState') -- taskMemory = 500000000.0 -- availableMemory = 5070000000.0 -- cpuMillicores = 1000m -- availableCpuMillicores = 4000m -- cpuset-cpus = [0m
+Main : 2026-09-28 12:53:22.194951 : 28 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task 52295b32-c53e-423d-927b-98510ba0bb83 completed successfully[0m
+Worker : 2026-09-28 12:53:22.195343 : 731179607 : INFO : [34mParams : runZone -- workerUri=http://10.64.7.4:5400 -- task=52295b32-c53e-423d-927b-98510ba0bb83[0m
+Worker : 2026-09-28 12:53:22.195360 : 16 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Starting task --owner admin --user /admin --runtimeType RunWorkflowTask --id 52295b32-c53e-423d-927b-98510ba0bb83[0m
+Worker : 2026-09-28 12:53:22.205456 : 10096 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:53:22.205720 : 264 : FINE : [34mTaskService : Cache MISS for task 52295b32-c53e-423d-927b-98510ba0bb83[0m
+Worker : 2026-09-28 12:53:22.210926 : 5206 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskStateEvent(2026-09-28T12:53:22.210916Z, 52295b32-c53e-423d-927b-98510ba0bb83, Instance of 'RunningState')[0m
+Worker : 2026-09-28 12:53:22.211212 : 287 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (208 bytes)[0m
+Worker : 2026-09-28 12:53:22.216931 : 5719 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:53:22.216944 : 12 : INFO : [34mTaskRunnerInstance : WorkflowRunner -- loaded wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 rev=49-97c37f58-2b20-45c8-95ff-f9f5460f8fc6 aclDomain= steps=TableStep:DoneState,DataStep:DoneState,DataStep:DoneState,TableStep:DoneState,DataStep:InitState,DataStep:InitState,DataStep:InitState[0m
+Worker : 2026-09-28 12:53:22.222503 : 5559 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:53:22.222522 : 20 : FINE : [34mWorkflowService : _routedUpdate: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 objectRev=49-97c37f58-2b20-45c8-95ff-f9f5460f8fc6 storedRev=49-97c37f58-2b20-45c8-95ff-f9f5460f8fc6[0m
+Worker : 2026-09-28 12:53:22.228031 : 5508 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:53:22.234252 : 6221 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Main : 2026-09-28 12:53:22.243210 : 48259 : FINEST : [34mHTTP : 2026-09-28T12:53:22.240400  0:00:00.002804 GET     [200] -- {null} -- /api/v1/operator?id=ee2d939e-37ae-4a9f-915d-9664a1b3952f&useFactory=true[0m
+Worker : 2026-09-28 12:53:22.243561 : 9310 : FINEST : [34mCrosstab : asCubeQuery -- start[0m
+Main : 2026-09-28 12:53:22.246617 : 3407 : FINEST : [34mHTTP : 2026-09-28T12:53:22.243883  0:00:00.002729 POST    [200] -- {null} -- /api/v1/schema/list?useFactory=true[0m
+Worker : 2026-09-28 12:53:22.247008 : 3447 : FINEST : [34mCrosstab : asCubeQuery -- done[0m
+Main : 2026-09-28 12:53:22.250027 : 3410 : FINEST : [34mHTTP : 2026-09-28T12:53:22.247194  0:00:00.002827 GET     [200] -- {null} -- /api/v1/operator?id=ee2d939e-37ae-4a9f-915d-9664a1b3952f&useFactory=true[0m
+Main : 2026-09-28 12:53:22.263530 : 13503 : FINER : [34mTaskService : task RunComputationTask with hash CGBX1RNotbL0tqB6LsqgxBsXDUaszGURrPWFfj2fH1o= not found[0m
+Main : 2026-09-28 12:53:22.266144 : 2613 : FINE : [34mNodePool : Parsing memory value: 125.8G[0m
+Main : 2026-09-28 12:53:22.266258 : 115 : FINE : [34mNodePool : Parsing memory value: 12.8G[0m
+Main : 2026-09-28 12:53:22.266289 : 30 : FINE : [34mNodePool : Parsing memory value: 260.5G[0m
+Main : 2026-09-28 12:53:22.266302 : 13 : FINE : [34mNodePool : Parsing memory value: 29.0G[0m
+Main : 2026-09-28 12:53:22.266311 : 10 : FINE : [34mNodePool : Parsing memory value: 529.9G[0m
+Main : 2026-09-28 12:53:22.266320 : 8 : FINE : [34mNodePool : Parsing memory value: 61.2G[0m
+Main : 2026-09-28 12:53:22.266329 : 9 : FINE : [34mNodePool : Parsing memory value: 5.1G[0m
+Main : 2026-09-28 12:53:22.272105 : 5777 : FINE : [34mTaskService : create -- 21 ms[0m
+Main : 2026-09-28 12:53:22.272236 : 131 : FINEST : [34mHTTP : 2026-09-28T12:53:22.250564  0:00:00.021666 PUT     [200] -- {null} -- /api/v1/task[0m
+Main : 2026-09-28 12:53:22.274037 : 1801 : FINEST : [34mEventService : Incremented listener count for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.274335 : 297 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.276815 : 2481 : INFO : [34mResilientRedisSubscription : Starting subscription to channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b[0m
+Main : 2026-09-28 12:53:22.276828 : 12 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Main : 2026-09-28 12:53:22.276832 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:53:22.276960 : 128 : INFO : [34mEventService : Created resilient subscription for channel 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b[0m
+Main : 2026-09-28 12:53:22.285873 : 8914 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Main : 2026-09-28 12:53:22.286173 : 300 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:53:22.286577 : 403 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Main : 2026-09-28 12:53:22.287772 : 1195 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:53:22.287781 : 9 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Main : 2026-09-28 12:53:22.287785 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:53:22.296914 : 9130 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:53:22.296986 : 71 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Main : 2026-09-28 12:53:22.297029 : 43 : INFO : [34mResilientRedisSubscription : Subscribed to Redis channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b[0m
+Main : 2026-09-28 12:53:22.297080 : 52 : INFO : [34mResilientRedisSubscription : Subscription to event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b established successfully[0m
+Worker : 2026-09-28 12:53:22.301574 : 54566 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskStateEvent(2026-09-28T12:53:22.301331Z, dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, Instance of 'InitState')[0m
+Worker : 2026-09-28 12:53:22.301953 : 378 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (361 bytes)[0m
+Main : 2026-09-28 12:53:22.302061 : 4980 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.315367 : 13306 : FINE : [34mTaskService : findFirstTaskByHash -- 2 ms[0m
+Main : 2026-09-28 12:53:22.315379 : 12 : FINER : [34mTaskService : found task with hash vN8awwyuEx2Ju1TaKNr3OzoVahhax8BRYP-K0MldTog= state done[0m
+Main : 2026-09-28 12:53:22.369098 : 53721 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:53:22.369160 : 60 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:53:22.369203 : 43 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:53:22.369297 : 94 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:53:22.376150 : 6853 : FINE : [34mTaskService : create -- 68 ms[0m
+Main : 2026-09-28 12:53:22.376562 : 413 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.385064 : 8502 : FINE : [34mTaskService : Cache MISS for task c2ea09c0-906c-41cb-8092-744de3cf7612[0m
+Main : 2026-09-28 12:53:22.395768 : 10704 : FINE : [34mTaskService : Memory estimate from model: 2220.0 MB for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.401113 : 5344 : FINE : [34mTaskService : Runtime estimate from model: 2220.0 seconds for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.401396 : 283 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.408795 : 7399 : INFO : [34mGrpcTaskSubmitter : Submitting task: dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.440823 : 32029 : INFO : [34mGrpcTaskSubmitter : Task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea submitted successfully[0m
+Main : 2026-09-28 12:53:22.447129 : 6305 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Received ExecuteTask request for task: dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.447142 : 13 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Executing task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea...[0m
+Main : 2026-09-28 12:53:22.447386 : 245 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:22.459378 : 11992 : FINEST : [34mCouchService : Start isolate task RunComputationTask(dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, 3-64822dc7-d06c-4633-9923-82157f876700, Instance of 'InitState') -- taskMemory = 2327838720.0 -- availableMemory = 4570000000.0 -- cpuMillicores = 1000m -- availableCpuMillicores = 3000m -- cpuset-cpus = [0m
+Main : 2026-09-28 12:53:22.459408 : 29 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea completed successfully[0m
+Worker : 2026-09-28 12:53:22.459811 : 41574097 : INFO : [34mParams : runZone -- workerUri=http://10.64.7.4:5400 -- task=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.459830 : 17 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Starting task --owner admin --user /admin --runtimeType RunComputationTask --id dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.467251 : 7422 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:53:22.467532 : 281 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.473897 : 6364 : FINEST : [34mCouchService : sendChannel -- 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b -- evt TaskStateEvent(2026-09-28T12:53:22.473886Z, dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, Instance of 'RunningState')[0m
+Worker : 2026-09-28 12:53:22.473956 : 59 : FINER : [34mStdOperator : Starting StdOperator.run() for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.473980 : 24 : FINEST : [34mCouchService : sendChannel -- 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:53:22.474009 : 29 : FINER : [34mStdOperator : Creating file result for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, project 1878c5a2-4d9d-4c8a-81db-8e55938b67ab[0m
+Worker : 2026-09-28 12:53:22.474213 : 204 : FINEST : [34mEventService : Published TSON event to Redis channel 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b (208 bytes)[0m
+Worker : 2026-09-28 12:53:22.474262 : 50 : FINEST : [34mEventService : Published TSON event to Redis channel 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b (228 bytes)[0m
+Main : 2026-09-28 12:53:22.474627 : 15220 : FINEST : [34mResilientRedisSubscription : Received message from Redis channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b: TaskStateEvent (208 bytes)[0m
+Main : 2026-09-28 12:53:22.474771 : 144 : FINEST : [34mEventService : Received task event: TaskStateEvent for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.474956 : 173004 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskStateEvent(2026-09-28T12:53:22.473886Z, dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, Instance of 'RunningState')[0m
+Main : 2026-09-28 12:53:22.475254 : 483 : FINEST : [34mResilientRedisSubscription : Received message from Redis channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b: TaskProgressEvent (228 bytes)[0m
+Main : 2026-09-28 12:53:22.475382 : 128 : FINEST : [34mEventService : Received task event: TaskProgressEvent for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.475496 : 540 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (364 bytes)[0m
+Worker : 2026-09-28 12:53:22.475558 : 62 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:53:22.475872 : 313 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (384 bytes)[0m
+Worker : 2026-09-28 12:53:22.479548 : 5286 : FINER : [34mStdOperator : File result created with ID 5fc5c037-c932-4145-8aba-ceb8e67dae30 for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.479763 : 215 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.479852 : 89 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:53:22.484938 : 5086 : FINER : [34mStdOperator : Running install operator runner for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.604521 : 119585 : FINER : [34mStdOperator : Install operator runner completed for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.604542 : 18 : FINER : [34mStdOperator : Running child runner for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.606579 : 2038 : FINEST : [34mTaskRunnerInstance : Running operator from URL: https://github.com/tercen/repro-large-result-operator[0m
+Worker : 2026-09-28 12:53:22.633137 : 26561 : INFO : [34mTaskRunnerInstance : Legacy image detected: docker.io/tercen/runtime-r40:4.0.4-8 (user="root", created=2025-12-12 06:09:05.519943Z) — running without --user flag[0m
+Worker : 2026-09-28 12:53:22.633184 : 43 : FINE : [34mTaskRunnerInstance : Checking operator URL: https://github.com/tercen/repro-large-result-operator[0m
+Worker : 2026-09-28 12:53:22.633468 : 284 : FINE : [34mTaskRunnerInstance : ExeRunner<RunComputationTask> -- start -- podman run --rm --replace --init --user 0:0 --pids-limit -1 --memory 2328M --memory-swap 2328M --cpus 1 --name=tercen_task_dba4ff5c-dcd2-4a78-992d-86b60fcf6cea --env TERCEN_SERVICE_URI=http://10.64.7.4:5400 --env MALLOC_CONF=background_thread:true,dirty_decay_ms:0,muzzy_decay_ms:0,thp:never,abort_conf:false --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 -e TERCEN_WEB_APP_PORT=8080 --workdir /var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa -e TERCEN_TASK_ID=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea -e R_PROFILE_USER=/var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa/.Rprofile -v /tmp/admin:/tmp:rw -v /var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa:/var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa:ro -v /var/lib/tercen/data/renv:/var/lib/tercen/data/renv:ro docker.io/tercen/runtime-r40:4.0.4-8 -f main.R --args --serviceUri http://10.64.7.4:5400 --token REDACTED --taskId dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:22.927126 : 293662 : FINEST : [34mTaskRunnerInstance : _ContainerMemoryTracker -- reading cgroup dir /sys/fs/cgroup/libpod_parent/libpod-551544c860abf292dff3a6bded85b8c632f76fce17faa2a8e45e9ea815cf7c1d[0m
+Worker : 2026-09-28 12:53:22.980846 : 504976 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt PatchRecords(489fd1f0-0c2e-47b3-ad1f-1faa78af56f9)[0m
+Worker : 2026-09-28 12:53:22.981225 : 377 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (1324 bytes)[0m
+Main : 2026-09-28 12:53:23.299425 : 824046 : FINEST : [34mHTTP : 2026-09-28T12:53:23.299208  0:00:00.000202 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:53:23.734683 : 435256 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:23.734710 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:23.736014 : 1306 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:23.736030 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:23.737509 : 1479 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:23.737519 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:23.737546 : 28 : FINEST : [34mHTTP : 2026-09-28T12:53:23.734557  0:00:00.002983 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:24.309578 : 572034 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:24.313008 : 3428 : FINEST : [34mHTTP : 2026-09-28T12:53:24.308903  0:00:00.004094 GET     [200] -- {null} -- /api/v1/task?id=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea&useFactory=true[0m
+Main : 2026-09-28 12:53:24.360183 : 47176 : FINEST : [34mHTTP : 2026-09-28T12:53:24.356541  0:00:00.003631 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 12:53:24.496384 : 136200 : FINEST : [34mHTTP : 2026-09-28T12:53:24.492918  0:00:00.003454 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 12:53:24.502802 : 6419 : FINEST : [34mHTTP : 2026-09-28T12:53:24.499596  0:00:00.003197 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 12:53:24.509650 : 6848 : FINER : [34mTableSchemaService : Starting selectStream for table d0c0b7bf-93f5-4ec5-aa57-173bdddd738f[0m
+Main : 2026-09-28 12:53:24.513035 : 3384 : FINER : [34mTableSchemaService : Starting selectStream for table d0c0b7bf-93f5-4ec5-aa57-173bdddd738f -- cnames [.ri, .ci, .y][0m
+Main : 2026-09-28 12:53:24.513052 : 16 : FINER : [34mTableSchemaService : Yielding stream for table d0c0b7bf-93f5-4ec5-aa57-173bdddd738f -- cnames [.ri, .ci, .y] -- with range 0 to 125000[0m
+Main : 2026-09-28 12:53:24.513291 : 240 : FINEST : [34mHTTP : 2026-09-28T12:53:24.509255  0:00:00.004029 POST    [200] -- {null} -- /api/v1/schema/selectStream[0m
+Main : 2026-09-28 12:53:24.513985 : 693 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.ri] relation=SimpleRelation(id=d0c0b7bf-93f5-4ec5-aa57-173bdddd738f,nCols=3)[0m
+Main : 2026-09-28 12:53:24.540178 : 26194 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 16445[0m
+Main : 2026-09-28 12:53:24.540211 : 32 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 12:53:24.542655 : 2445 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 483677[0m
+Main : 2026-09-28 12:53:24.542820 : 165 : FINER : [34mSarno : selectStream yielding table chunk with 120904 rows[0m
+Main : 2026-09-28 12:53:24.543352 : 531 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 12:53:24.544187 : 835 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.ci] relation=SimpleRelation(id=d0c0b7bf-93f5-4ec5-aa57-173bdddd738f,nCols=3)[0m
+Main : 2026-09-28 12:53:24.557401 : 13214 : WARNING : [34msarno : [2026-09-28T12:53:24.520Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 12:53:24.557411 : 10 : WARNING : [34msarno : [2026-09-28T12:53:24.520Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 12:53:24.557416 : 5 : WARNING : [34msarno : [2026-09-28T12:53:24.520Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 12:53:24.557420 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:53:24.539Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=2095460|limit=4145728|peak_percent=50.5|sent=500122|received=0|sent_per_sec=24.6 MiB|received_per_sec=0 B|duration_secs=0.019|start=520373[0m
+Main : 2026-09-28 12:53:24.557432 : 12 : WARNING : [34msarno : [2026-09-28T12:53:24.539Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 12:53:24.557436 : 4 : WARNING : [34msarno : [2026-09-28T12:53:24.540Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 12:53:24.557440 : 4 : WARNING : [34msarno : [2026-09-28T12:53:24.550Z INFO ] exec_task: Acquired worker on port 15003 (threads 1)[0m
+Main : 2026-09-28 12:53:24.557443 : 3 : WARNING : [34msarno : [2026-09-28T12:53:24.550Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15003[0m
+Main : 2026-09-28 12:53:24.557452 : 9 : WARNING : [34msarno : [2026-09-28T12:53:24.551Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15003[0m
+Main : 2026-09-28 12:53:24.568389 : 10937 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 16445[0m
+Main : 2026-09-28 12:53:24.568453 : 64 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 12:53:24.570509 : 2057 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 483677[0m
+Main : 2026-09-28 12:53:24.571390 : 881 : FINER : [34mSarno : selectStream yielding table chunk with 120904 rows[0m
+Main : 2026-09-28 12:53:24.572005 : 615 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 12:53:24.572818 : 813 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.y] relation=SimpleRelation(id=d0c0b7bf-93f5-4ec5-aa57-173bdddd738f,nCols=3)[0m
+Main : 2026-09-28 12:53:24.603019 : 30202 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 32828[0m
+Main : 2026-09-28 12:53:24.603068 : 47 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 12:53:24.607499 : 4432 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 967292[0m
+Main : 2026-09-28 12:53:24.607841 : 342 : FINER : [34mSarno : selectStream yielding table chunk with 120904 rows[0m
+Main : 2026-09-28 12:53:24.608519 : 677 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 12:53:24.807782 : 199267 : WARNING : [34msarno : [W:15003] [2026-09-28T12:53:24.567Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=2049139|limit=4145728|peak_percent=49.4|sent=500122|received=0|sent_per_sec=28.8 MiB|received_per_sec=0 B|duration_secs=0.017|start=474052[0m
+Main : 2026-09-28 12:53:24.807859 : 73 : WARNING : [34msarno : [2026-09-28T12:53:24.567Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15003, performing health check[0m
+Main : 2026-09-28 12:53:24.807971 : 112 : WARNING : [34msarno : [2026-09-28T12:53:24.568Z INFO ] exec_task: Returning healthy worker on port 15003 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 12:53:24.809708 : 1737 : WARNING : [34msarno : [2026-09-28T12:53:24.581Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 12:53:24.809726 : 18 : WARNING : [34msarno : [2026-09-28T12:53:24.581Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 12:53:24.809732 : 6 : WARNING : [34msarno : [2026-09-28T12:53:24.581Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 12:53:24.809736 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:53:24.603Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=3579070|limit=5145728|peak_percent=69.6|sent=1000120|received=0|sent_per_sec=44.4 MiB|received_per_sec=0 B|duration_secs=0.021|start=520373[0m
+Main : 2026-09-28 12:53:24.809753 : 17 : WARNING : [34msarno : [2026-09-28T12:53:24.604Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 12:53:24.809894 : 141 : WARNING : [34msarno : [2026-09-28T12:53:24.604Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 12:53:25.952135 : 1142243 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:25.957863 : 5728 : FINEST : [34mHTTP : 2026-09-28T12:53:25.951487  0:00:00.006365 GET     [200] -- {null} -- /api/v1/file?id=5fc5c037-c932-4145-8aba-ceb8e67dae30&useFactory=true[0m
+Main : 2026-09-28 12:53:28.271906 : 2314044 : WARNING : [34msarno : [2026-09-28T12:53:27.279Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:53:32.455015 : 4183108 : FINE : [34mCouchService : upload : collectTaskStats error: Instance of 'TaskService' -- collectTaskStats -- not impl[0m
+Main : 2026-09-28 12:53:32.455569 : 553 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:32.455585 : 15 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:32.456134 : 550 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:32.457767 : 1633 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:32.457783 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:32.459361 : 1578 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:32.459375 : 13 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:32.459405 : 30 : FINEST : [34mHTTP : 2026-09-28T12:53:32.455447  0:00:00.003952 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:32.488324 : 28920 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/1c/99/1c99ca16-d5f1-4e05-99bb-6c15fe6c5d98[0m
+Main : 2026-09-28 12:53:32.556715 : 68393 : FINE : [34mGcsResumableUpload : Initiated resumable upload: https://storage.googleapis.com/upload/storage/v1/b/tercen-ring-tercen-stage-data/o?uploadType=resumable&upload_id=AP6rU83Ftp-nuMwShxv4S1BZnFSnYjQLgyePFLr1r5AMKhi5b4gf6dFOVSN_YbOJRRyTAD3tihfHq4pTQm3jjU56SGYuisbWu8VmaBOMcDg69ymw[0m
+Main : 2026-09-28 12:53:32.977060 : 420343 : FINE : [34mGcsResumableUpload : Chunk uploaded: 0-16777215, total: 16777216 bytes[0m
+Main : 2026-09-28 12:53:33.417770 : 440711 : FINE : [34mGcsResumableUpload : Chunk uploaded: 16777216-33554431, total: 33554432 bytes[0m
+Main : 2026-09-28 12:53:33.735338 : 317568 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:33.735360 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:33.736721 : 1361 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:33.736736 : 15 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:33.738367 : 1630 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:33.738376 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:33.738404 : 28 : FINEST : [34mHTTP : 2026-09-28T12:53:33.735238  0:00:00.003159 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:33.860973 : 122571 : FINE : [34mGcsResumableUpload : Chunk uploaded: 33554432-50331647, total: 50331648 bytes[0m
+Main : 2026-09-28 12:53:34.284845 : 423873 : FINE : [34mGcsResumableUpload : Chunk uploaded: 50331648-67108863, total: 67108864 bytes[0m
+Main : 2026-09-28 12:53:34.709054 : 424208 : FINE : [34mGcsResumableUpload : Chunk uploaded: 67108864-83886079, total: 83886080 bytes[0m
+Main : 2026-09-28 12:53:35.153224 : 444171 : FINE : [34mGcsResumableUpload : Chunk uploaded: 83886080-100663295, total: 100663296 bytes[0m
+Main : 2026-09-28 12:53:35.580275 : 427051 : FINE : [34mGcsResumableUpload : Chunk uploaded: 100663296-117440511, total: 117440512 bytes[0m
+Main : 2026-09-28 12:53:36.006773 : 426497 : FINE : [34mGcsResumableUpload : Chunk uploaded: 117440512-134217727, total: 134217728 bytes[0m
+Main : 2026-09-28 12:53:36.432087 : 425314 : FINE : [34mGcsResumableUpload : Chunk uploaded: 134217728-150994943, total: 150994944 bytes[0m
+Main : 2026-09-28 12:53:36.882654 : 450567 : FINE : [34mGcsResumableUpload : Chunk uploaded: 150994944-167772159, total: 167772160 bytes[0m
+Main : 2026-09-28 12:53:37.308007 : 425353 : FINE : [34mGcsResumableUpload : Chunk uploaded: 167772160-184549375, total: 184549376 bytes[0m
+Main : 2026-09-28 12:53:37.753944 : 445937 : FINE : [34mGcsResumableUpload : Chunk uploaded: 184549376-201326591, total: 201326592 bytes[0m
+Main : 2026-09-28 12:53:38.237583 : 483639 : FINE : [34mGcsResumableUpload : Chunk uploaded: 201326592-218103807, total: 218103808 bytes[0m
+Main : 2026-09-28 12:53:38.667099 : 429516 : FINE : [34mGcsResumableUpload : Chunk uploaded: 218103808-234881023, total: 234881024 bytes[0m
+Main : 2026-09-28 12:53:38.887871 : 220772 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:38.887892 : 20 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:38.889283 : 1392 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:38.889297 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:38.890958 : 1662 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:38.890969 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:38.891043 : 74 : FINEST : [34mHTTP : 2026-09-28T12:53:38.887772  0:00:00.003264 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:39.099307 : 208267 : FINE : [34mGcsResumableUpload : Chunk uploaded: 234881024-251658239, total: 251658240 bytes[0m
+Main : 2026-09-28 12:53:39.519013 : 419705 : FINE : [34mGcsResumableUpload : Chunk uploaded: 251658240-268435455, total: 268435456 bytes[0m
+Main : 2026-09-28 12:53:39.954338 : 435325 : FINE : [34mGcsResumableUpload : Chunk uploaded: 268435456-285212671, total: 285212672 bytes[0m
+Main : 2026-09-28 12:53:40.442782 : 488444 : FINE : [34mGcsResumableUpload : Chunk uploaded: 285212672-301989887, total: 301989888 bytes[0m
+Main : 2026-09-28 12:53:40.877172 : 434390 : FINE : [34mGcsResumableUpload : Chunk uploaded: 301989888-318767103, total: 318767104 bytes[0m
+Main : 2026-09-28 12:53:41.311238 : 434066 : FINE : [34mGcsResumableUpload : Chunk uploaded: 318767104-335544319, total: 335544320 bytes[0m
+Main : 2026-09-28 12:53:41.741568 : 430330 : FINE : [34mGcsResumableUpload : Chunk uploaded: 335544320-352321535, total: 352321536 bytes[0m
+Main : 2026-09-28 12:53:42.172893 : 431326 : FINE : [34mGcsResumableUpload : Chunk uploaded: 352321536-369098751, total: 369098752 bytes[0m
+Main : 2026-09-28 12:53:42.626222 : 453329 : FINE : [34mGcsResumableUpload : Chunk uploaded: 369098752-385875967, total: 385875968 bytes[0m
+Main : 2026-09-28 12:53:43.047642 : 421419 : FINE : [34mGcsResumableUpload : Chunk uploaded: 385875968-402653183, total: 402653184 bytes[0m
+Main : 2026-09-28 12:53:43.476047 : 428405 : FINE : [34mGcsResumableUpload : Chunk uploaded: 402653184-419430399, total: 419430400 bytes[0m
+Main : 2026-09-28 12:53:43.735537 : 259489 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:43.735558 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:43.736983 : 1425 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:43.736996 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:43.738522 : 1527 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:43.738532 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:43.738558 : 27 : FINEST : [34mHTTP : 2026-09-28T12:53:43.735438  0:00:00.003115 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:43.927654 : 189097 : FINE : [34mGcsResumableUpload : Chunk uploaded: 419430400-436207615, total: 436207616 bytes[0m
+Main : 2026-09-28 12:53:44.400165 : 472511 : FINE : [34mGcsResumableUpload : Chunk uploaded: 436207616-452984831, total: 452984832 bytes[0m
+Main : 2026-09-28 12:53:44.858504 : 458339 : FINE : [34mGcsResumableUpload : Chunk uploaded: 452984832-469762047, total: 469762048 bytes[0m
+Main : 2026-09-28 12:53:45.308184 : 449681 : FINE : [34mGcsResumableUpload : Chunk uploaded: 469762048-486539263, total: 486539264 bytes[0m
+Main : 2026-09-28 12:53:45.735823 : 427638 : FINE : [34mGcsResumableUpload : Chunk uploaded: 486539264-503316479, total: 503316480 bytes[0m
+Main : 2026-09-28 12:53:46.178095 : 442272 : FINE : [34mGcsResumableUpload : Chunk uploaded: 503316480-520093695, total: 520093696 bytes[0m
+Main : 2026-09-28 12:53:46.606231 : 428136 : FINE : [34mGcsResumableUpload : Chunk uploaded: 520093696-536870911, total: 536870912 bytes[0m
+Main : 2026-09-28 12:53:47.043808 : 437577 : FINE : [34mGcsResumableUpload : Chunk uploaded: 536870912-553648127, total: 553648128 bytes[0m
+Main : 2026-09-28 12:53:47.466792 : 422984 : FINE : [34mGcsResumableUpload : Chunk uploaded: 553648128-570425343, total: 570425344 bytes[0m
+Main : 2026-09-28 12:53:47.890003 : 423212 : FINE : [34mGcsResumableUpload : Chunk uploaded: 570425344-587202559, total: 587202560 bytes[0m
+Main : 2026-09-28 12:53:48.332338 : 442335 : FINE : [34mGcsResumableUpload : Chunk uploaded: 587202560-603979775, total: 603979776 bytes[0m
+Main : 2026-09-28 12:53:48.735792 : 403453 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:48.735815 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:48.737477 : 1662 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:48.737490 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:48.738978 : 1489 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:48.738988 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:48.739016 : 27 : FINEST : [34mHTTP : 2026-09-28T12:53:48.735690  0:00:00.003320 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:48.790063 : 51049 : FINE : [34mGcsResumableUpload : Chunk uploaded: 603979776-620756991, total: 620756992 bytes[0m
+Main : 2026-09-28 12:53:49.210411 : 420348 : FINE : [34mGcsResumableUpload : Chunk uploaded: 620756992-637534207, total: 637534208 bytes[0m
+Main : 2026-09-28 12:53:49.636772 : 426361 : FINE : [34mGcsResumableUpload : Chunk uploaded: 637534208-654311423, total: 654311424 bytes[0m
+Main : 2026-09-28 12:53:50.060997 : 424225 : FINE : [34mGcsResumableUpload : Chunk uploaded: 654311424-671088639, total: 671088640 bytes[0m
+Main : 2026-09-28 12:53:50.498570 : 437574 : FINE : [34mGcsResumableUpload : Chunk uploaded: 671088640-687865855, total: 687865856 bytes[0m
+Main : 2026-09-28 12:53:50.959057 : 460486 : FINE : [34mGcsResumableUpload : Chunk uploaded: 687865856-704643071, total: 704643072 bytes[0m
+Main : 2026-09-28 12:53:51.390355 : 431299 : FINE : [34mGcsResumableUpload : Chunk uploaded: 704643072-721420287, total: 721420288 bytes[0m
+Main : 2026-09-28 12:53:51.863459 : 473103 : FINE : [34mGcsResumableUpload : Chunk uploaded: 721420288-738197503, total: 738197504 bytes[0m
+Main : 2026-09-28 12:53:52.280839 : 417380 : FINE : [34mGcsResumableUpload : Chunk uploaded: 738197504-754974719, total: 754974720 bytes[0m
+Main : 2026-09-28 12:53:52.714861 : 434022 : FINE : [34mGcsResumableUpload : Chunk uploaded: 754974720-771751935, total: 771751936 bytes[0m
+Main : 2026-09-28 12:53:53.162095 : 447234 : FINE : [34mGcsResumableUpload : Chunk uploaded: 771751936-788529151, total: 788529152 bytes[0m
+Main : 2026-09-28 12:53:53.378187 : 216091 : FINEST : [34mHTTP : 2026-09-28T12:53:53.378045  0:00:00.000130 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:53:53.599380 : 221194 : FINE : [34mGcsResumableUpload : Chunk uploaded: 788529152-805306367, total: 805306368 bytes[0m
+Main : 2026-09-28 12:53:53.835180 : 235800 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:53.835203 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:53.836499 : 1297 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:53.836511 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:53.837990 : 1480 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:53.838001 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:53.838025 : 24 : FINEST : [34mHTTP : 2026-09-28T12:53:53.835086  0:00:00.002933 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:54.049183 : 211159 : FINE : [34mGcsResumableUpload : Chunk uploaded: 805306368-822083583, total: 822083584 bytes[0m
+Main : 2026-09-28 12:53:54.483740 : 434559 : FINE : [34mGcsResumableUpload : Chunk uploaded: 822083584-838860799, total: 838860800 bytes[0m
+Main : 2026-09-28 12:53:54.936083 : 452342 : FINE : [34mGcsResumableUpload : Chunk uploaded: 838860800-855638015, total: 855638016 bytes[0m
+Main : 2026-09-28 12:53:55.364638 : 428555 : FINE : [34mGcsResumableUpload : Chunk uploaded: 855638016-872415231, total: 872415232 bytes[0m
+Main : 2026-09-28 12:53:55.808488 : 443851 : FINE : [34mGcsResumableUpload : Chunk uploaded: 872415232-889192447, total: 889192448 bytes[0m
+Main : 2026-09-28 12:53:56.258115 : 449626 : FINE : [34mGcsResumableUpload : Chunk uploaded: 889192448-905969663, total: 905969664 bytes[0m
+Main : 2026-09-28 12:53:56.696464 : 438349 : FINE : [34mGcsResumableUpload : Chunk uploaded: 905969664-922746879, total: 922746880 bytes[0m
+Main : 2026-09-28 12:53:57.130896 : 434432 : FINE : [34mGcsResumableUpload : Chunk uploaded: 922746880-939524095, total: 939524096 bytes[0m
+Main : 2026-09-28 12:53:57.392517 : 261622 : WARNING : [34msarno : [2026-09-28T12:53:57.280Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:53:57.569928 : 177410 : FINE : [34mGcsResumableUpload : Chunk uploaded: 939524096-956301311, total: 956301312 bytes[0m
+Main : 2026-09-28 12:53:58.006562 : 436634 : FINE : [34mGcsResumableUpload : Chunk uploaded: 956301312-973078527, total: 973078528 bytes[0m
+Main : 2026-09-28 12:53:58.444106 : 437544 : FINE : [34mGcsResumableUpload : Chunk uploaded: 973078528-989855743, total: 989855744 bytes[0m
+Main : 2026-09-28 12:53:58.698962 : 254857 : FINE : [34mGcsResumableUpload : Upload finalized: gcs/1c/99/1c99ca16-d5f1-4e05-99bb-6c15fe6c5d98, total: 996690501 bytes[0m
+Main : 2026-09-28 12:53:58.698991 : 26 : FINE : [34mGcsStorageService : Uploaded object via resumable: gcs/1c/99/1c99ca16-d5f1-4e05-99bb-6c15fe6c5d98, size: 996690501 bytes[0m
+Main : 2026-09-28 12:53:58.699005 : 14 : FINE : [34mCouchService : upload -- GCS direct streaming: 38.02614756544493 MB/s, size: 996690501 bytes[0m
+Main : 2026-09-28 12:53:58.735595 : 36591 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:53:58.735614 : 18 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:53:58.736734 : 1121 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:53:58.736753 : 18 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:53:58.738174 : 1422 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:53:58.738188 : 13 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:53:58.738242 : 55 : FINEST : [34mHTTP : 2026-09-28T12:53:58.735500  0:00:00.002735 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:53:58.820754 : 82513 : FINE : [34mGcsStorageService : Copied object: gcs/1c/99/1c99ca16-d5f1-4e05-99bb-6c15fe6c5d98 -> upload/lfs/1d/7e/26ebda29317788297d7e15581ac71f7804a98bf9abe497e5998334ada1fb[0m
+Main : 2026-09-28 12:53:58.888684 : 67930 : FINE : [34mGcsStorageService : Deleted object: gcs/1c/99/1c99ca16-d5f1-4e05-99bb-6c15fe6c5d98[0m
+Main : 2026-09-28 12:53:58.889793 : 1108 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:53:58.900617 : 10825 : FINEST : [34mHTTP : 2026-09-28T12:53:25.964564  0:00:32.936045 POST    [200] -- {null} -- /api/v1/file/upload[0m
+Main : 2026-09-28 12:53:58.902155 : 1537 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:53:59.387418 : 36460290 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/f1/c3/f1c3f802-abca-4a07-aa13-3d3c1c5f2999[0m
+Worker : 2026-09-28 12:53:59.499202 : 111784 : FINE : [34mCouchService : upload -- GCS direct streaming: 0.008545478949487718 MB/s, size: 955 bytes[0m
+Worker : 2026-09-28 12:53:59.694776 : 195574 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:59.696135 : 1358 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:53:59.720547 : 24412 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/6a/6a/6a6a5307-d436-43cf-bc75-37aa37e99c1f[0m
+Worker : 2026-09-28 12:53:59.795810 : 75264 : FINE : [34mCouchService : upload -- GCS direct streaming: 0.0008638447737391189 MB/s, size: 65 bytes[0m
+Worker : 2026-09-28 12:53:59.979587 : 183777 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:53:59.979615 : 27 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:59.985834 : 6219 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:59.991537 : 5703 : FINER : [34mStdOperator : Child runner completed for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:59.991572 : 34 : FINEST : [34mCouchService : sendChannel -- 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:53:59.991847 : 276 : FINEST : [34mEventService : Published TSON event to Redis channel 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b (233 bytes)[0m
+Main : 2026-09-28 12:53:59.992173 : 1090018 : FINEST : [34mResilientRedisSubscription : Received message from Redis channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b: TaskProgressEvent (233 bytes)[0m
+Main : 2026-09-28 12:53:59.992234 : 60 : FINEST : [34mEventService : Received task event: TaskProgressEvent for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:59.992375 : 37011151 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:53:59.992609 : 233 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (389 bytes)[0m
+Worker : 2026-09-28 12:53:59.993173 : 1325 : FINEST : [34mStdOperator : File result -- {kind: FileDocument, id: 5fc5c037-c932-4145-8aba-ceb8e67dae30, isDeleted: true, rev: 2-8b98043b-7e55-4d5e-aa65-433eea69ec55, description: , name: 9653e0a0-bb3b-11f1-94d4-e726fe46e11d, acl: {kind: Acl, owner: admin, aces: []}, createdDate: {kind: Date, value: 2026-09-28T12:53:22.475643Z}, lastModifiedDate: {kind: Date, value: 2026-09-28T12:53:58.895876Z}, urls: [], tags: [], meta: [{kind: Pair, key: hidden, value: true}, {kind: Pair, key: temp.file, value: true}, {kind: Pair, key: result.task.id, value: dba4ff5c-dcd2-4a78-992d-86b60fcf6cea}], url: {kind: Url, uri: }, version: , isPublic: false, projectId: 1878c5a2-4d9d-4c8a-81db-8e55938b67ab, folderId: , dataUri: lfs/1d/7e/26ebda29317788297d7e15581ac71f7804a98bf9abe497e5998334ada1fb, metadata: {kind: FileMetadata, contentType: , cacheControl: , contentEncoding: , contentLanguage: , md5Hash: }, size: 0, storageSize: 996690501.0}[0m
+Worker : 2026-09-28 12:53:59.993181 : 8 : FINER : [34mStdOperator : Saving computation result for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:53:59.993185 : 4 : FINER : [34mSaveComputationResult : saveTaskResult: Starting for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, fileResultId: 5fc5c037-c932-4145-8aba-ceb8e67dae30[0m
+Worker : 2026-09-28 12:53:59.993188 : 3 : FINER : [34mSaveComputationResult : saveTaskResult: fileResultId is not empty, retrieving file document 5fc5c037-c932-4145-8aba-ceb8e67dae30[0m
+Worker : 2026-09-28 12:53:59.995009 : 1822 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Starting for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea with dataUri: lfs/1d/7e/26ebda29317788297d7e15581ac71f7804a98bf9abe497e5998334ada1fb[0m
+Main : 2026-09-28 12:54:00.007939 : 15706 : FINEST : [34mResilientRedisSubscription : Received message from Redis channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b: TaskProgressEvent (225 bytes)[0m
+Main : 2026-09-28 12:54:00.008013 : 73 : FINEST : [34mEventService : Received task event: TaskProgressEvent for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:54:00.008137 : 13128 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Executing sarno task for file: /var/lib/tercen/data/upload/lfs/1d/7e/26ebda29317788297d7e15581ac71f7804a98bf9abe497e5998334ada1fb[0m
+Worker : 2026-09-28 12:54:00.008218 : 80 : INFO : [34mSaveComputationResult : SaveComputationResult -- sizing ingestion from result size 996690501B: booking 2369439476B (operator booking was 2327838720B)[0m
+Worker : 2026-09-28 12:54:00.008372 : 15764 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:54:00.008783 : 410 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (381 bytes)[0m
+Main : 2026-09-28 12:54:00.150837 : 142826 : WARNING : [34msarno : [2026-09-28T12:54:00.029Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 12:54:00.150868 : 29 : WARNING : [34msarno : [2026-09-28T12:54:00.030Z INFO ] exec_task: Forwarding task [ComputationResult(task_id=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea)] to worker on port 15002[0m
+Main : 2026-09-28 12:54:00.150873 : 5 : WARNING : [34msarno : [2026-09-28T12:54:00.030Z INFO ] exec_task: Started stream processing [ComputationResult(task_id=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea)] for worker on port 15002[0m
+Main : 2026-09-28 12:54:00.150879 : 6 : WARNING : [34msarno : [W:15002] [2026-09-28T12:54:00.030Z INFO ] ProcessResultQueryProcessor::process_query -- task_id: dba4ff5c-dcd2-4a78-992d-86b60fcf6cea -- file: /var/lib/tercen/data/upload/lfs/1d/7e/26ebda29317788297d7e15581ac71f7804a98bf9abe497e5998334ada1fb[0m
+Main : 2026-09-28 12:54:03.734945 : 3584068 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:54:03.734969 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:54:03.736366 : 1397 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:54:03.736383 : 17 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:54:03.737917 : 1534 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:54:03.737930 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:54:03.737984 : 55 : FINEST : [34mHTTP : 2026-09-28T12:54:03.734836  0:00:00.003140 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:54:06.914805 : 3176823 : WARNING : [34msarno : [W:15002] [2026-09-28T12:54:06.677Z INFO ] process_query -- operator result via object store: /tmp/sarno-blobs/fe/49/fe499e32d6b7f6f6a02f4c20b11e0d9a551c750f6111de1c87349e7525415fed[0m
+Worker : 2026-09-28 12:54:08.564344 : 8556128 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Received sarno result with 1 computed relations[0m
+Worker : 2026-09-28 12:54:08.564451 : 105 : FINER : [34mSaveComputationResult : _createComputedTableSchema: Creating schema with 996 columns, 125000 rows[0m
+Main : 2026-09-28 12:54:08.668403 : 1753597 : WARNING : [34msarno : [W:15002] [2026-09-28T12:54:08.566Z INFO ] TASK_STATS|task=ComputationResult(task_id=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea)|peak=1000623910|limit=2369439475|peak_percent=42.2|sent=51930|received=0|sent_per_sec=5.9 KiB|received_per_sec=0 B|duration_secs=8.536|start=524992[0m
+Main : 2026-09-28 12:54:08.668445 : 40 : WARNING : [34msarno : [2026-09-28T12:54:08.566Z INFO ] exec_task: Stream ended [ComputationResult(task_id=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 12:54:08.668450 : 5 : WARNING : [34msarno : [2026-09-28T12:54:08.566Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [ComputationResult(task_id=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea)][0m
+Worker : 2026-09-28 12:54:08.675706 : 111257 : FINER : [34mSaveComputationResult : _createComputedTableSchema: Created schema f0de326b-2e7e-4703-9502-f2863abd9e7f with name "b1cef130-bb3b-11f1-b155-ab9cdfe9f8a0"[0m
+Worker : 2026-09-28 12:54:08.675726 : 18 : FINER : [34m_SaveResult : saveOperatorResult: Starting with 1 schemas and 0 join operators[0m
+Worker : 2026-09-28 12:54:08.675731 : 5 : FINER : [34m_SaveResult : saveOperatorResult: Converting 1 schemas by row/col[0m
+Worker : 2026-09-28 12:54:08.675775 : 44 : FINER : [34m_SaveResult : _convertResultByRowCol: Converting schema f0de326b-2e7e-4703-9502-f2863abd9e7f with namespace ds4[0m
+Worker : 2026-09-28 12:54:08.675842 : 67 : FINER : [34m_SaveResult : saveOperatorResult: Processing derived factors for namespace ds4[0m
+Worker : 2026-09-28 12:54:08.676209 : 367 : FINER : [34m_SaveResult : saveOperatorResult: Returning CompositeRelation with 1 join operators[0m
+Worker : 2026-09-28 12:54:08.676218 : 9 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Validating generated relation for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:54:08.681300 : 12851 : FINEST : [34mHTTP : 2026-09-28T12:54:08.676784  0:00:00.004510 GET     [200] -- {null} -- /api/v1/schema?id=24a4525b-ef82-4dac-9729-a28a00d9e893&useFactory=true[0m
+Worker : 2026-09-28 12:54:08.681584 : 5367 : FINEST : [34mHttpClientService : Instance of 'TableSchemaService' -- get 24a4525b-ef82-4dac-9729-a28a00d9e893 -- 5 ms[0m
+Main : 2026-09-28 12:54:08.692754 : 11454 : FINEST : [34mHTTP : 2026-09-28T12:54:08.681832  0:00:00.010915 GET     [200] -- {null} -- /api/v1/schema?id=f0de326b-2e7e-4703-9502-f2863abd9e7f&useFactory=true[0m
+Worker : 2026-09-28 12:54:08.695007 : 13423 : FINEST : [34mHttpClientService : Instance of 'TableSchemaService' -- get f0de326b-2e7e-4703-9502-f2863abd9e7f -- 13 ms[0m
+Worker : 2026-09-28 12:54:08.695402 : 395 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Relation validation successful for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:54:08.696684 : 1281 : FINER : [34mStdOperator : Computation result saved for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea: success[0m
+Worker : 2026-09-28 12:54:08.697984 : 1301 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:54:08.698357 : 5603 : FINEST : [34mResilientRedisSubscription : Received message from Redis channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b: TaskProgressEvent (225 bytes)[0m
+Main : 2026-09-28 12:54:08.698445 : 87 : FINEST : [34mEventService : Received task event: TaskProgressEvent for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:54:08.698627 : 8689845 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:54:08.699080 : 452 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (381 bytes)[0m
+Worker : 2026-09-28 12:54:08.706467 : 8483 : FINER : [34mStdOperator : StdOperator.run() completed successfully for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:54:08.706489 : 21 : FINER : [34mTaskRunnerInstance : EnsureTaskCompletion -- task RunComputationTask(dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, 9-fef7343f-5643-4be7-b16c-c288d7ff39ed, Instance of 'RunningState') -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:54:08.706503 : 14 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: DoneState} -- duration 0:00:46.247103[0m
+Worker : 2026-09-28 12:54:08.706734 : 231 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Worker : 2026-09-28 12:54:08.721298 : 14565 : FINEST : [34mCouchService : sendChannel -- 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b -- evt TaskStateEvent(2026-09-28T12:54:08.721284Z, dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, Instance of 'DoneState')[0m
+Worker : 2026-09-28 12:54:08.721750 : 451 : FINEST : [34mEventService : Published TSON event to Redis channel 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b (205 bytes)[0m
+Main : 2026-09-28 12:54:08.722073 : 23629 : FINEST : [34mResilientRedisSubscription : Received message from Redis channel event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b: TaskStateEvent (205 bytes)[0m
+Main : 2026-09-28 12:54:08.722155 : 81 : FINEST : [34mEventService : Received task event: TaskStateEvent for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:54:08.722301 : 146 : INFO : [34mEventService : Task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea reached final state: Instance of 'DoneState'[0m
+Worker : 2026-09-28 12:54:08.722378 : 23299 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:54:08.722452 : 73 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskStateEvent(2026-09-28T12:54:08.721284Z, dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, Instance of 'DoneState')[0m
+Main : 2026-09-28 12:54:08.722467 : 166 : FINE : [34mRedisSentinelConnection : Sentinel event monitoring stopped[0m
+Main : 2026-09-28 12:54:08.722556 : 89 : INFO : [34mRedisSentinelConnection : Redis connection closed[0m
+Main : 2026-09-28 12:54:08.722559 : 3 : FINE : [34mResilientRedisSubscription : Cleaned up subscription resources for event:channel:86c52ad1-00f0-4eba-bd2a-44ae4db9a87b[0m
+Main : 2026-09-28 12:54:08.722573 : 14 : FINE : [34mEventService : Unsubscribed from Redis channel 86c52ad1-00f0-4eba-bd2a-44ae4db9a87b[0m
+Worker : 2026-09-28 12:54:08.722733 : 281 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (265 bytes)[0m
+Worker : 2026-09-28 12:54:08.722792 : 59 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (361 bytes)[0m
+Worker : 2026-09-28 12:54:08.723413 : 1663 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Task completed in 46.26s --owner admin --user /admin --runtimeType RunComputationTask --id dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:54:08.723464 : 891 : FINEST : [34mCouchService : isolateRunner complete -- releasing memory and cpus[0m
+Main : 2026-09-28 12:54:08.724502 : 1038 : FINEST : [34mEventService : Decremented listener count for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea, new count: 0[0m
+Main : 2026-09-28 12:54:08.724644 : 143 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:54:08.726693 : 2048 : FINE : [34mTaskService : Cache MISS for task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea[0m
+Main : 2026-09-28 12:54:08.728731 : 2038 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Reporting task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea completion to scheduler (state: TASK_STATE_DONE)[0m
+Main : 2026-09-28 12:54:08.731399 : 2669 : FINEST : [34mHTTP : 2026-09-28T12:54:08.726073  0:00:00.005318 GET     [200] -- {null} -- /api/v1/task?id=dba4ff5c-dcd2-4a78-992d-86b60fcf6cea&useFactory=true[0m
+Main : 2026-09-28 12:54:08.735629 : 4230 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:54:08.735675 : 45 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:54:08.739607 : 3932 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:54:08.739618 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Worker : 2026-09-28 12:54:08.740496 : 17705 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt PatchRecords(05866afb-858e-4a5c-a546-958b3f41f80f)[0m
+Main : 2026-09-28 12:54:08.742158 : 2540 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Worker : 2026-09-28 12:54:08.743144 : 2648 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (1306 bytes)[0m
+Main : 2026-09-28 12:54:08.743363 : 1206 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:54:08.743388 : 24 : FINEST : [34mHTTP : 2026-09-28T12:54:08.735500  0:00:00.007882 GET     [200] -- {null} -- /_health[0m
+Worker : 2026-09-28 12:54:08.748804 : 5659 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:54:08.748869 : 65 : FINE : [34mWorkflowService : _routedUpdate: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 objectRev=50-67fc8c93-e1e7-41c4-8be8-6ca103547378 storedRev=50-67fc8c93-e1e7-41c4-8be8-6ca103547378[0m
+Worker : 2026-09-28 12:54:08.754552 : 5683 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:54:08.761717 : 7165 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:54:08.772648 : 10931 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt PatchRecords(3031e487-fa83-4842-853e-44253dc5cf03)[0m
+Worker : 2026-09-28 12:54:08.773460 : 813 : FINER : [34mTaskRunnerInstance : EnsureTaskCompletion -- task RunWorkflowTask(52295b32-c53e-423d-927b-98510ba0bb83, 3-4946ca24-a1b9-4450-b9e4-93bf00265e7c, Instance of 'RunningState') -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:54:08.773481 : 21 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: DoneState} -- duration 0:00:46.578538[0m
+Worker : 2026-09-28 12:54:08.773588 : 106 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (847 bytes)[0m
+Worker : 2026-09-28 12:54:08.773784 : 197 : FINE : [34mTaskService : Cache MISS for task 52295b32-c53e-423d-927b-98510ba0bb83[0m
+Main : 2026-09-28 12:54:08.777677 : 34290 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task dba4ff5c-dcd2-4a78-992d-86b60fcf6cea completion reported successfully[0m
+Worker : 2026-09-28 12:54:08.779013 : 5228 : FINEST : [34mCouchService : sendChannel -- 7af84190-1279-4382-8b45-f2b76b7b40cd -- evt TaskStateEvent(2026-09-28T12:54:08.779002Z, 52295b32-c53e-423d-927b-98510ba0bb83, Instance of 'DoneState')[0m
+Worker : 2026-09-28 12:54:08.779224 : 211 : FINEST : [34mEventService : Published TSON event to Redis channel 7af84190-1279-4382-8b45-f2b76b7b40cd (205 bytes)[0m
+Worker : 2026-09-28 12:54:08.781059 : 1836 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Task completed in 46.59s --owner admin --user /admin --runtimeType RunWorkflowTask --id 52295b32-c53e-423d-927b-98510ba0bb83[0m
+Main : 2026-09-28 12:54:08.781096 : 3419 : FINEST : [34mCouchService : isolateRunner complete -- releasing memory and cpus[0m
+Main : 2026-09-28 12:54:08.781357 : 260 : FINE : [34mTaskService : Cache MISS for task 52295b32-c53e-423d-927b-98510ba0bb83[0m
+Main : 2026-09-28 12:54:08.783807 : 2450 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Reporting task 52295b32-c53e-423d-927b-98510ba0bb83 completion to scheduler (state: TASK_STATE_DONE)[0m
+Main : 2026-09-28 12:54:08.816431 : 32625 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task 52295b32-c53e-423d-927b-98510ba0bb83 completion reported successfully[0m

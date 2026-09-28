@@ -1,0 +1,1210 @@
+[podman-init] Initializing rootful Podman configuration...
+[podman-init] No GITHUB_TOKEN provided, skipping auth configuration
+[podman-init] Configuring Podman storage...
+[podman-init] Created /etc/containers/storage.conf
+[podman-init] Configuring Podman containers settings...
+[podman-init] Created /etc/containers/containers.conf
+[podman-init] Setting up cgroup v2 delegation...
+[podman-init] Moving processes to init cgroup...
+[podman-init] Enabled cgroup controllers: +cpuset +cpu +io +memory +hugetlb +pids +rdma
+[podman-init] Setting up cgroup directory for native operator execution...
+[podman-init] Native execution cgroup ready with memory controller
+[podman-init] Starting Podman socket...
+[podman-init] Waiting for Podman socket...
+[podman-init] Podman socket created successfully after 1.5 seconds
+[podman-init] Setting socket permissions for user 1000...
+[podman-init] Socket permissions set to 666 successfully
+[podman-init] Podman socket is working correctly (as root)
+[podman-init] Verifying socket accessibility for user 1000...
+[podman-init] Socket is accessible by user 1000
+[podman-init] Dropping privileges to user 1000...
+[podman-init] Executing: /app/bin/tercen
+[podman-init] Final socket permissions: 666
+[podman-init] Using runuser to drop privileges
+initConfig -- started
+Loading common config from /etc/tercen/common-config.yaml
+Loading config from /etc/tercen/config.yaml
+No user config provided at /home/podman/.config/tercen/config.yaml
+initConfig -- 1
+initConfig -- 2
+initConfig -- 3
+initConfig -- 4
+Main : 2026-09-28 12:56:38.478780 : 37 : CONFIG : [34mmain : {kind: Version, major: 1, minor: 1, patch: 3, tag: 1.1.11, date: 2026-09-28T10:59:06.099520Z, commit: ef1e322, features: [search]}[0m
+Main : 2026-09-28 12:56:38.478826 : 43 : CONFIG : [34mSignalHandler : Starting signal handler[0m
+Main : 2026-09-28 12:56:38.478973 : 147 : CONFIG : [34mContainerManager : Failed to create /root/.docker/config.json file : Exists failed[0m
+Main : 2026-09-28 12:56:38.479001 : 28 : CONFIG : [34mmain : Waiting for tercen main service connection...[0m
+Main : 2026-09-28 12:56:38.495637 : 16637 : CONFIG : [34mmain : Success full connection to tercen main service...[0m
+Main : 2026-09-28 12:56:38.495658 : 20 : INFO : [34mmain : reinstall check: isWorker=true, reinstall=false[0m
+Main : 2026-09-28 12:56:38.497163 : 1510 : CONFIG : [34mContainerManager : Running as non-root user in production, skipping Podman initialization (using existing socket)[0m
+Main : 2026-09-28 12:56:38.497182 : 14 : CONFIG : [34mContainerManager : Skipping Podman initialization, will use existing socket at /run/podman/podman.sock[0m
+run sarno container -- podman run --rm --init --network=host --user 1000:1000 -e TERCEN_PASSWORD=<redacted> -e TERCEN_USERNAME=admin -e RUST_LOG=info -e SARNO_ENFORCE_MEMORY_LIMIT=false -e SARNO_STORAGE_BACKEND=gcs -e SARNO_STORAGE_BUCKET=tercen-ring-tercen-stage-data -e SARNO_BLOB_CACHE_DIR=/tmp/sarno-blobs -e SARNO_STORAGE_KEY_PREFIX=sarno -v /tmp:/tmp -v /var/lib/tercen:/var/lib/tercen --name=sarno docker.io/tercen/sarno:1.2.6 sarno --ip 0.0.0.0 --port 15400
+Main : 2026-09-28 12:56:41.645168 : 3147989 : INFO : [34msarno : Sarno container started: d3b30ad4cdc4d5b6a793a574e10cc433085c61e0dd60130704001121d9cddaff[0m
+Main : 2026-09-28 12:56:41.662621 : 17454 : WARNING : [34msarno : [2026-09-28T12:56:41.640Z INFO ] LimitedAlloc: Memory limit enforcement is DISABLED (tracking only)[0m
+Main : 2026-09-28 12:56:41.662651 : 27 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] main started -- listening 0.0.0.0:15400[0m
+Main : 2026-09-28 12:56:41.662657 : 5 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] === Sarno Configuration ===[0m
+Main : 2026-09-28 12:56:41.662660 : 4 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] Config file path: /home/sarno/.config/sarno/sarno.toml[0m
+Main : 2026-09-28 12:56:41.662664 : 3 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] table_dir: /var/lib/tercen/data/sarno/[0m
+Main : 2026-09-28 12:56:41.662667 : 3 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] file_dir: /var/lib/tercen/data/upload/[0m
+Main : 2026-09-28 12:56:41.662671 : 4 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] grpc_host: 127.0.0.1[0m
+Main : 2026-09-28 12:56:41.662690 : 19 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] grpc_port: 50051[0m
+Main : 2026-09-28 12:56:41.662718 : 28 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] grpc_username: admin[0m
+Main : 2026-09-28 12:56:41.662721 : 3 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] storage_backend: gcs[0m
+Main : 2026-09-28 12:56:41.662729 : 9 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] storage_bucket: tercen-ring-tercen-stage-data[0m
+Main : 2026-09-28 12:56:41.662733 : 3 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] blob_cache_dir: /tmp/sarno-blobs[0m
+Main : 2026-09-28 12:56:41.662736 : 4 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] blob_cache_budget_bytes: 21474836480[0m
+Main : 2026-09-28 12:56:41.662741 : 4 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] ===========================[0m
+Main : 2026-09-28 12:56:41.662831 : 90 : WARNING : [34msarno : [2026-09-28T12:56:41.641Z INFO ] Worker pool initialized with unlimited workers[0m
+Main : 2026-09-28 12:56:41.915341 : 252511 : WARNING : [34msarno : [2026-09-28T12:56:41.670Z INFO ] Created new worker on port 15002 (threads 1, total: 1)[0m
+Main : 2026-09-28 12:56:41.915366 : 24 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] LimitedAlloc: Memory limit enforcement is DISABLED (tracking only)[0m
+Main : 2026-09-28 12:56:41.915370 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] rayon thread pool -- num_threads: 1 (requested: 1, host cores: 4)[0m
+Main : 2026-09-28 12:56:41.915374 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] worker started -- listening on socket /tmp/sarno-worker-15002.sock[0m
+Main : 2026-09-28 12:56:41.915376 : 2 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] === Sarno Configuration ===[0m
+Main : 2026-09-28 12:56:41.915379 : 3 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] Config file path: /home/sarno/.config/sarno/sarno.toml[0m
+Main : 2026-09-28 12:56:41.915382 : 3 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] table_dir: /var/lib/tercen/data/sarno/[0m
+Main : 2026-09-28 12:56:41.915385 : 3 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] file_dir: /var/lib/tercen/data/upload/[0m
+Main : 2026-09-28 12:56:41.915388 : 3 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] grpc_host: 127.0.0.1[0m
+Main : 2026-09-28 12:56:41.915390 : 2 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] grpc_port: 50051[0m
+Main : 2026-09-28 12:56:41.915394 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] grpc_username: admin[0m
+Main : 2026-09-28 12:56:41.915397 : 3 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] storage_backend: gcs[0m
+Main : 2026-09-28 12:56:41.915401 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] storage_bucket: tercen-ring-tercen-stage-data[0m
+Main : 2026-09-28 12:56:41.915405 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] blob_cache_dir: /tmp/sarno-blobs[0m
+Main : 2026-09-28 12:56:41.915409 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] blob_cache_budget_bytes: 21474836480[0m
+Main : 2026-09-28 12:56:41.915412 : 3 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] ===========================[0m
+Main : 2026-09-28 12:56:41.915416 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T12:56:41.671Z INFO ] Worker attempting to bind to Unix socket: /tmp/sarno-worker-15002.sock[0m
+Main : 2026-09-28 12:56:41.974511 : 59096 : CONFIG : [34mUpgradeProcess : initializeVersionConfig: found 12 entries[0m
+Main : 2026-09-28 12:56:41.974541 : 29 : CONFIG : [34mUpgradeProcess :   entry: version=0.10.0 date=2023-04-25 13:40:17.141219Z domains=[:default_0_10_0, pamgene:pamgene_0_10_0][0m
+Main : 2026-09-28 12:56:41.974546 : 5 : CONFIG : [34mUpgradeProcess :   entry: version=0.14.0 date=2024-03-02 13:23:00.368555Z domains=[:default_0_10_0, pamgene:pamgene_0_10_0][0m
+Main : 2026-09-28 12:56:41.974550 : 4 : CONFIG : [34mUpgradeProcess :   entry: version=1.0.1 date=2026-08-28 09:28:03.031586Z domains=[:default_0_10_0, thinkcyte:thinkcyte_0_15_0, pamgene:pamgene_0_10_0][0m
+Main : 2026-09-28 12:56:41.974553 : 3 : CONFIG : [34mUpgradeProcess :   entry: version=0.10.0 date=2023-01-22 11:37:28.700269Z domains=[:default_0_10_0][0m
+Main : 2026-09-28 12:56:41.974557 : 4 : CONFIG : [34mUpgradeProcess :   entry: version=0.8.0 date=2022-03-07 10:51:03.181121Z domains=[:default_0_7_0][0m
+Main : 2026-09-28 12:56:41.974561 : 4 : CONFIG : [34mUpgradeProcess :   entry: version=0.15.0 date=2024-07-12 11:07:43.387391Z domains=[:default_0_10_0, pamgene:pamgene_0_10_0][0m
+Main : 2026-09-28 12:56:41.974565 : 4 : CONFIG : [34mUpgradeProcess :   entry: version=0.16.0 date=2024-11-19 05:43:01.020350Z domains=[:default_0_10_0, thinkcyte:thinkcyte_0_15_0, pamgene:pamgene_0_10_0][0m
+Main : 2026-09-28 12:56:41.974569 : 5 : CONFIG : [34mUpgradeProcess :   entry: version=0.0.0 date=2022-02-14 09:55:19.116451Z domains=[:][0m
+Main : 2026-09-28 12:56:41.974574 : 4 : CONFIG : [34mUpgradeProcess :   entry: version=0.7.0 date=2022-02-15 08:46:39.470567Z domains=[:default_0_7_0][0m
+Main : 2026-09-28 12:56:41.974579 : 5 : CONFIG : [34mUpgradeProcess :   entry: version=0.15.0 date=2024-09-18 15:48:24.959680Z domains=[:default_0_10_0, pamgene:pamgene_0_10_0, thinkcyte.tercen.com:thinkcyte.tercen.com_0_15_0][0m
+Main : 2026-09-28 12:56:41.974584 : 5 : CONFIG : [34mUpgradeProcess :   entry: version=0.15.0 date=2024-09-18 15:49:15.022574Z domains=[:default_0_10_0, pamgene:pamgene_0_10_0, thinkcyte.tercen.com:thinkcyte.tercen.com_0_15_0, thinkcyte:thinkcyte_0_15_0][0m
+Main : 2026-09-28 12:56:41.974588 : 5 : CONFIG : [34mUpgradeProcess :   entry: version=0.9.0 date=2022-04-26 10:25:39.382763Z domains=[:default_0_7_0][0m
+Main : 2026-09-28 12:56:41.974594 : 5 : CONFIG : [34mUpgradeProcess : initializeVersionConfig: 12 entries after filtering[0m
+Main : 2026-09-28 12:56:41.974601 : 7 : CONFIG : [34mUpgradeProcess : initializeVersionConfig: configs.last version=1.0.1 date=2026-08-28 09:28:03.031586Z[0m
+Main : 2026-09-28 12:56:41.974606 : 5 : CONFIG : [34mUpgradeProcess : initializeVersionConfig: all domains present, no new entry needed[0m
+Main : 2026-09-28 12:56:41.974615 : 10 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Main : 2026-09-28 12:56:42.066055 : 91441 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Main : 2026-09-28 12:56:42.066078 : 21 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Main : 2026-09-28 12:56:42.066084 : 6 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Main : 2026-09-28 12:56:42.066197 : 113 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Main : 2026-09-28 12:56:44.366918 : 2300724 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Main : 2026-09-28 12:56:44.366941 : 20 : CONFIG : [34mServiceFactory : Starting removeUnusedIndexes()...[0m
+Main : 2026-09-28 12:56:44.492619 : 125680 : CONFIG : [34mServiceFactory : removeUnusedIndexes() completed[0m
+Main : 2026-09-28 12:56:44.492642 : 21 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Main : 2026-09-28 12:56:44.505254 : 12614 : INFO : [34mGcsStorageService : GCS storage service initialized for bucket: tercen-ring-tercen-stage-data[0m
+Main : 2026-09-28 12:56:44.505275 : 19 : FINEST : [34mCouchService : GCS direct upload enabled for bucket: tercen-ring-tercen-stage-data (mock: false)[0m
+Main : 2026-09-28 12:56:44.505861 : 586 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Main : 2026-09-28 12:56:44.505869 : 8 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:44.523417 : 17549 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Main : 2026-09-28 12:56:44.524431 : 1014 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.525533 : 1101 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Main : 2026-09-28 12:56:44.528817 : 3284 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.528824 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Main : 2026-09-28 12:56:44.528828 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:44.540434 : 11606 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.540502 : 68 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Main : 2026-09-28 12:56:44.540541 : 39 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Main : 2026-09-28 12:56:44.540875 : 334 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Main : 2026-09-28 12:56:44.540879 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:44.554973 : 14095 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Main : 2026-09-28 12:56:44.555851 : 877 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.556822 : 971 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Main : 2026-09-28 12:56:44.559453 : 2632 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.559459 : 5 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Main : 2026-09-28 12:56:44.559462 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:44.569885 : 10424 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.569936 : 50 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Main : 2026-09-28 12:56:44.570884 : 948 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Main : 2026-09-28 12:56:44.570899 : 15 : INFO : [34mTaskService : Task cache service initialized[0m
+Main : 2026-09-28 12:56:44.571001 : 102 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Main : 2026-09-28 12:56:44.571006 : 5 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:44.583424 : 12419 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Main : 2026-09-28 12:56:44.583676 : 252 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.584005 : 328 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Main : 2026-09-28 12:56:44.588039 : 4034 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.588045 : 6 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Main : 2026-09-28 12:56:44.588048 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:44.599714 : 11667 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:44.599760 : 45 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Main : 2026-09-28 12:56:44.599789 : 29 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Main : 2026-09-28 12:56:45.260076 : 660288 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Main : 2026-09-28 12:56:45.260092 : 16 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:45.272005 : 11913 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Main : 2026-09-28 12:56:45.272901 : 896 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:45.273918 : 1016 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Main : 2026-09-28 12:56:45.276614 : 2696 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:45.276620 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Main : 2026-09-28 12:56:45.276624 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:45.292609 : 15985 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Main : 2026-09-28 12:56:45.292657 : 48 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Main : 2026-09-28 12:56:45.292682 : 25 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Main : 2026-09-28 12:56:45.293043 : 361 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Main : 2026-09-28 12:56:45.293047 : 4 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Main : 2026-09-28 12:56:45.293054 : 8 : CONFIG : [34mmain : Starting servers in single-threaded mode[0m
+Main : 2026-09-28 12:56:45.293346 : 292 : CONFIG : [34mHttpServerFactory : Initializing HTTP server factory[0m
+Main : 2026-09-28 12:56:45.293843 : 496 : CONFIG : [34mHttpServerFactory : HTTP server factory initialized[0m
+Main : 2026-09-28 12:56:45.294090 : 247 : CONFIG : [34mmain : Listening -- http://0.0.0.0:5400[0m
+Main : 2026-09-28 12:56:45.294223 : 133 : CONFIG : [34mmain : Listening -- grpc://0.0.0.0:50051[0m
+Main : 2026-09-28 12:56:45.296544 : 2321 : INFO : [34mGrpcWorker : [Worker tercen-worker-worker-16-7866cc694-8m5zt] gRPC server started on port 55051[0m
+Main : 2026-09-28 12:56:45.296551 : 7 : INFO : [34mGrpcWorker : [Worker tercen-worker-worker-16-7866cc694-8m5zt] Registering with scheduler at ha-scheduler.tercen-stage.svc.cluster.local:50051[0m
+Main : 2026-09-28 12:56:45.296578 : 27 : INFO : [34mGrpcWorker : [Worker tercen-worker-worker-16-7866cc694-8m5zt] Registering with URL: http://10.64.5.2:55051[0m
+Worker : 2026-09-28 12:56:45.300932 : 8 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:45.313613 : 12682 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:45.313623 : 10 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:45.313629 : 5 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:45.313637 : 8 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:45.313688 : 51 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:45.313691 : 3 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:45.313732 : 41 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.313736 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.325764 : 12029 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.326621 : 856 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.327382 : 761 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.329892 : 2511 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.329899 : 6 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.329903 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:45.332700 : 36123 : INFO : [34mGrpcWorker : [Worker tercen-worker-worker-16-7866cc694-8m5zt] Registration successful[0m
+Main : 2026-09-28 12:56:45.332924 : 223 : INFO : [34mGrpcWorker : [Worker tercen-worker-worker-16-7866cc694-8m5zt] Starting self-status check (boot grace 30s, interval 10s)[0m
+Main : 2026-09-28 12:56:45.332937 : 13 : INFO : [34mGrpcWorker : [Worker tercen-worker-worker-16-7866cc694-8m5zt] Started successfully[0m
+Main : 2026-09-28 12:56:45.338173 : 5236 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-7866cc694-8m5zt] [Tenant: ] Received ExecuteTask request for task: 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:56:45.338181 : 8 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-7866cc694-8m5zt] [Tenant: ] Executing task 6f687e45-dc21-4934-b133-f67d0226a5c6...[0m
+Main : 2026-09-28 12:56:45.340268 : 2088 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.342412 : 12509 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.342430 : 18 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.342447 : 17 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.342474 : 28 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.342477 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.352451 : 9974 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.353251 : 800 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.354061 : 809 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.357487 : 3427 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.357496 : 8 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.357500 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:45.358638 : 18370 : FINEST : [34mCouchService : Creating new isolate (1/8)[0m
+Worker : 2026-09-28 12:56:45.364787 : 9 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:45.367722 : 10223 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.367737 : 15 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.368603 : 865 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:45.368610 : 7 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:45.368624 : 14 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.368628 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.376742 : 11956 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:45.376752 : 9 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:45.376758 : 6 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:45.376766 : 8 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:45.376821 : 55 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:45.376825 : 4 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:45.376872 : 48 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.376877 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.380894 : 12267 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.381724 : 829 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.382500 : 777 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.384952 : 2451 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.384958 : 6 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.384961 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.387250 : 10374 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.387468 : 217 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.387735 : 268 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.390164 : 2429 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.390170 : 5 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.390173 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.399531 : 9359 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.399548 : 16 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.399565 : 17 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.399597 : 32 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.399601 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.399632 : 14672 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.399655 : 22 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.399668 : 13 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.399877 : 209 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.399881 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.411088 : 11488 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.411353 : 264 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.411488 : 135 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.413530 : 13650 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.414005 : 2517 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.414011 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.414015 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.424043 : 10512 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.426143 : 12129 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.426162 : 19 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.427011 : 849 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:45.427027 : 15 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:45.427046 : 19 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.427051 : 5 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.435778 : 11735 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.438160 : 2382 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.438167 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.438171 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.448948 : 21898 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.449804 : 856 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.450594 : 790 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.451640 : 13469 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.451658 : 18 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.451670 : 12 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:45.451850 : 180 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:45.451853 : 3 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Worker : 2026-09-28 12:56:45.453125 : 2530 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.453145 : 20 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.453148 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.462941 : 9793 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.462957 : 16 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.462970 : 13 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.463153 : 183 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.463157 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:45.466628 : 107990 : FINEST : [34mCouchService : Pre-warmed isolate (1/8)[0m
+Worker : 2026-09-28 12:56:45.474583 : 11427 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.475397 : 813 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.476164 : 767 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.481339 : 9 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:45.492416 : 11078 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:45.492426 : 9 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:45.492431 : 5 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:45.492441 : 11 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:45.492491 : 49 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:45.492493 : 2 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:45.492537 : 44 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.492541 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.500176 : 24013 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.500189 : 12 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.500193 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.503643 : 11103 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.504484 : 841 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.505260 : 776 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.507802 : 2541 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.507810 : 8 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.507814 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.511841 : 11649 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.511860 : 18 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.511872 : 12 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:45.512056 : 184 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:45.512059 : 3 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Worker : 2026-09-28 12:56:45.520769 : 12955 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.520787 : 18 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.520801 : 15 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.520827 : 25 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.520830 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Main : 2026-09-28 12:56:45.526409 : 59782 : FINEST : [34mCouchService : Start isolate task RunComputationTask(6f687e45-dc21-4934-b133-f67d0226a5c6, 3-5bbf7301-bc0d-42b7-8242-4149c6912caf, Instance of 'InitState') -- taskMemory = 9437184000.0 -- availableMemory = 12800000000.0 -- cpuMillicores = 1000m -- availableCpuMillicores = 8000m -- cpuset-cpus = [0m
+Main : 2026-09-28 12:56:45.526458 : 48 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-7866cc694-8m5zt] [Tenant: ] Task 6f687e45-dc21-4934-b133-f67d0226a5c6 completed successfully[0m
+Worker : 2026-09-28 12:56:45.526726 : 14667 : INFO : [34mParams : runZone -- workerUri=http://10.64.5.2:5400 -- task=6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.526741 : 17 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Starting task --owner admin --user /admin --runtimeType RunComputationTask --id 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.531486 : 10657 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.532306 : 819 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.533068 : 762 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.535505 : 2438 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.535512 : 6 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.535516 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.539201 : 12459 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:56:45.539990 : 788 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.545991 : 10476 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.546017 : 26 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.546926 : 909 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:45.546938 : 11 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:45.546959 : 21 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.546963 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.549365 : 9376 : FINEST : [34mCouchService : sendChannel -- bad793e3-bbc8-4a97-9c7b-742aa7b55130 -- evt TaskStateEvent(2026-09-28T12:56:45.549344Z, 6f687e45-dc21-4934-b133-f67d0226a5c6, Instance of 'RunningState')[0m
+Worker : 2026-09-28 12:56:45.549459 : 93 : FINER : [34mStdOperator : Starting StdOperator.run() for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.549486 : 27 : FINEST : [34mCouchService : sendChannel -- bad793e3-bbc8-4a97-9c7b-742aa7b55130 -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:56:45.549521 : 35 : FINER : [34mStdOperator : Creating file result for task 6f687e45-dc21-4934-b133-f67d0226a5c6, project 1878c5a2-4d9d-4c8a-81db-8e55938b67ab[0m
+Worker : 2026-09-28 12:56:45.550213 : 692 : FINEST : [34mEventService : Published TSON event to Redis channel bad793e3-bbc8-4a97-9c7b-742aa7b55130 (208 bytes)[0m
+Worker : 2026-09-28 12:56:45.550270 : 58 : FINEST : [34mEventService : Published TSON event to Redis channel bad793e3-bbc8-4a97-9c7b-742aa7b55130 (228 bytes)[0m
+Worker : 2026-09-28 12:56:45.558094 : 11132 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.558913 : 818 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.559096 : 8826 : FINER : [34mStdOperator : File result created with ID c003534b-8695-42e2-b87d-e85248e965bc for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.559670 : 758 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.559882 : 785 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.559984 : 102 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:56:45.562174 : 2504 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.562183 : 8 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.562186 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.569096 : 9112 : FINER : [34mStdOperator : Running install operator runner for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.574468 : 12282 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.574487 : 19 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.574502 : 15 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.574688 : 187 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.574692 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.586414 : 11723 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.586603 : 189 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.586744 : 140 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.610428 : 23686 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.610449 : 19 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.610453 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.622759 : 12307 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.622788 : 28 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.622801 : 13 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:45.622995 : 194 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:45.622998 : 3 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Main : 2026-09-28 12:56:45.637950 : 111492 : FINEST : [34mCouchService : Pre-warmed isolate (3/8)[0m
+Worker : 2026-09-28 12:56:45.644260 : 9 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:45.659784 : 15524 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:45.659800 : 15 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:45.659807 : 7 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:45.659818 : 11 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:45.659860 : 42 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:45.659862 : 2 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:45.659905 : 43 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.659909 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.669862 : 9955 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.670682 : 819 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.671433 : 750 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.673959 : 2526 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.673966 : 8 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.673971 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.684179 : 10209 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.684205 : 25 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.684223 : 18 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.684256 : 34 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.684260 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.695333 : 11074 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.696163 : 829 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.696915 : 752 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.699485 : 2571 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.699497 : 11 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.699502 : 5 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.710624 : 11123 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.710644 : 19 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.711576 : 933 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:45.711586 : 9 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:45.711603 : 17 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.711607 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.720553 : 8947 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.720759 : 205 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.720931 : 172 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.723604 : 2674 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.723615 : 10 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.723619 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.759552 : 35935 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.759587 : 33 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.759604 : 17 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.759854 : 251 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.759861 : 6 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.771307 : 11447 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.772257 : 950 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.773089 : 831 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.795446 : 22358 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.795461 : 15 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.795466 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.804902 : 9437 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.804922 : 20 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.804934 : 11 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:45.805106 : 172 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:45.805110 : 4 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Main : 2026-09-28 12:56:45.820816 : 182867 : FINEST : [34mCouchService : Pre-warmed isolate (4/8)[0m
+Worker : 2026-09-28 12:56:45.827240 : 9 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:45.840852 : 13613 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:45.840863 : 10 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:45.840868 : 5 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:45.840878 : 10 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:45.840916 : 38 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:45.840919 : 3 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:45.840967 : 48 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.840970 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.850996 : 10027 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.851769 : 772 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.852488 : 719 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.855141 : 2653 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.855149 : 8 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.855153 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.866418 : 11265 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.866439 : 21 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.866454 : 15 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.866480 : 26 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.866483 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.876510 : 10028 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.876844 : 333 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.876992 : 148 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.879476 : 2485 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.879484 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.879488 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.889683 : 10195 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.889705 : 22 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.890569 : 864 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:45.890577 : 8 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:45.890595 : 19 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.890600 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.900358 : 9759 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.901263 : 904 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.902082 : 819 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.905216 : 336122 : FINER : [34mStdOperator : Install operator runner completed for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.905227 : 9 : FINER : [34mStdOperator : Running child runner for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.905946 : 3864 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.905951 : 5 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.905955 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.909808 : 4582 : FINEST : [34mTaskRunnerInstance : Running operator from URL: https://github.com/tercen/repro-large-result-operator[0m
+Worker : 2026-09-28 12:56:45.919008 : 13054 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.919047 : 39 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.919066 : 18 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:45.919396 : 331 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.919513 : 117 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.929277 : 9764 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:45.929480 : 203 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.929649 : 168 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:45.932219 : 2571 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.932227 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:45.932230 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:45.959014 : 26785 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:45.959038 : 23 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:45.959051 : 13 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:45.959238 : 187 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:45.959243 : 5 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Main : 2026-09-28 12:56:45.972483 : 151668 : FINEST : [34mCouchService : Pre-warmed isolate (5/8)[0m
+Worker : 2026-09-28 12:56:45.979168 : 8 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:45.983049 : 73242 : INFO : [34mTaskRunnerInstance : Legacy image detected: docker.io/tercen/runtime-r40:4.0.4-8 (user="root", created=2025-12-12 06:09:05.519943Z) — running without --user flag[0m
+Worker : 2026-09-28 12:56:45.983079 : 28 : FINE : [34mTaskRunnerInstance : Checking operator URL: https://github.com/tercen/repro-large-result-operator[0m
+Worker : 2026-09-28 12:56:45.984744 : 1666 : FINE : [34mTaskRunnerInstance : ExeRunner<RunComputationTask> -- start -- podman run --rm --replace --init --user 0:0 --pids-limit -1 --memory 9438M --memory-swap 9438M --cpus 1 --name=tercen_task_6f687e45-dc21-4934-b133-f67d0226a5c6 --env TERCEN_SERVICE_URI=http://10.64.5.2:5400 --env MALLOC_CONF=background_thread:true,dirty_decay_ms:0,muzzy_decay_ms:0,thp:never,abort_conf:false --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 -e TERCEN_WEB_APP_PORT=8080 --workdir /var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa -e TERCEN_TASK_ID=6f687e45-dc21-4934-b133-f67d0226a5c6 -e R_PROFILE_USER=/var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa/.Rprofile -v /tmp/admin:/tmp:rw -v /var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa:/var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa:ro -v /var/lib/tercen/data/renv:/var/lib/tercen/data/renv:ro docker.io/tercen/runtime-r40:4.0.4-8 -f main.R --args --serviceUri http://10.64.5.2:5400 --token REDACTED --taskId 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:56:45.990920 : 11753 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:45.990936 : 15 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:45.990942 : 6 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:45.990955 : 13 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:45.991023 : 68 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:45.991026 : 3 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:45.991074 : 49 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:45.991079 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.000770 : 9692 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.001586 : 816 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.002407 : 820 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.004986 : 2579 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.004993 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.004998 : 5 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.024543 : 19546 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.024573 : 29 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.024593 : 20 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:46.024632 : 39 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.024636 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.034594 : 9959 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.034840 : 245 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.035033 : 193 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.037719 : 2687 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.037732 : 13 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.037738 : 5 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.062295 : 24558 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.062325 : 29 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.063236 : 911 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:46.063248 : 13 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:46.063271 : 22 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.063277 : 6 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.084703 : 21427 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.084927 : 223 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.085084 : 158 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.087622 : 2537 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.087629 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.087633 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.103073 : 15440 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.103096 : 23 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.103112 : 17 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:46.103378 : 266 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.103385 : 6 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.113557 : 10173 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.114368 : 811 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.115180 : 812 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.142400 : 27221 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.142423 : 21 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.142427 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.155119 : 12694 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.155158 : 37 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.155169 : 11 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:46.155387 : 219 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:46.155396 : 8 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Main : 2026-09-28 12:56:46.168232 : 195749 : FINEST : [34mCouchService : Pre-warmed isolate (6/8)[0m
+Worker : 2026-09-28 12:56:46.174462 : 8 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:46.189298 : 14837 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:46.189309 : 10 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:46.189314 : 5 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:46.189322 : 8 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:46.189375 : 53 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:46.189383 : 8 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:46.189426 : 43 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.189430 : 5 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.199594 : 10163 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.200386 : 792 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.201447 : 1061 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.203997 : 2550 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.204004 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.204007 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.214177 : 10170 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.214208 : 30 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.214223 : 15 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:46.214257 : 34 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.214262 : 5 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.226912 : 12650 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.227124 : 213 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.227282 : 157 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.229882 : 2601 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.229890 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.229893 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.243573 : 13681 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.243594 : 20 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.244491 : 897 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:46.244499 : 8 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:46.244517 : 18 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.244520 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.253822 : 9302 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.254760 : 938 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.255517 : 757 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.257928 : 2411 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.257935 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.257938 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.269533 : 11596 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.269555 : 21 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.269569 : 14 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:46.269796 : 227 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.269804 : 8 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.294954 : 25152 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.295164 : 209 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.295294 : 129 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.308676 : 13383 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.308688 : 11 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.308692 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.319302 : 10611 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.319325 : 22 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.319337 : 12 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:46.319507 : 170 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:46.319510 : 3 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Main : 2026-09-28 12:56:46.341225 : 172992 : FINEST : [34mCouchService : Pre-warmed isolate (7/8)[0m
+Worker : 2026-09-28 12:56:46.347645 : 11 : CONFIG : [34mServiceFactory : ServiceFactory.initialize() started[0m
+Worker : 2026-09-28 12:56:46.359470 : 11825 : CONFIG : [34mServiceFactory : Object store initialized: backend=gcs[0m
+Worker : 2026-09-28 12:56:46.359483 : 12 : CONFIG : [34mServiceFactory : file_service blob I/O routed through the object store[0m
+Worker : 2026-09-28 12:56:46.359488 : 5 : CONFIG : [34mServiceFactory : file_service blob reads cached at /tmp/sarno-blobs[0m
+Worker : 2026-09-28 12:56:46.359499 : 11 : CONFIG : [34mServiceFactory : Initializing 24 services...[0m
+Worker : 2026-09-28 12:56:46.359550 : 51 : CONFIG : [34mServiceFactory : Services initialization completed[0m
+Worker : 2026-09-28 12:56:46.359553 : 4 : CONFIG : [34mServiceFactory : Calling initialized() on all services...[0m
+Worker : 2026-09-28 12:56:46.359598 : 44 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.359602 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.367687 : 8086 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.368507 : 819 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.369301 : 794 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.371843 : 2542 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.371849 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.371853 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.381927 : 10075 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.381947 : 19 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.381966 : 19 : INFO : [34mLockService : LockService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:46.382004 : 38 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.382008 : 4 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.393182 : 11175 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.393364 : 181 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.393492 : 128 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.396026 : 2535 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.396034 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.396038 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.405281 : 9243 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.405300 : 19 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.406214 : 914 : INFO : [34mTaskCacheService : Connected to Redis via Sentinel, Lua script loaded: d7f943bdbf10f9f097e86326974d82324b1df283[0m
+Worker : 2026-09-28 12:56:46.406224 : 10 : INFO : [34mTaskService : Task cache service initialized[0m
+Worker : 2026-09-28 12:56:46.406246 : 22 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.406249 : 3 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.414658 : 8409 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.415452 : 794 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.416178 : 726 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.418710 : 2533 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.418717 : 6 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.418720 : 3 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.437944 : 19226 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.437972 : 26 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.437992 : 20 : INFO : [34mEventService : EventService connected to Redis via Sentinel (master: mymaster)[0m
+Worker : 2026-09-28 12:56:46.438294 : 303 : INFO : [34mRedisSentinelConnection : Discovering Redis master via Sentinel...[0m
+Worker : 2026-09-28 12:56:46.438302 : 8 : FINE : [34mRedisSentinelConnection : Querying Sentinel at redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.471355 : 33054 : INFO : [34mRedisSentinelConnection : Authenticating to Sentinel with username: default, password: ***a92[0m
+Worker : 2026-09-28 12:56:46.472236 : 879 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.473031 : 796 : INFO : [34mRedisSentinelConnection : Discovered Redis master at redis-node-1.redis-headless.tercen-stage.svc.cluster.local:6379[0m
+Worker : 2026-09-28 12:56:46.475566 : 2535 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.475574 : 7 : INFO : [34mRedisSentinelConnection : Connected to Redis master via Sentinel[0m
+Worker : 2026-09-28 12:56:46.475578 : 4 : INFO : [34mRedisSentinelConnection : Starting Sentinel event monitoring on redis-headless.tercen-stage.svc.cluster.local:26379[0m
+Worker : 2026-09-28 12:56:46.484542 : 8965 : FINE : [34mRedisSentinelConnection : Authenticated to Redis with username[0m
+Worker : 2026-09-28 12:56:46.484559 : 16 : INFO : [34mRedisSentinelConnection : Sentinel event monitoring started successfully[0m
+Worker : 2026-09-28 12:56:46.484570 : 12 : INFO : [34mDocumentService : DocumentService: Initialized Redis cache for library documents[0m
+Worker : 2026-09-28 12:56:46.484766 : 195 : CONFIG : [34mServiceFactory : All services initialized() completed[0m
+Worker : 2026-09-28 12:56:46.484769 : 3 : CONFIG : [34mServiceFactory : Factory service initialized[0m
+Main : 2026-09-28 12:56:46.499263 : 158038 : FINEST : [34mCouchService : Pre-warmed isolate (8/8)[0m
+Main : 2026-09-28 12:56:47.350848 : 851585 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:56:47.350871 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:56:47.351897 : 1027 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:56:47.351909 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:56:47.353293 : 1385 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:56:47.353303 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:56:47.353376 : 73 : FINEST : [34mHTTP : 2026-09-28T12:56:47.350718  0:00:00.002650 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:56:47.520603 : 167229 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:56:47.520631 : 26 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:56:47.521621 : 991 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:56:47.521632 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:56:47.522835 : 1204 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:56:47.522843 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:56:47.522870 : 27 : FINEST : [34mHTTP : 2026-09-28T12:56:47.520490  0:00:00.002373 GET     [200] -- {null} -- /_health[0m
+Worker : 2026-09-28 12:56:47.677244 : 1692502 : FINEST : [34mTaskRunnerInstance : _ContainerMemoryTracker -- reading cgroup dir /sys/fs/cgroup/libpod_parent/libpod-e1425c33aea2ee9204db22328fb0b7d0ab183914ab990d4835d121dacda592c2[0m
+Main : 2026-09-28 12:56:52.520520 : 4997653 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:56:52.520545 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:56:52.521584 : 1038 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:56:52.521592 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:56:52.522893 : 1301 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:56:52.522900 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:56:52.522923 : 23 : FINEST : [34mHTTP : 2026-09-28T12:56:52.520395  0:00:00.002521 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:56:57.521080 : 4998159 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:56:57.521106 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:56:57.522182 : 1078 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:56:57.522200 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:56:57.523475 : 1276 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:56:57.523486 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:56:57.523512 : 26 : FINEST : [34mHTTP : 2026-09-28T12:56:57.520970  0:00:00.002536 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:02.520773 : 4997264 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:02.520800 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:02.521953 : 1154 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:02.521973 : 19 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:02.523354 : 1382 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:02.523366 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:02.523400 : 33 : FINEST : [34mHTTP : 2026-09-28T12:57:02.520661  0:00:00.002731 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:02.751569 : 228171 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:57:02.756664 : 5094 : FINEST : [34mHTTP : 2026-09-28T12:57:02.749520  0:00:00.007135 GET     [200] -- {null} -- /api/v1/task?useFactory=true&id=6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:57:02.807710 : 51047 : FINEST : [34mHTTP : 2026-09-28T12:57:02.802755  0:00:00.004944 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 12:57:02.954617 : 146907 : FINEST : [34mHTTP : 2026-09-28T12:57:02.949761  0:00:00.004842 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 12:57:02.962297 : 7680 : FINEST : [34mHTTP : 2026-09-28T12:57:02.957756  0:00:00.004529 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 12:57:02.969033 : 6734 : FINER : [34mTableSchemaService : Starting selectStream for table 4bb40345-a269-4919-b003-b4e0d02b8a44[0m
+Main : 2026-09-28 12:57:02.973009 : 3977 : FINER : [34mTableSchemaService : Starting selectStream for table 4bb40345-a269-4919-b003-b4e0d02b8a44 -- cnames [.ri, .ci, .y][0m
+Main : 2026-09-28 12:57:02.973019 : 9 : FINER : [34mTableSchemaService : Yielding stream for table 4bb40345-a269-4919-b003-b4e0d02b8a44 -- cnames [.ri, .ci, .y] -- with range 0 to 437500[0m
+Main : 2026-09-28 12:57:02.973244 : 225 : FINEST : [34mHTTP : 2026-09-28T12:57:02.968583  0:00:00.004657 POST    [200] -- {null} -- /api/v1/schema/selectStream[0m
+Main : 2026-09-28 12:57:02.973874 : 630 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.ri] relation=SimpleRelation(id=4bb40345-a269-4919-b003-b4e0d02b8a44,nCols=3)[0m
+Main : 2026-09-28 12:57:03.186759 : 212887 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 16445[0m
+Main : 2026-09-28 12:57:03.186812 : 51 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 12:57:03.193869 : 7059 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 1733677[0m
+Main : 2026-09-28 12:57:03.194223 : 353 : FINER : [34mSarno : selectStream yielding table chunk with 433404 rows[0m
+Main : 2026-09-28 12:57:03.194684 : 460 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 12:57:03.195417 : 733 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.ci] relation=SimpleRelation(id=4bb40345-a269-4919-b003-b4e0d02b8a44,nCols=3)[0m
+Main : 2026-09-28 12:57:03.215102 : 19686 : WARNING : [34msarno : [2026-09-28T12:57:02.980Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 12:57:03.215118 : 15 : WARNING : [34msarno : [2026-09-28T12:57:02.980Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 12:57:03.215122 : 4 : WARNING : [34msarno : [2026-09-28T12:57:02.981Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 12:57:03.215124 : 2 : WARNING : [34msarno : [W:15002] [2026-09-28T12:57:03.003Z INFO ] sarno blob store: backend=gcs bucket=tercen-ring-tercen-stage-data cache_dir=/tmp/sarno-blobs[0m
+Main : 2026-09-28 12:57:03.215136 : 12 : WARNING : [34msarno : [W:15002] [2026-09-28T12:57:03.187Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=11085208|limit=6645728|peak_percent=166.8|sent=1750122|received=0|sent_per_sec=8.1 MiB|received_per_sec=0 B|duration_secs=0.206|start=99439[0m
+Main : 2026-09-28 12:57:03.215149 : 13 : WARNING : [34msarno : [2026-09-28T12:57:03.188Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 12:57:03.215153 : 4 : WARNING : [34msarno : [2026-09-28T12:57:03.188Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 12:57:03.215156 : 3 : WARNING : [34msarno : [2026-09-28T12:57:03.201Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 12:57:03.215160 : 4 : WARNING : [34msarno : [2026-09-28T12:57:03.201Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 12:57:03.215163 : 4 : WARNING : [34msarno : [2026-09-28T12:57:03.202Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 12:57:03.224323 : 9160 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 16445[0m
+Main : 2026-09-28 12:57:03.224364 : 40 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 12:57:03.230340 : 5977 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 1733677[0m
+Main : 2026-09-28 12:57:03.230695 : 355 : FINER : [34mSarno : selectStream yielding table chunk with 433404 rows[0m
+Main : 2026-09-28 12:57:03.231309 : 614 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 12:57:03.232080 : 770 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.y] relation=SimpleRelation(id=4bb40345-a269-4919-b003-b4e0d02b8a44,nCols=3)[0m
+Main : 2026-09-28 12:57:03.262215 : 30137 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 32828[0m
+Main : 2026-09-28 12:57:03.262264 : 48 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 12:57:03.276023 : 13760 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 3467292[0m
+Main : 2026-09-28 12:57:03.276686 : 662 : FINER : [34mSarno : selectStream yielding table chunk with 433404 rows[0m
+Main : 2026-09-28 12:57:03.277568 : 882 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 12:57:03.465556 : 187990 : WARNING : [34msarno : [W:15002] [2026-09-28T12:57:03.224Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=5905786|limit=6645728|peak_percent=88.9|sent=1750122|received=0|sent_per_sec=73.6 MiB|received_per_sec=0 B|duration_secs=0.023|start=534555[0m
+Main : 2026-09-28 12:57:03.465597 : 38 : WARNING : [34msarno : [2026-09-28T12:57:03.225Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 12:57:03.465603 : 6 : WARNING : [34msarno : [2026-09-28T12:57:03.225Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 12:57:03.465607 : 4 : WARNING : [34msarno : [2026-09-28T12:57:03.239Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 12:57:03.465611 : 4 : WARNING : [34msarno : [2026-09-28T12:57:03.239Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 12:57:03.465615 : 4 : WARNING : [34msarno : [2026-09-28T12:57:03.239Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 12:57:03.465620 : 5 : WARNING : [34msarno : [W:15002] [2026-09-28T12:57:03.263Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=11139397|limit=10145728|peak_percent=109.8|sent=3500120|received=0|sent_per_sec=137.2 MiB|received_per_sec=0 B|duration_secs=0.024|start=534556[0m
+Main : 2026-09-28 12:57:03.465628 : 8 : WARNING : [34msarno : [2026-09-28T12:57:03.265Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 12:57:03.465633 : 5 : WARNING : [34msarno : [2026-09-28T12:57:03.265Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 12:57:05.628438 : 2162807 : FINEST : [34mHTTP : 2026-09-28T12:57:05.628273  0:00:00.000152 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:57:06.120108 : 491671 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:57:06.128478 : 8368 : FINEST : [34mHTTP : 2026-09-28T12:57:06.118821  0:00:00.009645 GET     [200] -- {null} -- /api/v1/file?id=c003534b-8695-42e2-b87d-e85248e965bc&useFactory=true[0m
+Main : 2026-09-28 12:57:16.808546 : 10680070 : WARNING : [34msarno : [2026-09-28T12:57:11.643Z INFO ] Health monitor: 1 workers healthy[0m
+Main : 2026-09-28 12:57:16.808874 : 325 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:16.808883 : 9 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:19.366051 : 2557170 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:19.366075 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:19.366638 : 565 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:19.366652 : 13 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:23.811296 : 4444645 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:23.811323 : 25 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:26.802671 : 2991350 : FINE : [34mCouchService : upload : collectTaskStats error: Instance of 'TaskService' -- collectTaskStats -- not impl[0m
+Main : 2026-09-28 12:57:26.803274 : 602 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:26.803287 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:26.803326 : 39 : FINEST : [34mHTTP : 2026-09-28T12:57:16.808766  0:00:09.994553 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:26.804023 : 698 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:26.804033 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:26.804937 : 905 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:26.804946 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:26.805698 : 752 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:26.805705 : 8 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:26.807002 : 1296 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:57:26.807632 : 631 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:26.807637 : 5 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:26.807662 : 24 : FINEST : [34mHTTP : 2026-09-28T12:57:19.365950  0:00:07.441706 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:26.807911 : 249 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:26.807914 : 3 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:26.807926 : 12 : FINEST : [34mHTTP : 2026-09-28T12:57:19.366547  0:00:07.441376 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:26.808725 : 799 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:26.808731 : 6 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:26.809269 : 538 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:26.809275 : 6 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:26.810411 : 1136 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:26.810418 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:26.810435 : 17 : FINEST : [34mHTTP : 2026-09-28T12:57:26.805605  0:00:00.004826 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:26.810933 : 498 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:26.810938 : 5 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:26.812041 : 1104 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:26.812047 : 5 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:26.812061 : 14 : FINEST : [34mHTTP : 2026-09-28T12:57:26.808636  0:00:00.003421 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:26.852908 : 40848 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/22/84/22848323-234d-469b-b1e6-78147412ac5b[0m
+Main : 2026-09-28 12:57:26.923537 : 70630 : FINE : [34mGcsResumableUpload : Initiated resumable upload: https://storage.googleapis.com/upload/storage/v1/b/tercen-ring-tercen-stage-data/o?uploadType=resumable&upload_id=AP6rU83YpKVzkWQdIWQPpndvKOoWcAb66rjMlialSoRYYtb8PlRYB9rmzmQ-Rs8GkUyA6TrZRBAv5Befrla1fZajWCP3BWyuy-JI4mV_pB9XV2YD[0m
+Main : 2026-09-28 12:57:27.312257 : 388720 : FINE : [34mGcsResumableUpload : Chunk uploaded: 0-16777215, total: 16777216 bytes[0m
+Main : 2026-09-28 12:57:27.719498 : 407241 : FINE : [34mGcsResumableUpload : Chunk uploaded: 16777216-33554431, total: 33554432 bytes[0m
+Main : 2026-09-28 12:57:28.109084 : 389587 : FINE : [34mGcsResumableUpload : Chunk uploaded: 33554432-50331647, total: 50331648 bytes[0m
+Main : 2026-09-28 12:57:28.551624 : 442540 : FINE : [34mGcsResumableUpload : Chunk uploaded: 50331648-67108863, total: 67108864 bytes[0m
+Main : 2026-09-28 12:57:28.930185 : 378560 : FINE : [34mGcsResumableUpload : Chunk uploaded: 67108864-83886079, total: 83886080 bytes[0m
+Main : 2026-09-28 12:57:29.318570 : 388385 : FINE : [34mGcsResumableUpload : Chunk uploaded: 83886080-100663295, total: 100663296 bytes[0m
+Main : 2026-09-28 12:57:29.700348 : 381778 : FINE : [34mGcsResumableUpload : Chunk uploaded: 100663296-117440511, total: 117440512 bytes[0m
+Main : 2026-09-28 12:57:30.107381 : 407034 : FINE : [34mGcsResumableUpload : Chunk uploaded: 117440512-134217727, total: 134217728 bytes[0m
+Main : 2026-09-28 12:57:30.490244 : 382862 : FINE : [34mGcsResumableUpload : Chunk uploaded: 134217728-150994943, total: 150994944 bytes[0m
+Main : 2026-09-28 12:57:30.701116 : 210872 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:30.701149 : 31 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:30.702270 : 1122 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:30.702281 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:30.703575 : 1295 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:30.703585 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:30.703612 : 26 : FINEST : [34mHTTP : 2026-09-28T12:57:30.701017  0:00:00.002588 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:30.878114 : 174504 : FINE : [34mGcsResumableUpload : Chunk uploaded: 150994944-167772159, total: 167772160 bytes[0m
+Main : 2026-09-28 12:57:31.271487 : 393374 : FINE : [34mGcsResumableUpload : Chunk uploaded: 167772160-184549375, total: 184549376 bytes[0m
+Main : 2026-09-28 12:57:31.656822 : 385334 : FINE : [34mGcsResumableUpload : Chunk uploaded: 184549376-201326591, total: 201326592 bytes[0m
+Main : 2026-09-28 12:57:32.044521 : 387698 : FINE : [34mGcsResumableUpload : Chunk uploaded: 201326592-218103807, total: 218103808 bytes[0m
+Main : 2026-09-28 12:57:32.431791 : 387272 : FINE : [34mGcsResumableUpload : Chunk uploaded: 218103808-234881023, total: 234881024 bytes[0m
+Main : 2026-09-28 12:57:32.830438 : 398646 : FINE : [34mGcsResumableUpload : Chunk uploaded: 234881024-251658239, total: 251658240 bytes[0m
+Main : 2026-09-28 12:57:33.211759 : 381321 : FINE : [34mGcsResumableUpload : Chunk uploaded: 251658240-268435455, total: 268435456 bytes[0m
+Main : 2026-09-28 12:57:33.602301 : 390542 : FINE : [34mGcsResumableUpload : Chunk uploaded: 268435456-285212671, total: 285212672 bytes[0m
+Main : 2026-09-28 12:57:33.986507 : 384206 : FINE : [34mGcsResumableUpload : Chunk uploaded: 285212672-301989887, total: 301989888 bytes[0m
+Main : 2026-09-28 12:57:34.390383 : 403876 : FINE : [34mGcsResumableUpload : Chunk uploaded: 301989888-318767103, total: 318767104 bytes[0m
+Main : 2026-09-28 12:57:34.785146 : 394763 : FINE : [34mGcsResumableUpload : Chunk uploaded: 318767104-335544319, total: 335544320 bytes[0m
+Main : 2026-09-28 12:57:35.185798 : 400652 : FINE : [34mGcsResumableUpload : Chunk uploaded: 335544320-352321535, total: 352321536 bytes[0m
+Main : 2026-09-28 12:57:35.530368 : 344571 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:35.530392 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:35.531497 : 1106 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:35.531508 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:35.532722 : 1214 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:35.532728 : 5 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:35.532750 : 23 : FINEST : [34mHTTP : 2026-09-28T12:57:35.530266  0:00:00.002478 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:35.571027 : 38278 : FINE : [34mGcsResumableUpload : Chunk uploaded: 352321536-369098751, total: 369098752 bytes[0m
+Main : 2026-09-28 12:57:35.790720 : 219693 : FINEST : [34mHTTP : 2026-09-28T12:57:35.790583  0:00:00.000124 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:57:36.009019 : 218300 : FINE : [34mGcsResumableUpload : Chunk uploaded: 369098752-385875967, total: 385875968 bytes[0m
+Main : 2026-09-28 12:57:36.392680 : 383660 : FINE : [34mGcsResumableUpload : Chunk uploaded: 385875968-402653183, total: 402653184 bytes[0m
+Main : 2026-09-28 12:57:36.793033 : 400353 : FINE : [34mGcsResumableUpload : Chunk uploaded: 402653184-419430399, total: 419430400 bytes[0m
+Main : 2026-09-28 12:57:37.187119 : 394086 : FINE : [34mGcsResumableUpload : Chunk uploaded: 419430400-436207615, total: 436207616 bytes[0m
+Main : 2026-09-28 12:57:37.571881 : 384762 : FINE : [34mGcsResumableUpload : Chunk uploaded: 436207616-452984831, total: 452984832 bytes[0m
+Main : 2026-09-28 12:57:37.954932 : 383051 : FINE : [34mGcsResumableUpload : Chunk uploaded: 452984832-469762047, total: 469762048 bytes[0m
+Main : 2026-09-28 12:57:38.348024 : 393092 : FINE : [34mGcsResumableUpload : Chunk uploaded: 469762048-486539263, total: 486539264 bytes[0m
+Main : 2026-09-28 12:57:38.728870 : 380847 : FINE : [34mGcsResumableUpload : Chunk uploaded: 486539264-503316479, total: 503316480 bytes[0m
+Main : 2026-09-28 12:57:39.124202 : 395331 : FINE : [34mGcsResumableUpload : Chunk uploaded: 503316480-520093695, total: 520093696 bytes[0m
+Main : 2026-09-28 12:57:39.504443 : 380241 : FINE : [34mGcsResumableUpload : Chunk uploaded: 520093696-536870911, total: 536870912 bytes[0m
+Main : 2026-09-28 12:57:39.903544 : 399101 : FINE : [34mGcsResumableUpload : Chunk uploaded: 536870912-553648127, total: 553648128 bytes[0m
+Main : 2026-09-28 12:57:40.285682 : 382138 : FINE : [34mGcsResumableUpload : Chunk uploaded: 553648128-570425343, total: 570425344 bytes[0m
+Main : 2026-09-28 12:57:40.530335 : 244654 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:40.530361 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:40.531464 : 1104 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:40.531476 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:40.532811 : 1335 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:40.532822 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:40.532848 : 26 : FINEST : [34mHTTP : 2026-09-28T12:57:40.530234  0:00:00.002607 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:40.682997 : 150151 : FINE : [34mGcsResumableUpload : Chunk uploaded: 570425344-587202559, total: 587202560 bytes[0m
+Main : 2026-09-28 12:57:41.070059 : 387062 : FINE : [34mGcsResumableUpload : Chunk uploaded: 587202560-603979775, total: 603979776 bytes[0m
+Main : 2026-09-28 12:57:41.470163 : 400104 : FINE : [34mGcsResumableUpload : Chunk uploaded: 603979776-620756991, total: 620756992 bytes[0m
+Main : 2026-09-28 12:57:41.815664 : 345502 : WARNING : [34msarno : [2026-09-28T12:57:41.644Z INFO ] Health monitor: 1 workers healthy[0m
+Main : 2026-09-28 12:57:41.925668 : 110003 : FINE : [34mGcsResumableUpload : Chunk uploaded: 620756992-637534207, total: 637534208 bytes[0m
+Main : 2026-09-28 12:57:42.321874 : 396206 : FINE : [34mGcsResumableUpload : Chunk uploaded: 637534208-654311423, total: 654311424 bytes[0m
+Main : 2026-09-28 12:57:42.728185 : 406312 : FINE : [34mGcsResumableUpload : Chunk uploaded: 654311424-671088639, total: 671088640 bytes[0m
+Main : 2026-09-28 12:57:43.119943 : 391758 : FINE : [34mGcsResumableUpload : Chunk uploaded: 671088640-687865855, total: 687865856 bytes[0m
+Main : 2026-09-28 12:57:43.575744 : 455801 : FINE : [34mGcsResumableUpload : Chunk uploaded: 687865856-704643071, total: 704643072 bytes[0m
+Main : 2026-09-28 12:57:43.969620 : 393876 : FINE : [34mGcsResumableUpload : Chunk uploaded: 704643072-721420287, total: 721420288 bytes[0m
+Main : 2026-09-28 12:57:44.404140 : 434520 : FINE : [34mGcsResumableUpload : Chunk uploaded: 721420288-738197503, total: 738197504 bytes[0m
+Main : 2026-09-28 12:57:44.826097 : 421957 : FINE : [34mGcsResumableUpload : Chunk uploaded: 738197504-754974719, total: 754974720 bytes[0m
+Main : 2026-09-28 12:57:45.216299 : 390202 : FINE : [34mGcsResumableUpload : Chunk uploaded: 754974720-771751935, total: 771751936 bytes[0m
+Main : 2026-09-28 12:57:45.530367 : 314067 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:45.530391 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:45.531526 : 1136 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:45.531539 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:45.532911 : 1373 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:45.532922 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:45.532949 : 27 : FINEST : [34mHTTP : 2026-09-28T12:57:45.530265  0:00:00.002677 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:45.652851 : 119904 : FINE : [34mGcsResumableUpload : Chunk uploaded: 771751936-788529151, total: 788529152 bytes[0m
+Main : 2026-09-28 12:57:46.062605 : 409754 : FINE : [34mGcsResumableUpload : Chunk uploaded: 788529152-805306367, total: 805306368 bytes[0m
+Main : 2026-09-28 12:57:46.446069 : 383464 : FINE : [34mGcsResumableUpload : Chunk uploaded: 805306368-822083583, total: 822083584 bytes[0m
+Main : 2026-09-28 12:57:46.829212 : 383143 : FINE : [34mGcsResumableUpload : Chunk uploaded: 822083584-838860799, total: 838860800 bytes[0m
+Main : 2026-09-28 12:57:47.209692 : 380480 : FINE : [34mGcsResumableUpload : Chunk uploaded: 838860800-855638015, total: 855638016 bytes[0m
+Main : 2026-09-28 12:57:47.595191 : 385499 : FINE : [34mGcsResumableUpload : Chunk uploaded: 855638016-872415231, total: 872415232 bytes[0m
+Main : 2026-09-28 12:57:47.994899 : 399708 : FINE : [34mGcsResumableUpload : Chunk uploaded: 872415232-889192447, total: 889192448 bytes[0m
+Main : 2026-09-28 12:57:48.379971 : 385072 : FINE : [34mGcsResumableUpload : Chunk uploaded: 889192448-905969663, total: 905969664 bytes[0m
+Main : 2026-09-28 12:57:48.788708 : 408738 : FINE : [34mGcsResumableUpload : Chunk uploaded: 905969664-922746879, total: 922746880 bytes[0m
+Main : 2026-09-28 12:57:49.190164 : 401455 : FINE : [34mGcsResumableUpload : Chunk uploaded: 922746880-939524095, total: 939524096 bytes[0m
+Main : 2026-09-28 12:57:49.573693 : 383529 : FINE : [34mGcsResumableUpload : Chunk uploaded: 939524096-956301311, total: 956301312 bytes[0m
+Main : 2026-09-28 12:57:49.963025 : 389332 : FINE : [34mGcsResumableUpload : Chunk uploaded: 956301312-973078527, total: 973078528 bytes[0m
+Main : 2026-09-28 12:57:50.357894 : 394869 : FINE : [34mGcsResumableUpload : Chunk uploaded: 973078528-989855743, total: 989855744 bytes[0m
+Main : 2026-09-28 12:57:50.567580 : 209686 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:50.567603 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:50.568938 : 1335 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:50.568955 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:50.570271 : 1316 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:50.570280 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:50.570308 : 28 : FINEST : [34mHTTP : 2026-09-28T12:57:50.567482  0:00:00.002820 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:50.764975 : 194669 : FINE : [34mGcsResumableUpload : Chunk uploaded: 989855744-1006632959, total: 1006632960 bytes[0m
+Main : 2026-09-28 12:57:51.157069 : 392094 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1006632960-1023410175, total: 1023410176 bytes[0m
+Main : 2026-09-28 12:57:51.535576 : 378508 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1023410176-1040187391, total: 1040187392 bytes[0m
+Main : 2026-09-28 12:57:51.920899 : 385322 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1040187392-1056964607, total: 1056964608 bytes[0m
+Main : 2026-09-28 12:57:52.307048 : 386150 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1056964608-1073741823, total: 1073741824 bytes[0m
+Main : 2026-09-28 12:57:52.705511 : 398462 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1073741824-1090519039, total: 1090519040 bytes[0m
+Main : 2026-09-28 12:57:53.090463 : 384952 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1090519040-1107296255, total: 1107296256 bytes[0m
+Main : 2026-09-28 12:57:53.476648 : 386185 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1107296256-1124073471, total: 1124073472 bytes[0m
+Main : 2026-09-28 12:57:53.884179 : 407531 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1124073472-1140850687, total: 1140850688 bytes[0m
+Main : 2026-09-28 12:57:54.274460 : 390281 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1140850688-1157627903, total: 1157627904 bytes[0m
+Main : 2026-09-28 12:57:54.691003 : 416543 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1157627904-1174405119, total: 1174405120 bytes[0m
+Main : 2026-09-28 12:57:55.066742 : 375739 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1174405120-1191182335, total: 1191182336 bytes[0m
+Main : 2026-09-28 12:57:55.448552 : 381811 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1191182336-1207959551, total: 1207959552 bytes[0m
+Main : 2026-09-28 12:57:55.658615 : 210062 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:57:55.658636 : 19 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:57:55.659734 : 1099 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:57:55.659745 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:57:55.661064 : 1320 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:57:55.661075 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:57:55.661102 : 26 : FINEST : [34mHTTP : 2026-09-28T12:57:55.658516  0:00:00.002580 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:57:55.841038 : 179938 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1207959552-1224736767, total: 1224736768 bytes[0m
+Main : 2026-09-28 12:57:56.222375 : 381338 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1224736768-1241513983, total: 1241513984 bytes[0m
+Main : 2026-09-28 12:57:56.613639 : 391263 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1241513984-1258291199, total: 1258291200 bytes[0m
+Main : 2026-09-28 12:57:56.999965 : 386326 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1258291200-1275068415, total: 1275068416 bytes[0m
+Main : 2026-09-28 12:57:57.385094 : 385129 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1275068416-1291845631, total: 1291845632 bytes[0m
+Main : 2026-09-28 12:57:57.764664 : 379570 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1291845632-1308622847, total: 1308622848 bytes[0m
+Main : 2026-09-28 12:57:58.150320 : 385656 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1308622848-1325400063, total: 1325400064 bytes[0m
+Main : 2026-09-28 12:57:58.549802 : 399483 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1325400064-1342177279, total: 1342177280 bytes[0m
+Main : 2026-09-28 12:57:58.944010 : 394208 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1342177280-1358954495, total: 1358954496 bytes[0m
+Main : 2026-09-28 12:57:59.320615 : 376604 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1358954496-1375731711, total: 1375731712 bytes[0m
+Main : 2026-09-28 12:57:59.701322 : 380708 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1375731712-1392508927, total: 1392508928 bytes[0m
+Main : 2026-09-28 12:58:00.074316 : 372994 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1392508928-1409286143, total: 1409286144 bytes[0m
+Main : 2026-09-28 12:58:00.462811 : 388494 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1409286144-1426063359, total: 1426063360 bytes[0m
+Main : 2026-09-28 12:58:00.689042 : 226231 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:00.689068 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:00.690312 : 1246 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:00.690324 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:00.692013 : 1690 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:00.692023 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:00.692051 : 28 : FINEST : [34mHTTP : 2026-09-28T12:58:00.688905  0:00:00.003140 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:00.868936 : 176887 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1426063360-1442840575, total: 1442840576 bytes[0m
+Main : 2026-09-28 12:58:01.276884 : 407949 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1442840576-1459617791, total: 1459617792 bytes[0m
+Main : 2026-09-28 12:58:01.663170 : 386285 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1459617792-1476395007, total: 1476395008 bytes[0m
+Main : 2026-09-28 12:58:02.048455 : 385285 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1476395008-1493172223, total: 1493172224 bytes[0m
+Main : 2026-09-28 12:58:02.440309 : 391854 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1493172224-1509949439, total: 1509949440 bytes[0m
+Main : 2026-09-28 12:58:02.836011 : 395702 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1509949440-1526726655, total: 1526726656 bytes[0m
+Main : 2026-09-28 12:58:03.227627 : 391616 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1526726656-1543503871, total: 1543503872 bytes[0m
+Main : 2026-09-28 12:58:03.613456 : 385829 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1543503872-1560281087, total: 1560281088 bytes[0m
+Main : 2026-09-28 12:58:04.033570 : 420115 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1560281088-1577058303, total: 1577058304 bytes[0m
+Main : 2026-09-28 12:58:04.418576 : 385005 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1577058304-1593835519, total: 1593835520 bytes[0m
+Main : 2026-09-28 12:58:04.805642 : 387066 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1593835520-1610612735, total: 1610612736 bytes[0m
+Main : 2026-09-28 12:58:05.183512 : 377871 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1610612736-1627389951, total: 1627389952 bytes[0m
+Main : 2026-09-28 12:58:05.529766 : 346253 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:05.529790 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:05.530828 : 1039 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:05.530840 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:05.532117 : 1277 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:05.532139 : 22 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:05.532167 : 28 : FINEST : [34mHTTP : 2026-09-28T12:58:05.529663  0:00:00.002498 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:05.571584 : 39419 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1627389952-1644167167, total: 1644167168 bytes[0m
+Main : 2026-09-28 12:58:05.783141 : 211557 : FINEST : [34mHTTP : 2026-09-28T12:58:05.782985  0:00:00.000131 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:58:05.962081 : 178941 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1644167168-1660944383, total: 1660944384 bytes[0m
+Main : 2026-09-28 12:58:06.371301 : 409219 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1660944384-1677721599, total: 1677721600 bytes[0m
+Main : 2026-09-28 12:58:06.795079 : 423778 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1677721600-1694498815, total: 1694498816 bytes[0m
+Main : 2026-09-28 12:58:07.214056 : 418976 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1694498816-1711276031, total: 1711276032 bytes[0m
+Main : 2026-09-28 12:58:07.596522 : 382467 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1711276032-1728053247, total: 1728053248 bytes[0m
+Main : 2026-09-28 12:58:07.980298 : 383776 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1728053248-1744830463, total: 1744830464 bytes[0m
+Main : 2026-09-28 12:58:08.372423 : 392125 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1744830464-1761607679, total: 1761607680 bytes[0m
+Main : 2026-09-28 12:58:08.763403 : 390980 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1761607680-1778384895, total: 1778384896 bytes[0m
+Main : 2026-09-28 12:58:09.148035 : 384633 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1778384896-1795162111, total: 1795162112 bytes[0m
+Main : 2026-09-28 12:58:09.538319 : 390284 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1795162112-1811939327, total: 1811939328 bytes[0m
+Main : 2026-09-28 12:58:09.932808 : 394488 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1811939328-1828716543, total: 1828716544 bytes[0m
+Main : 2026-09-28 12:58:10.322999 : 390191 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1828716544-1845493759, total: 1845493760 bytes[0m
+Main : 2026-09-28 12:58:10.533627 : 210628 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:10.533652 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:10.534811 : 1160 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:10.534828 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:10.536216 : 1389 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:10.536230 : 13 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:10.536259 : 29 : FINEST : [34mHTTP : 2026-09-28T12:58:10.533529  0:00:00.002724 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:10.712418 : 176161 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1845493760-1862270975, total: 1862270976 bytes[0m
+Main : 2026-09-28 12:58:11.101514 : 389096 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1862270976-1879048191, total: 1879048192 bytes[0m
+Main : 2026-09-28 12:58:11.483412 : 381898 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1879048192-1895825407, total: 1895825408 bytes[0m
+Main : 2026-09-28 12:58:11.892010 : 408598 : WARNING : [34msarno : [2026-09-28T12:58:11.645Z INFO ] Health monitor: 1 workers healthy[0m
+Main : 2026-09-28 12:58:11.913228 : 21217 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1895825408-1912602623, total: 1912602624 bytes[0m
+Main : 2026-09-28 12:58:12.292369 : 379142 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1912602624-1929379839, total: 1929379840 bytes[0m
+Main : 2026-09-28 12:58:12.713202 : 420833 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1929379840-1946157055, total: 1946157056 bytes[0m
+Main : 2026-09-28 12:58:13.099477 : 386275 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1946157056-1962934271, total: 1962934272 bytes[0m
+Main : 2026-09-28 12:58:13.482212 : 382735 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1962934272-1979711487, total: 1979711488 bytes[0m
+Main : 2026-09-28 12:58:13.863537 : 381326 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1979711488-1996488703, total: 1996488704 bytes[0m
+Main : 2026-09-28 12:58:14.252304 : 388766 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1996488704-2013265919, total: 2013265920 bytes[0m
+Main : 2026-09-28 12:58:14.653487 : 401183 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2013265920-2030043135, total: 2030043136 bytes[0m
+Main : 2026-09-28 12:58:15.031669 : 378182 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2030043136-2046820351, total: 2046820352 bytes[0m
+Main : 2026-09-28 12:58:15.413729 : 382060 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2046820352-2063597567, total: 2063597568 bytes[0m
+Main : 2026-09-28 12:58:15.623343 : 209614 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:15.623367 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:15.624585 : 1220 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:15.624596 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:15.625907 : 1311 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:15.625916 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:15.625939 : 23 : FINEST : [34mHTTP : 2026-09-28T12:58:15.623211  0:00:00.002721 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:15.799840 : 173904 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2063597568-2080374783, total: 2080374784 bytes[0m
+Main : 2026-09-28 12:58:16.201592 : 401752 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2080374784-2097151999, total: 2097152000 bytes[0m
+Main : 2026-09-28 12:58:16.589383 : 387790 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2097152000-2113929215, total: 2113929216 bytes[0m
+Main : 2026-09-28 12:58:16.982655 : 393273 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2113929216-2130706431, total: 2130706432 bytes[0m
+Main : 2026-09-28 12:58:17.406095 : 423439 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2130706432-2147483647, total: 2147483648 bytes[0m
+Main : 2026-09-28 12:58:17.794774 : 388679 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2147483648-2164260863, total: 2164260864 bytes[0m
+Main : 2026-09-28 12:58:18.171796 : 377022 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2164260864-2181038079, total: 2181038080 bytes[0m
+Main : 2026-09-28 12:58:18.566524 : 394728 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2181038080-2197815295, total: 2197815296 bytes[0m
+Main : 2026-09-28 12:58:18.953893 : 387370 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2197815296-2214592511, total: 2214592512 bytes[0m
+Main : 2026-09-28 12:58:19.332170 : 378277 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2214592512-2231369727, total: 2231369728 bytes[0m
+Main : 2026-09-28 12:58:19.709211 : 377040 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2231369728-2248146943, total: 2248146944 bytes[0m
+Main : 2026-09-28 12:58:20.098731 : 389521 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2248146944-2264924159, total: 2264924160 bytes[0m
+Main : 2026-09-28 12:58:20.484183 : 385452 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2264924160-2281701375, total: 2281701376 bytes[0m
+Main : 2026-09-28 12:58:20.694953 : 210769 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:20.694975 : 20 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:20.696039 : 1065 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:20.696050 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:20.697291 : 1241 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:20.697298 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:20.697321 : 23 : FINEST : [34mHTTP : 2026-09-28T12:58:20.694856  0:00:00.002460 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:20.865171 : 167852 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2281701376-2298478591, total: 2298478592 bytes[0m
+Main : 2026-09-28 12:58:21.239761 : 374590 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2298478592-2315255807, total: 2315255808 bytes[0m
+Main : 2026-09-28 12:58:21.628110 : 388349 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2315255808-2332033023, total: 2332033024 bytes[0m
+Main : 2026-09-28 12:58:22.034332 : 406222 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2332033024-2348810239, total: 2348810240 bytes[0m
+Main : 2026-09-28 12:58:22.675957 : 641625 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2348810240-2365587455, total: 2365587456 bytes[0m
+Main : 2026-09-28 12:58:23.070879 : 394923 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2365587456-2382364671, total: 2382364672 bytes[0m
+Main : 2026-09-28 12:58:23.452322 : 381442 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2382364672-2399141887, total: 2399141888 bytes[0m
+Main : 2026-09-28 12:58:23.834518 : 382196 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2399141888-2415919103, total: 2415919104 bytes[0m
+Main : 2026-09-28 12:58:24.228880 : 394363 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2415919104-2432696319, total: 2432696320 bytes[0m
+Main : 2026-09-28 12:58:24.624363 : 395482 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2432696320-2449473535, total: 2449473536 bytes[0m
+Main : 2026-09-28 12:58:25.003984 : 379621 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2449473536-2466250751, total: 2466250752 bytes[0m
+Main : 2026-09-28 12:58:25.382606 : 378622 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2466250752-2483027967, total: 2483027968 bytes[0m
+Main : 2026-09-28 12:58:25.599071 : 216465 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:25.599095 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:25.600206 : 1112 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:25.600219 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:25.601692 : 1474 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:25.601704 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:25.601731 : 27 : FINEST : [34mHTTP : 2026-09-28T12:58:25.598971  0:00:00.002754 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:25.772500 : 170771 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2483027968-2499805183, total: 2499805184 bytes[0m
+Main : 2026-09-28 12:58:26.149279 : 376779 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2499805184-2516582399, total: 2516582400 bytes[0m
+Main : 2026-09-28 12:58:26.542217 : 392938 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2516582400-2533359615, total: 2533359616 bytes[0m
+Main : 2026-09-28 12:58:26.926685 : 384468 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2533359616-2550136831, total: 2550136832 bytes[0m
+Main : 2026-09-28 12:58:27.304800 : 378116 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2550136832-2566914047, total: 2566914048 bytes[0m
+Main : 2026-09-28 12:58:27.691735 : 386934 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2566914048-2583691263, total: 2583691264 bytes[0m
+Main : 2026-09-28 12:58:28.112163 : 420429 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2583691264-2600468479, total: 2600468480 bytes[0m
+Main : 2026-09-28 12:58:28.494585 : 382421 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2600468480-2617245695, total: 2617245696 bytes[0m
+Main : 2026-09-28 12:58:28.911223 : 416638 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2617245696-2634022911, total: 2634022912 bytes[0m
+Main : 2026-09-28 12:58:29.288186 : 376963 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2634022912-2650800127, total: 2650800128 bytes[0m
+Main : 2026-09-28 12:58:29.683430 : 395245 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2650800128-2667577343, total: 2667577344 bytes[0m
+Main : 2026-09-28 12:58:30.071538 : 388107 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2667577344-2684354559, total: 2684354560 bytes[0m
+Main : 2026-09-28 12:58:30.463885 : 392347 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2684354560-2701131775, total: 2701131776 bytes[0m
+Main : 2026-09-28 12:58:30.675247 : 211362 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:30.675270 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:30.676440 : 1171 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:30.676458 : 17 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:30.677893 : 1436 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:30.677907 : 13 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:30.677936 : 29 : FINEST : [34mHTTP : 2026-09-28T12:58:30.675146  0:00:00.002784 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:30.847252 : 169318 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2701131776-2717908991, total: 2717908992 bytes[0m
+Main : 2026-09-28 12:58:31.227696 : 380444 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2717908992-2734686207, total: 2734686208 bytes[0m
+Main : 2026-09-28 12:58:31.621372 : 393676 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2734686208-2751463423, total: 2751463424 bytes[0m
+Main : 2026-09-28 12:58:32.005373 : 384001 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2751463424-2768240639, total: 2768240640 bytes[0m
+Main : 2026-09-28 12:58:32.383464 : 378091 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2768240640-2785017855, total: 2785017856 bytes[0m
+Main : 2026-09-28 12:58:32.773436 : 389972 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2785017856-2801795071, total: 2801795072 bytes[0m
+Main : 2026-09-28 12:58:33.154680 : 381245 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2801795072-2818572287, total: 2818572288 bytes[0m
+Main : 2026-09-28 12:58:33.536430 : 381749 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2818572288-2835349503, total: 2835349504 bytes[0m
+Main : 2026-09-28 12:58:33.936764 : 400334 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2835349504-2852126719, total: 2852126720 bytes[0m
+Main : 2026-09-28 12:58:34.333423 : 396659 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2852126720-2868903935, total: 2868903936 bytes[0m
+Main : 2026-09-28 12:58:34.756749 : 423326 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2868903936-2885681151, total: 2885681152 bytes[0m
+Main : 2026-09-28 12:58:35.151488 : 394739 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2885681152-2902458367, total: 2902458368 bytes[0m
+Main : 2026-09-28 12:58:35.530573 : 379085 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:35.530597 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:35.531569 : 973 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:35.531578 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:35.532828 : 1249 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:35.532835 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:35.532859 : 24 : FINEST : [34mHTTP : 2026-09-28T12:58:35.530467  0:00:00.002385 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:35.542221 : 9363 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2902458368-2919235583, total: 2919235584 bytes[0m
+Main : 2026-09-28 12:58:35.752841 : 210621 : FINEST : [34mHTTP : 2026-09-28T12:58:35.752705  0:00:00.000124 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:58:35.921355 : 168514 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2919235584-2936012799, total: 2936012800 bytes[0m
+Main : 2026-09-28 12:58:36.326389 : 405035 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2936012800-2952790015, total: 2952790016 bytes[0m
+Main : 2026-09-28 12:58:36.713339 : 386950 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2952790016-2969567231, total: 2969567232 bytes[0m
+Main : 2026-09-28 12:58:37.101607 : 388268 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2969567232-2986344447, total: 2986344448 bytes[0m
+Main : 2026-09-28 12:58:37.488839 : 387231 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2986344448-3003121663, total: 3003121664 bytes[0m
+Main : 2026-09-28 12:58:37.864802 : 375963 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3003121664-3019898879, total: 3019898880 bytes[0m
+Main : 2026-09-28 12:58:38.276751 : 411949 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3019898880-3036676095, total: 3036676096 bytes[0m
+Main : 2026-09-28 12:58:38.664877 : 388126 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3036676096-3053453311, total: 3053453312 bytes[0m
+Main : 2026-09-28 12:58:39.077394 : 412517 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3053453312-3070230527, total: 3070230528 bytes[0m
+Main : 2026-09-28 12:58:39.463885 : 386491 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3070230528-3087007743, total: 3087007744 bytes[0m
+Main : 2026-09-28 12:58:39.915662 : 451777 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3087007744-3103784959, total: 3103784960 bytes[0m
+Main : 2026-09-28 12:58:40.290239 : 374577 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3103784960-3120562175, total: 3120562176 bytes[0m
+Main : 2026-09-28 12:58:40.530498 : 240259 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:40.530521 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:40.531575 : 1055 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:40.531587 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:40.532824 : 1238 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:40.532833 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:40.532858 : 25 : FINEST : [34mHTTP : 2026-09-28T12:58:40.530397  0:00:00.002455 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:40.679844 : 146988 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3120562176-3137339391, total: 3137339392 bytes[0m
+Main : 2026-09-28 12:58:41.065139 : 385295 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3137339392-3154116607, total: 3154116608 bytes[0m
+Main : 2026-09-28 12:58:41.489528 : 424389 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3154116608-3170893823, total: 3170893824 bytes[0m
+Main : 2026-09-28 12:58:41.718452 : 228925 : WARNING : [34msarno : [2026-09-28T12:58:41.646Z INFO ] Health monitor: 1 workers healthy[0m
+Main : 2026-09-28 12:58:41.878549 : 160096 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3170893824-3187671039, total: 3187671040 bytes[0m
+Main : 2026-09-28 12:58:42.256519 : 377969 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3187671040-3204448255, total: 3204448256 bytes[0m
+Main : 2026-09-28 12:58:42.674413 : 417895 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3204448256-3221225471, total: 3221225472 bytes[0m
+Main : 2026-09-28 12:58:43.070675 : 396262 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3221225472-3238002687, total: 3238002688 bytes[0m
+Main : 2026-09-28 12:58:43.453261 : 382586 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3238002688-3254779903, total: 3254779904 bytes[0m
+Main : 2026-09-28 12:58:43.844065 : 390804 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3254779904-3271557119, total: 3271557120 bytes[0m
+Main : 2026-09-28 12:58:44.242411 : 398346 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3271557120-3288334335, total: 3288334336 bytes[0m
+Main : 2026-09-28 12:58:44.625248 : 382837 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3288334336-3305111551, total: 3305111552 bytes[0m
+Main : 2026-09-28 12:58:45.013344 : 388097 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3305111552-3321888767, total: 3321888768 bytes[0m
+Main : 2026-09-28 12:58:45.393832 : 380487 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3321888768-3338665983, total: 3338665984 bytes[0m
+Main : 2026-09-28 12:58:45.607143 : 213311 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:45.607165 : 20 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:45.608335 : 1172 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:45.608353 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:45.609721 : 1369 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:45.609735 : 13 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:45.609767 : 32 : FINEST : [34mHTTP : 2026-09-28T12:58:45.607029  0:00:00.002730 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:45.788209 : 178444 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3338665984-3355443199, total: 3355443200 bytes[0m
+Main : 2026-09-28 12:58:46.173680 : 385471 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3355443200-3372220415, total: 3372220416 bytes[0m
+Main : 2026-09-28 12:58:46.589041 : 415362 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3372220416-3388997631, total: 3388997632 bytes[0m
+Main : 2026-09-28 12:58:46.967774 : 378732 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3388997632-3405774847, total: 3405774848 bytes[0m
+Main : 2026-09-28 12:58:47.353619 : 385845 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3405774848-3422552063, total: 3422552064 bytes[0m
+Main : 2026-09-28 12:58:47.739116 : 385497 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3422552064-3439329279, total: 3439329280 bytes[0m
+Main : 2026-09-28 12:58:48.133592 : 394476 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3439329280-3456106495, total: 3456106496 bytes[0m
+Main : 2026-09-28 12:58:48.531144 : 397552 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3456106496-3472883711, total: 3472883712 bytes[0m
+Main : 2026-09-28 12:58:48.912439 : 381296 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3472883712-3489660927, total: 3489660928 bytes[0m
+Main : 2026-09-28 12:58:49.235924 : 323484 : FINE : [34mGcsResumableUpload : Upload finalized: gcs/22/84/22848323-234d-469b-b1e6-78147412ac5b, total: 3498441074 bytes[0m
+Main : 2026-09-28 12:58:49.235952 : 26 : FINE : [34mGcsStorageService : Uploaded object via resumable: gcs/22/84/22848323-234d-469b-b1e6-78147412ac5b, size: 3498441074 bytes[0m
+Main : 2026-09-28 12:58:49.235976 : 24 : FINE : [34mCouchService : upload -- GCS direct streaming: 42.46554860161634 MB/s, size: 3498441074 bytes[0m
+Main : 2026-09-28 12:58:49.408533 : 172559 : FINE : [34mGcsStorageService : Copied object: gcs/22/84/22848323-234d-469b-b1e6-78147412ac5b -> upload/lfs/ec/7f/7816c992bff24e1fb3c70663e31aad8987db156db26e80a5e526a2afdee0[0m
+Main : 2026-09-28 12:58:49.479525 : 70992 : FINE : [34mGcsStorageService : Deleted object: gcs/22/84/22848323-234d-469b-b1e6-78147412ac5b[0m
+Main : 2026-09-28 12:58:49.480441 : 914 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:58:49.494485 : 14044 : FINEST : [34mHTTP : 2026-09-28T12:57:06.136244  0:01:43.358234 POST    [200] -- {null} -- /api/v1/file/upload[0m
+Main : 2026-09-28 12:58:49.496604 : 2120 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:58:50.182934 : 122505689 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/8c/9a/8c9a50a5-733f-45e4-816a-9323d819d63f[0m
+Worker : 2026-09-28 12:58:50.268912 : 85978 : FINE : [34mCouchService : upload -- GCS direct streaming: 0.011111111111111112 MB/s, size: 955 bytes[0m
+Worker : 2026-09-28 12:58:50.444680 : 175767 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:58:50.446278 : 1598 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:58:50.480189 : 33911 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/87/43/87435296-b278-4253-ae2c-96b141b16b26[0m
+Main : 2026-09-28 12:58:50.529670 : 1033067 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:50.529689 : 17 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:50.530574 : 886 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:50.530581 : 6 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:50.531798 : 1218 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:50.531804 : 6 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:50.531825 : 21 : FINEST : [34mHTTP : 2026-09-28T12:58:50.529570  0:00:00.002250 GET     [200] -- {null} -- /_health[0m
+Worker : 2026-09-28 12:58:50.552980 : 72791 : FINE : [34mCouchService : upload -- GCS direct streaming: 0.0008932129557103791 MB/s, size: 65 bytes[0m
+Worker : 2026-09-28 12:58:50.693559 : 140580 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:58:50.695075 : 1515 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:58:50.704204 : 9129 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:58:50.712667 : 8463 : FINER : [34mStdOperator : Child runner completed for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:58:50.712697 : 29 : FINEST : [34mCouchService : sendChannel -- bad793e3-bbc8-4a97-9c7b-742aa7b55130 -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:58:50.713544 : 848 : FINEST : [34mEventService : Published TSON event to Redis channel bad793e3-bbc8-4a97-9c7b-742aa7b55130 (233 bytes)[0m
+Worker : 2026-09-28 12:58:50.715981 : 2436 : FINEST : [34mStdOperator : File result -- {kind: FileDocument, id: c003534b-8695-42e2-b87d-e85248e965bc, isDeleted: true, rev: 2-82a7adb0-f3e7-4ee5-8631-d6b61a66b932, description: , name: 0f5ea9d0-bb3c-11f1-a55d-09fe98338fc4, acl: {kind: Acl, owner: admin, aces: []}, createdDate: {kind: Date, value: 2026-09-28T12:56:45.552972Z}, lastModifiedDate: {kind: Date, value: 2026-09-28T12:58:49.488626Z}, urls: [], tags: [], meta: [{kind: Pair, key: hidden, value: true}, {kind: Pair, key: temp.file, value: true}, {kind: Pair, key: result.task.id, value: 6f687e45-dc21-4934-b133-f67d0226a5c6}], url: {kind: Url, uri: }, version: , isPublic: false, projectId: 1878c5a2-4d9d-4c8a-81db-8e55938b67ab, folderId: , dataUri: lfs/ec/7f/7816c992bff24e1fb3c70663e31aad8987db156db26e80a5e526a2afdee0, metadata: {kind: FileMetadata, contentType: , cacheControl: , contentEncoding: , contentLanguage: , md5Hash: }, size: 0, storageSize: 3498441074.0}[0m
+Worker : 2026-09-28 12:58:50.715986 : 5 : FINER : [34mStdOperator : Saving computation result for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:58:50.715993 : 7 : FINER : [34mSaveComputationResult : saveTaskResult: Starting for task 6f687e45-dc21-4934-b133-f67d0226a5c6, fileResultId: c003534b-8695-42e2-b87d-e85248e965bc[0m
+Worker : 2026-09-28 12:58:50.715997 : 4 : FINER : [34mSaveComputationResult : saveTaskResult: fileResultId is not empty, retrieving file document c003534b-8695-42e2-b87d-e85248e965bc[0m
+Worker : 2026-09-28 12:58:50.719098 : 3101 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Starting for task 6f687e45-dc21-4934-b133-f67d0226a5c6 with dataUri: lfs/ec/7f/7816c992bff24e1fb3c70663e31aad8987db156db26e80a5e526a2afdee0[0m
+Worker : 2026-09-28 12:58:50.729593 : 10495 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Executing sarno task for file: /var/lib/tercen/data/upload/lfs/ec/7f/7816c992bff24e1fb3c70663e31aad8987db156db26e80a5e526a2afdee0[0m
+Main : 2026-09-28 12:58:50.991530 : 459707 : WARNING : [34msarno : [2026-09-28T12:58:50.750Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 12:58:50.991568 : 35 : WARNING : [34msarno : [2026-09-28T12:58:50.750Z INFO ] exec_task: Forwarding task [ComputationResult(task_id=6f687e45-dc21-4934-b133-f67d0226a5c6)] to worker on port 15002[0m
+Main : 2026-09-28 12:58:50.991574 : 6 : WARNING : [34msarno : [2026-09-28T12:58:50.750Z INFO ] exec_task: Started stream processing [ComputationResult(task_id=6f687e45-dc21-4934-b133-f67d0226a5c6)] for worker on port 15002[0m
+Main : 2026-09-28 12:58:50.991581 : 7 : WARNING : [34msarno : [W:15002] [2026-09-28T12:58:50.750Z INFO ] ProcessResultQueryProcessor::process_query -- task_id: 6f687e45-dc21-4934-b133-f67d0226a5c6 -- file: /var/lib/tercen/data/upload/lfs/ec/7f/7816c992bff24e1fb3c70663e31aad8987db156db26e80a5e526a2afdee0[0m
+Main : 2026-09-28 12:58:55.530177 : 4538599 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:58:55.530201 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:58:55.531358 : 1158 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:58:55.531379 : 21 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:58:55.734326 : 202948 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:58:55.734354 : 26 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:58:55.734397 : 43 : FINEST : [34mHTTP : 2026-09-28T12:58:55.530057  0:00:00.204332 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:58:55.753008 : 18622 : WARNING : [34msarno : [2026-09-28T12:58:55.532Z INFO ] Created new worker on port 15003 (threads 1, total: 2)[0m
+Main : 2026-09-28 12:58:55.753049 : 30 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.533Z INFO ] LimitedAlloc: Memory limit enforcement is DISABLED (tracking only)[0m
+Main : 2026-09-28 12:58:55.753053 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] rayon thread pool -- num_threads: 1 (requested: 1, host cores: 4)[0m
+Main : 2026-09-28 12:58:55.753057 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] worker started -- listening on socket /tmp/sarno-worker-15003.sock[0m
+Main : 2026-09-28 12:58:55.753061 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] === Sarno Configuration ===[0m
+Main : 2026-09-28 12:58:55.753065 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] Config file path: /home/sarno/.config/sarno/sarno.toml[0m
+Main : 2026-09-28 12:58:55.753068 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] table_dir: /var/lib/tercen/data/sarno/[0m
+Main : 2026-09-28 12:58:55.753080 : 13 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] file_dir: /var/lib/tercen/data/upload/[0m
+Main : 2026-09-28 12:58:55.753084 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] grpc_host: 127.0.0.1[0m
+Main : 2026-09-28 12:58:55.753088 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] grpc_port: 50051[0m
+Main : 2026-09-28 12:58:55.753097 : 9 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] grpc_username: admin[0m
+Main : 2026-09-28 12:58:55.753102 : 5 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] storage_backend: gcs[0m
+Main : 2026-09-28 12:58:55.753105 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] storage_bucket: tercen-ring-tercen-stage-data[0m
+Main : 2026-09-28 12:58:55.753109 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] blob_cache_dir: /tmp/sarno-blobs[0m
+Main : 2026-09-28 12:58:55.753121 : 13 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] blob_cache_budget_bytes: 21474836480[0m
+Main : 2026-09-28 12:58:55.753125 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] ===========================[0m
+Main : 2026-09-28 12:58:55.753146 : 22 : WARNING : [34msarno : [W:15003] [2026-09-28T12:58:55.534Z INFO ] Worker attempting to bind to Unix socket: /tmp/sarno-worker-15003.sock[0m
+Main : 2026-09-28 12:59:00.530117 : 4776973 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:59:00.530179 : 59 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:59:00.531852 : 1674 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:59:00.531871 : 18 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:59:00.533576 : 1706 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:59:00.533589 : 13 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:59:00.533621 : 31 : FINEST : [34mHTTP : 2026-09-28T12:59:00.529905  0:00:00.003709 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:59:05.530313 : 4996694 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:59:05.530339 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:59:05.531403 : 1066 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:59:05.531424 : 19 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:59:05.532867 : 1444 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:59:05.532885 : 18 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:59:05.532920 : 34 : FINEST : [34mHTTP : 2026-09-28T12:59:05.530180  0:00:00.002733 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:59:05.628315 : 95397 : FINEST : [34mHTTP : 2026-09-28T12:59:05.628163  0:00:00.000141 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:59:10.529962 : 4901647 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:59:10.529986 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:59:10.530976 : 990 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:59:10.530987 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:59:10.532284 : 1297 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:59:10.532292 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:59:10.532320 : 27 : FINEST : [34mHTTP : 2026-09-28T12:59:10.529857  0:00:00.002457 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:59:11.537215 : 1004898 : WARNING : [34msarno : [W:15002] [2026-09-28T12:59:11.462Z INFO ] process_query -- operator result via object store: /tmp/sarno-blobs/e5/23/e523d3ac0f50e88ab3708ad4c2253e43cddda4849f1a66af7c5bfcb1df86d88e[0m
+Main : 2026-09-28 12:59:11.787953 : 250738 : WARNING : [34msarno : [2026-09-28T12:59:11.647Z INFO ] Health monitor: 1 workers healthy[0m
+Main : 2026-09-28 12:59:15.529818 : 3741864 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:59:15.529842 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:59:15.530866 : 1025 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:59:15.530875 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:59:15.532182 : 1308 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:59:15.532190 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:59:15.532217 : 27 : FINEST : [34mHTTP : 2026-09-28T12:59:15.529714  0:00:00.002495 GET     [200] -- {null} -- /_health[0m
+Worker : 2026-09-28 12:59:16.557013 : 25827422 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Received sarno result with 1 computed relations[0m
+Worker : 2026-09-28 12:59:16.557059 : 44 : FINER : [34mSaveComputationResult : _createComputedTableSchema: Creating schema with 999 columns, 437500 rows[0m
+Worker : 2026-09-28 12:59:16.684412 : 127355 : FINER : [34mSaveComputationResult : _createComputedTableSchema: Created schema cc5504b8-cf3c-4ed6-85e0-fdbfd4c21419 with name "69645150-bb3c-11f1-bb13-c5287a3dcd0c"[0m
+Worker : 2026-09-28 12:59:16.684455 : 41 : FINER : [34m_SaveResult : saveOperatorResult: Starting with 1 schemas and 0 join operators[0m
+Worker : 2026-09-28 12:59:16.684460 : 5 : FINER : [34m_SaveResult : saveOperatorResult: Converting 1 schemas by row/col[0m
+Worker : 2026-09-28 12:59:16.684514 : 54 : FINER : [34m_SaveResult : _convertResultByRowCol: Converting schema cc5504b8-cf3c-4ed6-85e0-fdbfd4c21419 with namespace ds2[0m
+Worker : 2026-09-28 12:59:16.684609 : 95 : FINER : [34m_SaveResult : saveOperatorResult: Processing derived factors for namespace ds2[0m
+Worker : 2026-09-28 12:59:16.685529 : 921 : FINER : [34m_SaveResult : saveOperatorResult: Returning CompositeRelation with 1 join operators[0m
+Worker : 2026-09-28 12:59:16.685538 : 8 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Validating generated relation for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:59:16.690757 : 1158541 : FINEST : [34mHTTP : 2026-09-28T12:59:16.686034  0:00:00.004716 GET     [200] -- {null} -- /api/v1/schema?id=4c307d2f-8aaa-4b57-b5ee-a0b43a6c8b93&useFactory=true[0m
+Worker : 2026-09-28 12:59:16.690967 : 5429 : FINEST : [34mHttpClientService : Instance of 'TableSchemaService' -- get 4c307d2f-8aaa-4b57-b5ee-a0b43a6c8b93 -- 5 ms[0m
+Main : 2026-09-28 12:59:16.705587 : 14830 : FINEST : [34mHTTP : 2026-09-28T12:59:16.691158  0:00:00.014423 GET     [200] -- {null} -- /api/v1/schema?id=cc5504b8-cf3c-4ed6-85e0-fdbfd4c21419&useFactory=true[0m
+Worker : 2026-09-28 12:59:16.707519 : 16553 : FINEST : [34mHttpClientService : Instance of 'TableSchemaService' -- get cc5504b8-cf3c-4ed6-85e0-fdbfd4c21419 -- 16 ms[0m
+Worker : 2026-09-28 12:59:16.707908 : 388 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Relation validation successful for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:59:16.709641 : 1734 : FINER : [34mStdOperator : Computation result saved for task 6f687e45-dc21-4934-b133-f67d0226a5c6: success[0m
+Worker : 2026-09-28 12:59:16.710474 : 832 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:59:16.720752 : 10279 : FINER : [34mStdOperator : StdOperator.run() completed successfully for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:59:16.720774 : 21 : FINER : [34mTaskRunnerInstance : EnsureTaskCompletion -- task RunComputationTask(6f687e45-dc21-4934-b133-f67d0226a5c6, 9-1ea539f9-a8d0-4b78-9e13-7081a8d816f6, Instance of 'RunningState') -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:59:16.720789 : 16 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: DoneState} -- duration 0:02:31.194350[0m
+Worker : 2026-09-28 12:59:16.721660 : 870 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Worker : 2026-09-28 12:59:16.741869 : 20210 : FINEST : [34mCouchService : sendChannel -- bad793e3-bbc8-4a97-9c7b-742aa7b55130 -- evt TaskStateEvent(2026-09-28T12:59:16.741853Z, 6f687e45-dc21-4934-b133-f67d0226a5c6, Instance of 'DoneState')[0m
+Worker : 2026-09-28 12:59:16.742843 : 973 : FINEST : [34mEventService : Published TSON event to Redis channel bad793e3-bbc8-4a97-9c7b-742aa7b55130 (205 bytes)[0m
+Worker : 2026-09-28 12:59:16.744574 : 1731 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Task completed in 2.52min --owner admin --user /admin --runtimeType RunComputationTask --id 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:59:16.744631 : 39044 : FINEST : [34mCouchService : isolateRunner complete -- releasing memory and cpus[0m
+Main : 2026-09-28 12:59:16.745625 : 993 : FINE : [34mTaskService : Cache MISS for task 6f687e45-dc21-4934-b133-f67d0226a5c6[0m
+Main : 2026-09-28 12:59:16.749643 : 4018 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-7866cc694-8m5zt] [Tenant: ] Reporting task 6f687e45-dc21-4934-b133-f67d0226a5c6 completion to scheduler (state: TASK_STATE_DONE)[0m
+Main : 2026-09-28 12:59:16.787869 : 38227 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-7866cc694-8m5zt] [Tenant: ] Task 6f687e45-dc21-4934-b133-f67d0226a5c6 completion reported successfully[0m
+Main : 2026-09-28 12:59:16.799755 : 11888 : WARNING : [34msarno : [W:15002] [2026-09-28T12:59:16.568Z INFO ] TASK_STATS|task=ComputationResult(task_id=6f687e45-dc21-4934-b133-f67d0226a5c6)|peak=3502400778|limit=9437184000|peak_percent=37.1|sent=52086|received=0|sent_per_sec=2.0 KiB|received_per_sec=0 B|duration_secs=25.818|start=467554[0m
+Main : 2026-09-28 12:59:16.799791 : 33 : WARNING : [34msarno : [2026-09-28T12:59:16.568Z INFO ] exec_task: Stream ended [ComputationResult(task_id=6f687e45-dc21-4934-b133-f67d0226a5c6)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 12:59:16.799796 : 5 : WARNING : [34msarno : [2026-09-28T12:59:16.568Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [ComputationResult(task_id=6f687e45-dc21-4934-b133-f67d0226a5c6)][0m
+Main : 2026-09-28 12:59:20.530371 : 3730577 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:59:20.530395 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:59:20.531323 : 929 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:59:20.531331 : 7 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:59:20.532599 : 1268 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:59:20.532606 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:59:20.532628 : 22 : FINEST : [34mHTTP : 2026-09-28T12:59:20.530264  0:00:00.002357 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:59:25.529806 : 4997181 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:59:25.529832 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:59:25.530782 : 950 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:59:25.530790 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:59:25.532025 : 1236 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:59:25.532032 : 6 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:59:25.532058 : 26 : FINEST : [34mHTTP : 2026-09-28T12:59:25.529700  0:00:00.002351 GET     [200] -- {null} -- /_health[0m

@@ -1,0 +1,821 @@
+Main : 2026-09-28 12:42:40.845025 : 2106940 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Received ExecuteTask request for task: 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Main : 2026-09-28 12:42:40.845049 : 23 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Executing task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8...[0m
+Main : 2026-09-28 12:42:40.846011 : 962 : FINE : [34mTaskService : Cache MISS for task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Main : 2026-09-28 12:42:40.859336 : 13326 : FINEST : [34mCouchService : Start isolate task RunWorkflowTask(33bd8c40-0ac7-4dea-9b87-cf507e84eaa8, 2-2a6ee2c3-dbd8-4ebd-b048-44002c2e2a77, Instance of 'InitState') -- taskMemory = 500000000.0 -- availableMemory = 5070000000.0 -- cpuMillicores = 1000m -- availableCpuMillicores = 4000m -- cpuset-cpus = [0m
+Main : 2026-09-28 12:42:40.859364 : 27 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8 completed successfully[0m
+Worker : 2026-09-28 12:42:40.859710 : 79058908 : INFO : [34mParams : runZone -- workerUri=http://10.64.7.4:5400 -- task=33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Worker : 2026-09-28 12:42:40.859727 : 16 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Starting task --owner admin --user /admin --runtimeType RunWorkflowTask --id 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Worker : 2026-09-28 12:42:40.866261 : 6535 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:42:40.866459 : 197 : FINE : [34mTaskService : Cache MISS for task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Worker : 2026-09-28 12:42:40.871548 : 5089 : FINEST : [34mCouchService : sendChannel -- c11116e2-ad3a-4a9c-bc8a-f660c899fb97 -- evt TaskStateEvent(2026-09-28T12:42:40.871538Z, 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8, Instance of 'RunningState')[0m
+Worker : 2026-09-28 12:42:40.871855 : 308 : FINEST : [34mEventService : Published TSON event to Redis channel c11116e2-ad3a-4a9c-bc8a-f660c899fb97 (208 bytes)[0m
+Worker : 2026-09-28 12:42:40.876790 : 4935 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:42:40.876802 : 11 : INFO : [34mTaskRunnerInstance : WorkflowRunner -- loaded wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 rev=41-f3c1ca94-7cb9-48b1-b51d-184b3700737e aclDomain= steps=TableStep:DoneState,DataStep:DoneState,DataStep:InitState[0m
+Worker : 2026-09-28 12:42:40.881516 : 4714 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:42:40.881534 : 18 : FINE : [34mWorkflowService : _routedUpdate: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 objectRev=41-f3c1ca94-7cb9-48b1-b51d-184b3700737e storedRev=41-f3c1ca94-7cb9-48b1-b51d-184b3700737e[0m
+Worker : 2026-09-28 12:42:40.885287 : 3753 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:42:40.891985 : 6698 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Main : 2026-09-28 12:42:40.901118 : 41754 : FINEST : [34mHTTP : 2026-09-28T12:42:40.898352  0:00:00.002759 GET     [200] -- {null} -- /api/v1/operator?id=ee2d939e-37ae-4a9f-915d-9664a1b3952f&useFactory=true[0m
+Worker : 2026-09-28 12:42:40.901525 : 9541 : FINEST : [34mCrosstab : asCubeQuery -- start[0m
+Main : 2026-09-28 12:42:40.904611 : 3494 : FINEST : [34mHTTP : 2026-09-28T12:42:40.901854  0:00:00.002753 POST    [200] -- {null} -- /api/v1/schema/list?useFactory=true[0m
+Worker : 2026-09-28 12:42:40.904996 : 3471 : FINEST : [34mCrosstab : asCubeQuery -- done[0m
+Main : 2026-09-28 12:42:40.907897 : 3285 : FINEST : [34mHTTP : 2026-09-28T12:42:40.905215  0:00:00.002677 GET     [200] -- {null} -- /api/v1/operator?id=ee2d939e-37ae-4a9f-915d-9664a1b3952f&useFactory=true[0m
+Main : 2026-09-28 12:42:40.919884 : 11988 : FINE : [34mTaskService : findFirstTaskByHash -- 6 ms[0m
+Main : 2026-09-28 12:42:40.919896 : 12 : FINER : [34mTaskService : found task with hash JpTegE_EqGdxOHgtX7_h80qVCnAwqUduiykjYzvgf18= state done[0m
+Main : 2026-09-28 12:42:41.002182 : 82287 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:42:41.002261 : 77 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:42:41.002316 : 55 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:42:41.002361 : 45 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:42:41.002612 : 252 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:42:41.011731 : 9119 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:42:41.011827 : 95 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 12:42:41.014312 : 2485 : FINE : [34mTaskService : Cache MISS for task da8bb2cc-1847-4f4e-b82d-8306352e3fc2[0m
+Main : 2026-09-28 12:42:41.023880 : 9569 : FINE : [34mTaskService : create -- 115 ms[0m
+Main : 2026-09-28 12:42:41.024049 : 169 : FINEST : [34mHTTP : 2026-09-28T12:42:40.908412  0:00:00.115632 PUT     [200] -- {null} -- /api/v1/task[0m
+Worker : 2026-09-28 12:42:41.024498 : 119502 : FINEST : [34mCouchService : sendChannel -- c11116e2-ad3a-4a9c-bc8a-f660c899fb97 -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 12:42:41.024807 : 309 : FINEST : [34mCouchService : sendChannel -- c11116e2-ad3a-4a9c-bc8a-f660c899fb97 -- evt TaskStateEvent(2026-09-28T12:42:41.024471Z, da8bb2cc-1847-4f4e-b82d-8306352e3fc2, Instance of 'DoneState')[0m
+Worker : 2026-09-28 12:42:41.024886 : 78 : FINEST : [34mEventService : Published TSON event to Redis channel c11116e2-ad3a-4a9c-bc8a-f660c899fb97 (267 bytes)[0m
+Worker : 2026-09-28 12:42:41.025049 : 163 : FINEST : [34mEventService : Published TSON event to Redis channel c11116e2-ad3a-4a9c-bc8a-f660c899fb97 (361 bytes)[0m
+Main : 2026-09-28 12:42:41.025512 : 1462 : FINE : [34mTaskService : Cache MISS for task da8bb2cc-1847-4f4e-b82d-8306352e3fc2[0m
+Main : 2026-09-28 12:42:41.028349 : 2837 : FINEST : [34mHTTP : 2026-09-28T12:42:41.024941  0:00:00.003402 GET     [200] -- {null} -- /api/v1/task?id=da8bb2cc-1847-4f4e-b82d-8306352e3fc2&useFactory=true[0m
+Worker : 2026-09-28 12:42:41.034178 : 9130 : FINEST : [34mCouchService : sendChannel -- c11116e2-ad3a-4a9c-bc8a-f660c899fb97 -- evt PatchRecords(35709569-9b02-402d-8e78-c47b33c56501)[0m
+Worker : 2026-09-28 12:42:41.034878 : 699 : FINEST : [34mEventService : Published TSON event to Redis channel c11116e2-ad3a-4a9c-bc8a-f660c899fb97 (1664 bytes)[0m
+Worker : 2026-09-28 12:42:41.039782 : 4905 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:42:41.039841 : 58 : FINE : [34mWorkflowService : _routedUpdate: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 objectRev=42-deb46c83-1fcf-4b71-9f12-a0fe77a766e8 storedRev=42-deb46c83-1fcf-4b71-9f12-a0fe77a766e8[0m
+Worker : 2026-09-28 12:42:41.044713 : 4873 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 12:42:41.051272 : 6558 : FINE : [34mWorkflowService : composeWorkflow: wf=a449773b-5bb3-44f4-8540-ca087c8e3b09 domain= defRows=0 stateRows=0[0m
+Worker : 2026-09-28 12:42:41.060790 : 9518 : FINEST : [34mCouchService : sendChannel -- c11116e2-ad3a-4a9c-bc8a-f660c899fb97 -- evt PatchRecords(a15af523-5069-4685-b47f-37222d81881d)[0m
+Worker : 2026-09-28 12:42:41.061293 : 504 : FINER : [34mTaskRunnerInstance : EnsureTaskCompletion -- task RunWorkflowTask(33bd8c40-0ac7-4dea-9b87-cf507e84eaa8, 3-d00dcc9a-6e05-48bc-bea9-e148d1f60c75, Instance of 'RunningState') -- state {kind: RunningState}[0m
+Worker : 2026-09-28 12:42:41.061313 : 19 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: DoneState} -- duration 0:00:00.201959[0m
+Worker : 2026-09-28 12:42:41.061401 : 89 : FINEST : [34mEventService : Published TSON event to Redis channel c11116e2-ad3a-4a9c-bc8a-f660c899fb97 (847 bytes)[0m
+Worker : 2026-09-28 12:42:41.061576 : 174 : FINE : [34mTaskService : Cache MISS for task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Worker : 2026-09-28 12:42:41.065886 : 4311 : FINEST : [34mCouchService : sendChannel -- c11116e2-ad3a-4a9c-bc8a-f660c899fb97 -- evt TaskStateEvent(2026-09-28T12:42:41.065878Z, 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8, Instance of 'DoneState')[0m
+Worker : 2026-09-28 12:42:41.066124 : 238 : FINEST : [34mEventService : Published TSON event to Redis channel c11116e2-ad3a-4a9c-bc8a-f660c899fb97 (205 bytes)[0m
+Worker : 2026-09-28 12:42:41.067733 : 1609 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Task completed in 208ms --owner admin --user /admin --runtimeType RunWorkflowTask --id 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Main : 2026-09-28 12:42:41.067801 : 39453 : FINEST : [34mCouchService : isolateRunner complete -- releasing memory and cpus[0m
+Main : 2026-09-28 12:42:41.068079 : 278 : FINE : [34mTaskService : Cache MISS for task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8[0m
+Main : 2026-09-28 12:42:41.070543 : 2463 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Reporting task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8 completion to scheduler (state: TASK_STATE_DONE)[0m
+Main : 2026-09-28 12:42:41.111881 : 41339 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-8-7cc4854b97-s2l54] [Tenant: ] Task 33bd8c40-0ac7-4dea-9b87-cf507e84eaa8 completion reported successfully[0m
+Main : 2026-09-28 12:42:43.734754 : 2622874 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:42:43.734780 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:42:43.736026 : 1246 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:42:43.736037 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:42:43.737425 : 1389 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:42:43.737435 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:42:43.737507 : 73 : FINEST : [34mHTTP : 2026-09-28T12:42:43.734628  0:00:00.002872 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:42:48.735368 : 4997863 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:42:48.735394 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:42:48.736641 : 1249 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:42:48.736654 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:42:48.738032 : 1379 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:42:48.738044 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:42:48.738081 : 37 : FINEST : [34mHTTP : 2026-09-28T12:42:48.735259  0:00:00.002804 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:42:53.297910 : 4559831 : FINEST : [34mHTTP : 2026-09-28T12:42:53.297731  0:00:00.000167 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:42:53.734937 : 437027 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:42:53.734961 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:42:53.736204 : 1244 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:42:53.736217 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:42:53.737626 : 1408 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:42:53.737636 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:42:53.737679 : 43 : FINEST : [34mHTTP : 2026-09-28T12:42:53.734831  0:00:00.002825 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:42:57.265101 : 3527425 : WARNING : [34msarno : [2026-09-28T12:42:57.244Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:42:58.735074 : 1469972 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:42:58.735098 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:42:58.736356 : 1259 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:42:58.736366 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:42:58.737774 : 1409 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:42:58.737785 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:42:58.737816 : 31 : FINEST : [34mHTTP : 2026-09-28T12:42:58.734957  0:00:00.002853 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:03.735344 : 4997530 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:03.735368 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:03.736634 : 1268 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:03.736649 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:03.738055 : 1406 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:03.738070 : 14 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:03.738112 : 43 : FINEST : [34mHTTP : 2026-09-28T12:43:03.735238  0:00:00.002867 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:08.735449 : 4997338 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:08.735475 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:08.736643 : 1169 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:08.736654 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:08.737995 : 1341 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:08.738003 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:08.738027 : 24 : FINEST : [34mHTTP : 2026-09-28T12:43:08.735343  0:00:00.002678 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:13.735113 : 4997088 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:13.735138 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:13.736395 : 1258 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:13.736408 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:13.737841 : 1433 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:13.737851 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:13.737945 : 94 : FINEST : [34mHTTP : 2026-09-28T12:43:13.735005  0:00:00.002917 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:18.734891 : 4996948 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:18.734916 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:18.736115 : 1200 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:18.736128 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:18.737576 : 1449 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:18.737585 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:18.737624 : 39 : FINEST : [34mHTTP : 2026-09-28T12:43:18.734786  0:00:00.002832 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:23.298276 : 4560654 : FINEST : [34mHTTP : 2026-09-28T12:43:23.298116  0:00:00.000148 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:43:23.735443 : 437168 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:23.735469 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:23.736755 : 1287 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:23.736768 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:23.738150 : 1383 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:23.738159 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:23.738186 : 27 : FINEST : [34mHTTP : 2026-09-28T12:43:23.735335  0:00:00.002844 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:27.324702 : 3586519 : WARNING : [34msarno : [2026-09-28T12:43:27.246Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:43:28.735123 : 1410420 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:28.735148 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:28.736460 : 1312 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:28.736471 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:28.737891 : 1421 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:28.737903 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:28.737956 : 54 : FINEST : [34mHTTP : 2026-09-28T12:43:28.735010  0:00:00.002938 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:33.734959 : 4997004 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:33.734983 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:33.736184 : 1201 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:33.736197 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:33.737577 : 1380 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:33.737590 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:33.737618 : 29 : FINEST : [34mHTTP : 2026-09-28T12:43:33.734854  0:00:00.002757 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:38.734936 : 4997319 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:38.734962 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:38.736114 : 1152 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:38.736126 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:38.737475 : 1350 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:38.737484 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:38.737517 : 33 : FINEST : [34mHTTP : 2026-09-28T12:43:38.734829  0:00:00.002683 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:43.735376 : 4997861 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:43.735398 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:43.736617 : 1219 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:43.736630 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:43.738087 : 1457 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:43.738097 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:43.738135 : 38 : FINEST : [34mHTTP : 2026-09-28T12:43:43.735269  0:00:00.002860 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:48.735516 : 4997384 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:48.735543 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:48.736701 : 1158 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:48.736712 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:48.738163 : 1452 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:48.738172 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:48.738195 : 23 : FINEST : [34mHTTP : 2026-09-28T12:43:48.735410  0:00:00.002778 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:53.297887 : 4559694 : FINEST : [34mHTTP : 2026-09-28T12:43:53.297727  0:00:00.000148 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:43:53.734797 : 436910 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:53.734820 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:53.735990 : 1171 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:53.736001 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:53.737406 : 1405 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:53.737416 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:53.737442 : 26 : FINEST : [34mHTTP : 2026-09-28T12:43:53.734690  0:00:00.002747 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:43:57.383272 : 3645833 : WARNING : [34msarno : [2026-09-28T12:43:57.247Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:43:58.735488 : 1352215 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:43:58.735514 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:43:58.736839 : 1324 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:43:58.736848 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:43:58.738197 : 1350 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:43:58.738209 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:43:58.738244 : 36 : FINEST : [34mHTTP : 2026-09-28T12:43:58.735381  0:00:00.002845 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:03.734661 : 4996435 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:03.734702 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:03.735880 : 1179 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:03.735894 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:03.737364 : 1471 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:03.737374 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:03.737419 : 46 : FINEST : [34mHTTP : 2026-09-28T12:44:03.734556  0:00:00.002856 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:08.736921 : 4999503 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:08.736949 : 26 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:08.738258 : 1309 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:08.738269 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:08.739621 : 1352 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:08.739630 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:08.739653 : 23 : FINEST : [34mHTTP : 2026-09-28T12:44:08.736768  0:00:00.002879 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:13.734640 : 4994989 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:13.734691 : 49 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:13.735891 : 1201 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:13.735904 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:13.737288 : 1385 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:13.737297 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:13.737368 : 72 : FINEST : [34mHTTP : 2026-09-28T12:44:13.734534  0:00:00.002828 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:18.735156 : 4997789 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:18.735177 : 19 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:18.736371 : 1195 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:18.736380 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:18.737773 : 1394 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:18.737782 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:18.737844 : 63 : FINEST : [34mHTTP : 2026-09-28T12:44:18.735048  0:00:00.002789 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:23.298832 : 4560989 : FINEST : [34mHTTP : 2026-09-28T12:44:23.298652  0:00:00.000168 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:44:23.735454 : 436622 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:23.735479 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:23.736868 : 1390 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:23.736880 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:23.738276 : 1397 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:23.738286 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:23.738324 : 39 : FINEST : [34mHTTP : 2026-09-28T12:44:23.735346  0:00:00.002962 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:27.443760 : 3705438 : WARNING : [34msarno : [2026-09-28T12:44:27.249Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:44:28.734974 : 1291213 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:28.734996 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:28.736247 : 1251 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:28.736257 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:28.737623 : 1366 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:28.737632 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:28.737688 : 56 : FINEST : [34mHTTP : 2026-09-28T12:44:28.734871  0:00:00.002778 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:33.735398 : 4997712 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:33.735509 : 109 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:33.737690 : 2182 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:33.737709 : 18 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:33.739731 : 2023 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:33.739798 : 66 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:33.739903 : 105 : FINEST : [34mHTTP : 2026-09-28T12:44:33.735250  0:00:00.004646 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:38.735083 : 4995183 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:38.735109 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:38.736267 : 1158 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:38.736277 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:38.737614 : 1338 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:38.737623 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:38.737676 : 53 : FINEST : [34mHTTP : 2026-09-28T12:44:38.734976  0:00:00.002680 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:43.734854 : 4997180 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:43.734879 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:43.736227 : 1349 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:43.736242 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:43.737712 : 1471 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:43.737725 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:43.737752 : 27 : FINEST : [34mHTTP : 2026-09-28T12:44:43.734750  0:00:00.002995 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:48.735433 : 4997683 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:48.735459 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:48.736712 : 1254 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:48.736727 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:48.738122 : 1396 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:48.738132 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:48.738158 : 26 : FINEST : [34mHTTP : 2026-09-28T12:44:48.735326  0:00:00.002825 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:53.298467 : 4560310 : FINEST : [34mHTTP : 2026-09-28T12:44:53.298309  0:00:00.000146 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:44:53.735461 : 436995 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:53.735487 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:53.736636 : 1150 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:53.736647 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:53.738017 : 1370 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:53.738027 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:53.738051 : 24 : FINEST : [34mHTTP : 2026-09-28T12:44:53.735355  0:00:00.002690 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:44:57.502202 : 3764154 : WARNING : [34msarno : [2026-09-28T12:44:57.251Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:44:58.736182 : 1233980 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:44:58.736334 : 150 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:44:58.737966 : 1632 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:44:58.737980 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:44:58.739516 : 1537 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:44:58.739526 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:44:58.739554 : 29 : FINEST : [34mHTTP : 2026-09-28T12:44:58.736039  0:00:00.003508 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:03.734861 : 4995308 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:03.734886 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:03.736026 : 1141 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:03.736035 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:03.737399 : 1364 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:03.737407 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:03.737431 : 24 : FINEST : [34mHTTP : 2026-09-28T12:45:03.734756  0:00:00.002669 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:08.735331 : 4997902 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:08.735358 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:08.736539 : 1181 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:08.736548 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:08.737904 : 1357 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:08.737912 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:08.737975 : 62 : FINEST : [34mHTTP : 2026-09-28T12:45:08.735225  0:00:00.002743 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:13.735463 : 4997490 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:13.735489 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:13.736861 : 1374 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:13.736873 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:13.738320 : 1448 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:13.738331 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:13.738358 : 27 : FINEST : [34mHTTP : 2026-09-28T12:45:13.735355  0:00:00.002996 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:18.735251 : 4996895 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:18.735276 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:18.736604 : 1328 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:18.736613 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:18.738331 : 1718 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:18.738339 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:18.738374 : 35 : FINEST : [34mHTTP : 2026-09-28T12:45:18.735146  0:00:00.003209 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:23.298064 : 4559693 : FINEST : [34mHTTP : 2026-09-28T12:45:23.297903  0:00:00.000149 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:45:23.735404 : 437339 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:23.735430 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:23.736777 : 1348 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:23.736790 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:23.738218 : 1429 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:23.738229 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:23.738267 : 38 : FINEST : [34mHTTP : 2026-09-28T12:45:23.735299  0:00:00.002951 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:27.312539 : 3574274 : WARNING : [34msarno : [2026-09-28T12:45:27.252Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:45:28.735551 : 1423013 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:28.735579 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:28.736818 : 1240 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:28.736829 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:28.738173 : 1345 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:28.738182 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:28.738205 : 23 : FINEST : [34mHTTP : 2026-09-28T12:45:28.735446  0:00:00.002752 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:33.735162 : 4996959 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:33.735189 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:33.736426 : 1239 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:33.736439 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:33.737927 : 1489 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:33.737938 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:33.737965 : 27 : FINEST : [34mHTTP : 2026-09-28T12:45:33.735051  0:00:00.002907 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:38.736122 : 4998159 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:38.736155 : 31 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:38.738369 : 2215 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:38.738382 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:38.739833 : 1452 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:38.739843 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:38.739888 : 46 : FINEST : [34mHTTP : 2026-09-28T12:45:38.735977  0:00:00.003903 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:43.735471 : 4995585 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:43.735498 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:43.736746 : 1249 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:43.736762 : 15 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:43.738160 : 1399 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:43.738171 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:43.738216 : 46 : FINEST : [34mHTTP : 2026-09-28T12:45:43.735364  0:00:00.002845 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:48.735386 : 4997171 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:48.735411 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:48.736567 : 1157 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:48.736577 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:48.737918 : 1342 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:48.737926 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:48.737988 : 62 : FINEST : [34mHTTP : 2026-09-28T12:45:48.735279  0:00:00.002703 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:53.297824 : 4559837 : FINEST : [34mHTTP : 2026-09-28T12:45:53.297650  0:00:00.000163 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:45:53.734930 : 437106 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:53.734955 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:53.736309 : 1355 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:53.736320 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:53.737733 : 1414 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:53.737744 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:53.737789 : 46 : FINEST : [34mHTTP : 2026-09-28T12:45:53.734824  0:00:00.002958 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:45:57.372471 : 3634683 : WARNING : [34msarno : [2026-09-28T12:45:57.253Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:45:58.735541 : 1363071 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:45:58.735565 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:45:58.736744 : 1180 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:45:58.736754 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:45:58.738984 : 2230 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:45:58.738996 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:45:58.739019 : 24 : FINEST : [34mHTTP : 2026-09-28T12:45:58.735436  0:00:00.003577 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:03.735441 : 4996423 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:03.735467 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:03.736653 : 1186 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:03.736678 : 24 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:03.738049 : 1372 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:03.738064 : 15 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:03.738101 : 37 : FINEST : [34mHTTP : 2026-09-28T12:46:03.735335  0:00:00.002751 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:08.735003 : 4996904 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:08.735030 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:08.736152 : 1122 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:08.736164 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:08.737557 : 1393 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:08.737565 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:08.737605 : 40 : FINEST : [34mHTTP : 2026-09-28T12:46:08.734896  0:00:00.002702 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:13.735431 : 4997828 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:13.735457 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:13.736734 : 1278 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:13.736749 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:13.738128 : 1380 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:13.738139 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:13.738165 : 26 : FINEST : [34mHTTP : 2026-09-28T12:46:13.735324  0:00:00.002834 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:18.734791 : 4996628 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:18.734816 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:18.735942 : 1127 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:18.735955 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:18.737294 : 1339 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:18.737302 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:18.737345 : 43 : FINEST : [34mHTTP : 2026-09-28T12:46:18.734683  0:00:00.002637 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:23.298622 : 4561279 : FINEST : [34mHTTP : 2026-09-28T12:46:23.298460  0:00:00.000149 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:46:23.734658 : 436036 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:23.734702 : 42 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:23.735899 : 1198 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:23.735912 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:23.737296 : 1385 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:23.737306 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:23.737346 : 40 : FINEST : [34mHTTP : 2026-09-28T12:46:23.734553  0:00:00.002787 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:27.431178 : 3693835 : WARNING : [34msarno : [2026-09-28T12:46:27.254Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:46:28.735083 : 1303904 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:28.735113 : 28 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:28.737843 : 2731 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:28.737854 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:28.740181 : 2328 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:28.740192 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:28.740216 : 25 : FINEST : [34mHTTP : 2026-09-28T12:46:28.734940  0:00:00.005270 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:33.735020 : 4994805 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:33.735044 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:33.736310 : 1267 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:33.736322 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:33.737746 : 1425 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:33.737757 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:33.737803 : 46 : FINEST : [34mHTTP : 2026-09-28T12:46:33.734901  0:00:00.002895 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:38.735076 : 4997275 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:38.735103 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:38.736286 : 1183 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:38.736295 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:38.737673 : 1379 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:38.737685 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:38.737732 : 48 : FINEST : [34mHTTP : 2026-09-28T12:46:38.734970  0:00:00.002756 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:43.734843 : 4997112 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:43.734868 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:43.736112 : 1244 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:43.736126 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:43.737486 : 1361 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:43.737496 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:43.737523 : 28 : FINEST : [34mHTTP : 2026-09-28T12:46:43.734738  0:00:00.002779 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:48.735185 : 4997663 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:48.735211 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:48.736378 : 1167 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:48.736390 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:48.737769 : 1380 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:48.737778 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:48.737833 : 56 : FINEST : [34mHTTP : 2026-09-28T12:46:48.735080  0:00:00.002745 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:53.298026 : 4560194 : FINEST : [34mHTTP : 2026-09-28T12:46:53.297868  0:00:00.000146 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:46:53.735703 : 437677 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:53.735729 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:53.736959 : 1231 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:53.736970 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:53.738493 : 1523 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:53.738505 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:53.738533 : 29 : FINEST : [34mHTTP : 2026-09-28T12:46:53.735578  0:00:00.002949 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:46:57.493034 : 3754503 : WARNING : [34msarno : [2026-09-28T12:46:57.255Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:46:58.734862 : 1241827 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:46:58.734888 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:46:58.736022 : 1135 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:46:58.736033 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:46:58.737392 : 1359 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:46:58.737401 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:46:58.737439 : 38 : FINEST : [34mHTTP : 2026-09-28T12:46:58.734755  0:00:00.002665 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:03.735629 : 4998192 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:03.735657 : 26 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:03.736878 : 1222 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:03.736888 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:03.738296 : 1409 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:03.738304 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:03.738343 : 39 : FINEST : [34mHTTP : 2026-09-28T12:47:03.735523  0:00:00.002813 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:08.735144 : 4996802 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:08.735170 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:08.736328 : 1159 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:08.736338 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:08.737715 : 1378 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:08.737724 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:08.737747 : 23 : FINEST : [34mHTTP : 2026-09-28T12:47:08.735041  0:00:00.002699 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:13.735110 : 4997365 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:13.735133 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:13.736383 : 1251 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:13.736397 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:13.737802 : 1406 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:13.737813 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:13.737840 : 27 : FINEST : [34mHTTP : 2026-09-28T12:47:13.735005  0:00:00.002828 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:18.734906 : 4997068 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:18.734932 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:18.736069 : 1137 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:18.736078 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:18.737475 : 1398 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:18.737483 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:18.737595 : 112 : FINEST : [34mHTTP : 2026-09-28T12:47:18.734800  0:00:00.002701 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:23.298789 : 4561196 : FINEST : [34mHTTP : 2026-09-28T12:47:23.298606  0:00:00.000171 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:47:23.735427 : 436638 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:23.735453 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:23.736680 : 1228 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:23.736696 : 15 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:23.738112 : 1417 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:23.738123 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:23.738172 : 49 : FINEST : [34mHTTP : 2026-09-28T12:47:23.735321  0:00:00.002844 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:27.303230 : 3565061 : WARNING : [34msarno : [2026-09-28T12:47:27.257Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:47:28.735002 : 1431771 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:28.735029 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:28.736263 : 1234 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:28.736272 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:28.737709 : 1437 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:28.737718 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:28.737741 : 22 : FINEST : [34mHTTP : 2026-09-28T12:47:28.734896  0:00:00.002839 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:33.735752 : 4998013 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:33.735778 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:33.737018 : 1241 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:33.737031 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:33.738446 : 1415 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:33.738455 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:33.738509 : 53 : FINEST : [34mHTTP : 2026-09-28T12:47:33.735621  0:00:00.002881 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:38.734785 : 4996278 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:38.734809 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:38.736117 : 1307 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:38.736128 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:38.737564 : 1436 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:38.737573 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:38.737622 : 49 : FINEST : [34mHTTP : 2026-09-28T12:47:38.734657  0:00:00.002958 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:43.734747 : 4997127 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:43.734771 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:43.736099 : 1329 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:43.736111 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:43.737469 : 1357 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:43.737477 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:43.737511 : 35 : FINEST : [34mHTTP : 2026-09-28T12:47:43.734615  0:00:00.002890 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:48.735066 : 4997556 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:48.735090 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:48.736357 : 1268 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:48.736367 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:48.737743 : 1376 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:48.737753 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:48.737805 : 53 : FINEST : [34mHTTP : 2026-09-28T12:47:48.734961  0:00:00.002837 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:53.298189 : 4560385 : FINEST : [34mHTTP : 2026-09-28T12:47:53.298029  0:00:00.000148 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:47:53.735187 : 436998 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:53.735212 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:53.736429 : 1218 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:53.736440 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:53.737846 : 1407 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:53.737856 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:53.737924 : 69 : FINEST : [34mHTTP : 2026-09-28T12:47:53.735080  0:00:00.002837 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:47:57.364388 : 3626466 : WARNING : [34msarno : [2026-09-28T12:47:57.258Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:47:58.736029 : 1371640 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:47:58.736057 : 26 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:47:58.738337 : 2281 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:47:58.738352 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:47:58.739798 : 1447 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:47:58.739809 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:47:58.739836 : 27 : FINEST : [34mHTTP : 2026-09-28T12:47:58.735885  0:00:00.003945 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:03.735564 : 4995731 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:03.735588 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:03.737315 : 1728 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:03.737328 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:03.738717 : 1390 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:03.738730 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:03.738767 : 38 : FINEST : [34mHTTP : 2026-09-28T12:48:03.735456  0:00:00.003305 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:08.735174 : 4996407 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:08.735201 : 26 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:08.736470 : 1270 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:08.736480 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:08.737898 : 1418 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:08.737906 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:08.737949 : 42 : FINEST : [34mHTTP : 2026-09-28T12:48:08.735064  0:00:00.002878 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:13.735446 : 4997499 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:13.735470 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:13.736735 : 1266 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:13.736747 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:13.738216 : 1470 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:13.738226 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:13.738267 : 42 : FINEST : [34mHTTP : 2026-09-28T12:48:13.735340  0:00:00.002919 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:18.735167 : 4996902 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:18.735193 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:18.736379 : 1187 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:18.736393 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:18.737798 : 1406 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:18.737809 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:18.737837 : 28 : FINEST : [34mHTTP : 2026-09-28T12:48:18.735062  0:00:00.002767 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:23.298568 : 4560733 : FINEST : [34mHTTP : 2026-09-28T12:48:23.298410  0:00:00.000146 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:48:23.735117 : 436549 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:23.735142 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:23.736458 : 1316 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:23.736470 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:23.737896 : 1426 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:23.737905 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:23.737969 : 64 : FINEST : [34mHTTP : 2026-09-28T12:48:23.735013  0:00:00.002949 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:27.425830 : 3687864 : WARNING : [34msarno : [2026-09-28T12:48:27.260Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:48:28.735122 : 1309291 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:28.735148 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:28.736304 : 1156 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:28.736313 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:28.737643 : 1331 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:28.737652 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:28.737722 : 71 : FINEST : [34mHTTP : 2026-09-28T12:48:28.735017  0:00:00.002697 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:33.735233 : 4997512 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:33.735258 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:33.736460 : 1203 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:33.736472 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:33.737876 : 1405 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:33.737888 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:33.737915 : 27 : FINEST : [34mHTTP : 2026-09-28T12:48:33.735126  0:00:00.002783 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:38.736797 : 4998885 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:38.736840 : 40 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:38.738183 : 1345 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:38.738198 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:38.739568 : 1371 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:38.739578 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:38.739603 : 25 : FINEST : [34mHTTP : 2026-09-28T12:48:38.736613  0:00:00.002983 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:43.735721 : 4996120 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:43.735747 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:43.737091 : 1345 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:43.737102 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:43.738479 : 1378 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:43.738488 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:43.738543 : 55 : FINEST : [34mHTTP : 2026-09-28T12:48:43.735594  0:00:00.002941 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:48.734800 : 4996259 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:48.734827 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:48.735954 : 1127 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:48.735963 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:48.737347 : 1384 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:48.737356 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:48.737388 : 32 : FINEST : [34mHTTP : 2026-09-28T12:48:48.734693  0:00:00.002689 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:53.298780 : 4561395 : FINEST : [34mHTTP : 2026-09-28T12:48:53.298600  0:00:00.000168 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:48:53.734919 : 436138 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:53.734945 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:53.736154 : 1210 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:53.736167 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:53.737544 : 1377 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:53.737553 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:53.737624 : 71 : FINEST : [34mHTTP : 2026-09-28T12:48:53.734810  0:00:00.002807 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:48:57.485282 : 3747660 : WARNING : [34msarno : [2026-09-28T12:48:57.262Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:48:58.735040 : 1249758 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:48:58.735065 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:48:58.736258 : 1194 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:48:58.736269 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:48:58.737688 : 1419 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:48:58.737697 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:48:58.737773 : 77 : FINEST : [34mHTTP : 2026-09-28T12:48:58.734935  0:00:00.002832 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:03.734649 : 4996877 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:03.734690 : 39 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:03.735887 : 1199 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:03.735900 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:03.737286 : 1387 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:03.737297 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:03.737352 : 55 : FINEST : [34mHTTP : 2026-09-28T12:49:03.734544  0:00:00.002774 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:08.735110 : 4997759 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:08.735137 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:08.736326 : 1190 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:08.736336 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:08.737717 : 1382 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:08.737725 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:08.737748 : 23 : FINEST : [34mHTTP : 2026-09-28T12:49:08.735004  0:00:00.002738 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:13.735410 : 4997663 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:13.735434 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:13.736713 : 1280 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:13.736728 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:13.738139 : 1412 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:13.738149 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:13.738190 : 41 : FINEST : [34mHTTP : 2026-09-28T12:49:13.735304  0:00:00.002879 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:18.734921 : 4996734 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:18.734948 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:18.736070 : 1122 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:18.736080 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:18.737444 : 1364 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:18.737452 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:18.737491 : 39 : FINEST : [34mHTTP : 2026-09-28T12:49:18.734814  0:00:00.002670 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:23.297789 : 4560299 : FINEST : [34mHTTP : 2026-09-28T12:49:23.297609  0:00:00.000168 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:49:23.735273 : 437484 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:23.735299 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:23.736551 : 1253 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:23.736563 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:23.737961 : 1399 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:23.737971 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:23.738040 : 69 : FINEST : [34mHTTP : 2026-09-28T12:49:23.735167  0:00:00.002866 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:27.295294 : 3557257 : WARNING : [34msarno : [2026-09-28T12:49:27.264Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:49:28.734724 : 1439429 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:28.734750 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:28.735975 : 1226 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:28.735987 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:28.737332 : 1346 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:28.737342 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:28.737402 : 60 : FINEST : [34mHTTP : 2026-09-28T12:49:28.734594  0:00:00.002801 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:33.735242 : 4997843 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:33.735268 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:33.736709 : 1442 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:33.736721 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:33.738151 : 1430 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:33.738161 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:33.738191 : 31 : FINEST : [34mHTTP : 2026-09-28T12:49:33.735138  0:00:00.003047 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:38.735555 : 4997365 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:38.735580 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:38.736942 : 1363 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:38.736956 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:38.738355 : 1400 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:38.738365 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:38.738403 : 38 : FINEST : [34mHTTP : 2026-09-28T12:49:38.735450  0:00:00.002948 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:43.735039 : 4996638 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:43.735066 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:43.736270 : 1205 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:43.736280 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:43.737632 : 1353 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:43.737641 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:43.737680 : 40 : FINEST : [34mHTTP : 2026-09-28T12:49:43.734922  0:00:00.002736 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:48.736308 : 4998630 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:48.736339 : 28 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:48.739052 : 2714 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:48.739066 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:48.740477 : 1412 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:48.740488 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:48.740539 : 52 : FINEST : [34mHTTP : 2026-09-28T12:49:48.736168  0:00:00.004365 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:53.298336 : 4557798 : FINEST : [34mHTTP : 2026-09-28T12:49:53.298173  0:00:00.000151 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:49:53.734844 : 436509 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:53.734869 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:53.736020 : 1151 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:53.736031 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:53.737422 : 1390 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:53.737430 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:53.737453 : 23 : FINEST : [34mHTTP : 2026-09-28T12:49:53.734741  0:00:00.002706 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:49:57.356060 : 3618610 : WARNING : [34msarno : [2026-09-28T12:49:57.265Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:49:58.734715 : 1378654 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:49:58.734740 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:49:58.736015 : 1276 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:49:58.736027 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:49:58.737381 : 1355 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:49:58.737390 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:49:58.737413 : 23 : FINEST : [34mHTTP : 2026-09-28T12:49:58.734589  0:00:00.002818 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:03.735512 : 4998102 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:03.735538 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:03.736881 : 1344 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:03.736898 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:03.738385 : 1489 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:03.738397 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:03.738427 : 30 : FINEST : [34mHTTP : 2026-09-28T12:50:03.735407  0:00:00.003013 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:08.734831 : 4996407 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:08.734857 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:08.736007 : 1149 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:08.736019 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:08.737379 : 1360 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:08.737387 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:08.737429 : 42 : FINEST : [34mHTTP : 2026-09-28T12:50:08.734725  0:00:00.002698 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:13.734742 : 4997315 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:13.734766 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:13.736051 : 1285 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:13.736066 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:13.737458 : 1393 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:13.737469 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:13.737496 : 27 : FINEST : [34mHTTP : 2026-09-28T12:50:13.734613  0:00:00.002876 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:18.735301 : 4997807 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:18.735327 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:18.736540 : 1213 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:18.736550 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:18.737942 : 1393 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:18.737951 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:18.737996 : 46 : FINEST : [34mHTTP : 2026-09-28T12:50:18.735194  0:00:00.002796 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:23.298788 : 4560793 : FINEST : [34mHTTP : 2026-09-28T12:50:23.298606  0:00:00.000169 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:50:23.735558 : 436770 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:23.735585 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:23.736992 : 1408 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:23.737006 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:23.738446 : 1441 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:23.738457 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:23.738485 : 28 : FINEST : [34mHTTP : 2026-09-28T12:50:23.735452  0:00:00.003027 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:27.417751 : 3679269 : WARNING : [34msarno : [2026-09-28T12:50:27.267Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:50:28.735312 : 1317560 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:28.735338 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:28.736653 : 1316 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:28.736674 : 20 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:28.738283 : 1609 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:28.738292 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:28.738316 : 24 : FINEST : [34mHTTP : 2026-09-28T12:50:28.735204  0:00:00.003105 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:33.734774 : 4996460 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:33.734799 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:33.736160 : 1361 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:33.736173 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:33.737588 : 1416 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:33.737599 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:33.737627 : 28 : FINEST : [34mHTTP : 2026-09-28T12:50:33.734644  0:00:00.002976 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:38.736008 : 4998383 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:38.736039 : 29 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:38.738144 : 2106 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:38.738158 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:38.739533 : 1376 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:38.739543 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:38.739571 : 29 : FINEST : [34mHTTP : 2026-09-28T12:50:38.735866  0:00:00.003698 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:43.735358 : 4995788 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:43.735382 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:43.736583 : 1202 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:43.736596 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:43.738004 : 1409 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:43.738015 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:43.738043 : 29 : FINEST : [34mHTTP : 2026-09-28T12:50:43.735250  0:00:00.002786 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:48.735762 : 4997720 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:48.735788 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:48.737011 : 1224 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:48.737027 : 15 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:48.738430 : 1404 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:48.738441 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:48.738465 : 25 : FINEST : [34mHTTP : 2026-09-28T12:50:48.735638  0:00:00.002821 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:53.298321 : 4559857 : FINEST : [34mHTTP : 2026-09-28T12:50:53.298166  0:00:00.000144 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 12:50:53.735178 : 436857 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:53.735205 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:53.736500 : 1296 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:53.736513 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:53.737902 : 1390 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:53.737916 : 14 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:53.737994 : 78 : FINEST : [34mHTTP : 2026-09-28T12:50:53.735070  0:00:00.002916 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:50:57.482164 : 3744172 : WARNING : [34msarno : [2026-09-28T12:50:57.269Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 12:50:58.734840 : 1252675 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:50:58.734863 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:50:58.736218 : 1356 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:50:58.736230 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:50:58.737615 : 1385 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:50:58.737623 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:50:58.737708 : 84 : FINEST : [34mHTTP : 2026-09-28T12:50:58.734735  0:00:00.002966 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:51:03.735500 : 4997794 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:51:03.735525 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:51:03.736732 : 1208 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:51:03.736745 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:51:03.738142 : 1397 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:51:03.738151 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:51:03.738191 : 39 : FINEST : [34mHTTP : 2026-09-28T12:51:03.735397  0:00:00.002788 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:51:08.735101 : 4996912 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:51:08.735125 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:51:08.736262 : 1137 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:51:08.736270 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:51:08.737688 : 1419 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:51:08.737698 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:51:08.737761 : 63 : FINEST : [34mHTTP : 2026-09-28T12:51:08.734994  0:00:00.002760 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:51:13.735279 : 4997520 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:51:13.735304 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:51:13.736567 : 1264 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:51:13.736580 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:51:13.737955 : 1376 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:51:13.737965 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:51:13.737992 : 27 : FINEST : [34mHTTP : 2026-09-28T12:51:13.735175  0:00:00.002810 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:51:18.736647 : 4998658 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 12:51:18.736684 : 34 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 12:51:18.738183 : 1500 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 12:51:18.738198 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 12:51:18.739579 : 1382 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 12:51:18.739590 : 10 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 12:51:18.739617 : 27 : FINEST : [34mHTTP : 2026-09-28T12:51:18.736534  0:00:00.003076 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 12:51:23.298482 : 4558867 : FINEST : [34mHTTP : 2026-09-28T12:51:23.298324  0:00:00.000146 GET     [200] -- {null} -- /_alive[0m
