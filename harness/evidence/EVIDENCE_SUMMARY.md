@@ -146,6 +146,19 @@ booking-driven from the 1.2.6 leg).
   ProcessResultQueryProcessor before Friday. Reported as-is, not
   smoothed over.
 
+  ADJUDICATION (glm, code-verified @ sarno 2d5debf30, confirmed
+  own-eyes 2026-09-28): hypothesis above DISPROVEN — both
+  process_result_query branches (object-store ~:63 and local fallback
+  ~:76) call `from_file_streaming`; the "via object store" line IS the
+  streaming path, no separate marker exists. The streaming decode DID
+  engage. The peak is unchanged because from_file_streaming streams
+  PER TABLE (one tables[i] subtree in flight, dropped before the next,
+  tercen_model/mod.rs) and this harness emits a SINGLE-table
+  OperatorResult — the degenerate n_tables=1 case. Step 1 still cuts
+  peak for the multi-table incident class (Faris: 4 gathered tables);
+  single-table reduction = sarno#38 step 2 (per-column chunked
+  decode), not yet built. Not a wiring defect; no regression.
+
 ## Verdict
 
 All four collectors green on stage 1.1.11 at both points; #1690
