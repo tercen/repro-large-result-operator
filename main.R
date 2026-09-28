@@ -5,8 +5,10 @@
 # it through the ComputationResult path (where the #1690 sizing +
 # fail-fast wiring lives).
 #
-# Size points (n_cols): 1880 -> ~1.5 GB on 100k input rows (dry-check,
-# worker-8); 4375 -> ~3.5 GB (real point, worker-16 post-roll).
+# Size points (n_cols): 1250 -> ~1.0 GB on 100k input rows (dry-check,
+# worker-8: 5.07 GB booking ceiling — measured via `system workers`,
+# 2026-09-28 — so the operator peak must stay well under ~5 GB);
+# 4375 -> ~3.5 GB (real point, worker-16 post-roll).
 suppressPackageStartupMessages({
   library(tercen)
   library(dplyr)
