@@ -2,7 +2,11 @@
 local({
 
   # the requested version of renv
-  version <- "0.9.2"
+  # sci#1685 harness: pinned to the version cran.tercen.com carries so the
+  # exact-match CRAN bootstrap path fires; the 0.9.2 pin falls through to
+  # the api.github.com tarball leg, which 401s on a dead GITHUB_PAT (the
+  # customer failure the tercen/actions repro harness diagnosed).
+  version <- "1.2.4"
 
   # avoid recursion
   if (!is.na(Sys.getenv("RENV_R_INITIALIZING", unset = NA)))
