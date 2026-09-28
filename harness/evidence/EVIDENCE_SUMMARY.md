@@ -117,6 +117,35 @@ worker-16 booked 12.8 GB available, podman `--memory 9438M`.
 - End-to-end: submit→done ≈ 4 min (2 min operator R build, 1.5 min
   upload, 26 s ingestion).
 
+## 1.2.7 re-run (sarno 1.2.7) — task a830c762, 2026-09-28T13:15–13:17Z
+
+`evidence/worker_log_real_127_full.log`, `evidence/pod_metrics_real_127.log`.
+Stage rotated to sarno **1.2.7** at 13:11Z (glm apply); worker-16
+rollout-restarted onto 1.2.7 first (pod tercen-worker-worker-16-78bfb8fd46-s9tng,
+startup log shows `sarno:1.2.7` — the pre-roll pod still ran 1.2.6).
+Cache bust = fresh step clone (n_cols 998, namespace ds2b, task
+a830c762); offset 6000 → booking 9437184000, worker-16 (already up,
+booking-driven from the 1.2.6 leg).
+
+- Collector (a): 208 × 16 MiB chunks ≈ 3.47 GB — unchanged green.
+- Collector (d): blob-cache read-back crossed —
+  `operator result via object store: /tmp/sarno-blobs/3f/25/3f25df2b…`
+  (sarno 1.2.7, GCS backend, cache-first). Green.
+- Sizing line: correctly SILENT (booking 9.4 GB > required ≈5.6 GB;
+  formula unchanged in 1.2.7).
+- **FINDING — ingestion peak did NOT drop**: 1.2.7
+  `TASK_STATS|task=ComputationResult(task_id=a830c762)|peak=3499963748|limit=9437184000|peak_percent=37.1|duration_secs=27.300`
+  vs 1.2.6 peak=3502400778 / 25.818 s. Δpeak ≈ **0.07 %** (noise), Δt
+  +6 %. Expected from the sarno#41 bench shape was ~0.38× sarno-side
+  (3.5 → ~1.4–1.8 GB). No streaming-decode markers appear in the 1.2.7
+  ingestion log; the path taken is the object-store blob-cache
+  read-back (`process_query -- operator result via object store`).
+  **Hypothesis (untested here): #41's streaming decode engages on the
+  from_file path, not the blob-cache object-store path this harness
+  exercises** — worth a 1.2.7 code check against
+  ProcessResultQueryProcessor before Friday. Reported as-is, not
+  smoothed over.
+
 ## Verdict
 
 All four collectors green on stage 1.1.11 at both points; #1690

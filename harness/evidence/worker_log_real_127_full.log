@@ -1,0 +1,615 @@
+Main : 2026-09-28 13:15:10.986391 : 2331392 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-78bfb8fd46-s9tng] [Tenant: ] Received ExecuteTask request for task: a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:15:10.986413 : 21 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-78bfb8fd46-s9tng] [Tenant: ] Executing task a830c762-2eef-4454-9972-ab1e326aa34e...[0m
+Main : 2026-09-28 13:15:10.987314 : 900 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:15:11.008007 : 20695 : FINEST : [34mCouchService : Start isolate task RunComputationTask(a830c762-2eef-4454-9972-ab1e326aa34e, 3-edecada4-bca3-49c0-8a80-19d7ca5728e1, Instance of 'InitState') -- taskMemory = 9437184000.0 -- availableMemory = 12800000000.0 -- cpuMillicores = 1000m -- availableCpuMillicores = 8000m -- cpuset-cpus = [0m
+Main : 2026-09-28 13:15:11.008036 : 27 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-78bfb8fd46-s9tng] [Tenant: ] Task a830c762-2eef-4454-9972-ab1e326aa34e completed successfully[0m
+Worker : 2026-09-28 13:15:11.008366 : 33799003 : INFO : [34mParams : runZone -- workerUri=http://10.64.5.4:5400 -- task=a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.008382 : 17 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Starting task --owner admin --user /admin --runtimeType RunComputationTask --id a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.022437 : 14053 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: RunningState}[0m
+Worker : 2026-09-28 13:15:11.023356 : 919 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.032727 : 9372 : FINEST : [34mCouchService : sendChannel -- bd7b2744-81ca-4f03-86fb-3cedc36275f0 -- evt TaskStateEvent(2026-09-28T13:15:11.032711Z, a830c762-2eef-4454-9972-ab1e326aa34e, Instance of 'RunningState')[0m
+Worker : 2026-09-28 13:15:11.032792 : 64 : FINER : [34mStdOperator : Starting StdOperator.run() for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.032809 : 17 : FINEST : [34mCouchService : sendChannel -- bd7b2744-81ca-4f03-86fb-3cedc36275f0 -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 13:15:11.032837 : 28 : FINER : [34mStdOperator : Creating file result for task a830c762-2eef-4454-9972-ab1e326aa34e, project 1878c5a2-4d9d-4c8a-81db-8e55938b67ab[0m
+Worker : 2026-09-28 13:15:11.033613 : 776 : FINEST : [34mEventService : Published TSON event to Redis channel bd7b2744-81ca-4f03-86fb-3cedc36275f0 (208 bytes)[0m
+Worker : 2026-09-28 13:15:11.033622 : 9 : FINEST : [34mEventService : Published TSON event to Redis channel bd7b2744-81ca-4f03-86fb-3cedc36275f0 (228 bytes)[0m
+Worker : 2026-09-28 13:15:11.042454 : 8832 : FINER : [34mStdOperator : File result created with ID d2d10f45-a896-4e8d-9b19-5a46dd09da62 for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.043386 : 933 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.043433 : 46 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 13:15:11.052579 : 9146 : FINER : [34mStdOperator : Running install operator runner for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.404570 : 351993 : FINER : [34mStdOperator : Install operator runner completed for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.404596 : 24 : FINER : [34mStdOperator : Running child runner for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:11.408663 : 4068 : FINEST : [34mTaskRunnerInstance : Running operator from URL: https://github.com/tercen/repro-large-result-operator[0m
+Worker : 2026-09-28 13:15:11.480888 : 72228 : INFO : [34mTaskRunnerInstance : Legacy image detected: docker.io/tercen/runtime-r40:4.0.4-8 (user="root", created=2025-12-12 06:09:05.519943Z) — running without --user flag[0m
+Worker : 2026-09-28 13:15:11.480939 : 47 : FINE : [34mTaskRunnerInstance : Checking operator URL: https://github.com/tercen/repro-large-result-operator[0m
+Worker : 2026-09-28 13:15:11.482721 : 1783 : FINE : [34mTaskRunnerInstance : ExeRunner<RunComputationTask> -- start -- podman run --rm --replace --init --user 0:0 --pids-limit -1 --memory 9438M --memory-swap 9438M --cpus 1 --name=tercen_task_a830c762-2eef-4454-9972-ab1e326aa34e --env TERCEN_SERVICE_URI=http://10.64.5.4:5400 --env MALLOC_CONF=background_thread:true,dirty_decay_ms:0,muzzy_decay_ms:0,thp:never,abort_conf:false --env OPENBLAS_NUM_THREADS=1 --env OMP_NUM_THREADS=1 -e TERCEN_WEB_APP_PORT=8080 --workdir /var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa -e TERCEN_TASK_ID=a830c762-2eef-4454-9972-ab1e326aa34e -e R_PROFILE_USER=/var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa/.Rprofile -v /tmp/admin:/tmp:rw -v /var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa:/var/lib/tercen/data/operator/34/37/3734b2dc-8221-4e52-92d4-ff8a84e2cf69/tercen-repro-large-result-operator-30dbbaa:ro -v /var/lib/tercen/data/renv:/var/lib/tercen/data/renv:ro docker.io/tercen/runtime-r40:4.0.4-8 -f main.R --args --serviceUri http://10.64.5.4:5400 --token REDACTED --taskId a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:15:13.201275 : 1718557 : FINEST : [34mTaskRunnerInstance : _ContainerMemoryTracker -- reading cgroup dir /sys/fs/cgroup/libpod_parent/libpod-79bb666aa209ca709e32ac7d815ff9f8c355f3d46a22466e807fb5d12a2c57a7[0m
+Main : 2026-09-28 13:15:13.652927 : 2644894 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:13.652953 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:13.653990 : 1038 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:13.654001 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:13.655361 : 1361 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:13.655371 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:13.655397 : 26 : FINEST : [34mHTTP : 2026-09-28T13:15:13.652800  0:00:00.002590 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:18.652755 : 4997360 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:18.652777 : 20 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:18.653765 : 989 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:18.653775 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:18.655070 : 1295 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:18.655078 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:18.655103 : 26 : FINEST : [34mHTTP : 2026-09-28T13:15:18.652643  0:00:00.002453 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:23.652408 : 4997306 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:23.652432 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:23.653442 : 1010 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:23.653452 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:23.654782 : 1330 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:23.654791 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:23.654819 : 28 : FINEST : [34mHTTP : 2026-09-28T13:15:23.652296  0:00:00.002516 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:28.326376 : 4671559 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:15:28.331462 : 5086 : FINEST : [34mHTTP : 2026-09-28T13:15:28.324554  0:00:00.006899 GET     [200] -- {null} -- /api/v1/task?id=a830c762-2eef-4454-9972-ab1e326aa34e&useFactory=true[0m
+Main : 2026-09-28 13:15:28.382503 : 51041 : FINEST : [34mHTTP : 2026-09-28T13:15:28.377449  0:00:00.005043 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 13:15:28.528703 : 146199 : FINEST : [34mHTTP : 2026-09-28T13:15:28.523785  0:00:00.004907 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 13:15:28.536320 : 7616 : FINEST : [34mHTTP : 2026-09-28T13:15:28.531744  0:00:00.004570 POST    [200] -- {null} -- /api/v1/schema/findByQueryHash?useFactory=false[0m
+Main : 2026-09-28 13:15:28.544222 : 7902 : FINER : [34mTableSchemaService : Starting selectStream for table 4bb40345-a269-4919-b003-b4e0d02b8a44[0m
+Main : 2026-09-28 13:15:28.548192 : 3970 : FINER : [34mTableSchemaService : Starting selectStream for table 4bb40345-a269-4919-b003-b4e0d02b8a44 -- cnames [.ri, .ci, .y][0m
+Main : 2026-09-28 13:15:28.548201 : 9 : FINER : [34mTableSchemaService : Yielding stream for table 4bb40345-a269-4919-b003-b4e0d02b8a44 -- cnames [.ri, .ci, .y] -- with range 0 to 437500[0m
+Main : 2026-09-28 13:15:28.548409 : 208 : FINEST : [34mHTTP : 2026-09-28T13:15:28.542498  0:00:00.005908 POST    [200] -- {null} -- /api/v1/schema/selectStream[0m
+Main : 2026-09-28 13:15:28.549002 : 593 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.ri] relation=SimpleRelation(id=4bb40345-a269-4919-b003-b4e0d02b8a44,nCols=3)[0m
+Main : 2026-09-28 13:15:28.648459 : 99460 : FINEST : [34mHTTP : 2026-09-28T13:15:28.648300  0:00:00.000147 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 13:15:28.652260 : 3799 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:28.652272 : 12 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:28.653177 : 905 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:28.653188 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:28.735117 : 81932 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 16445[0m
+Main : 2026-09-28 13:15:28.735186 : 66 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 13:15:28.741916 : 6732 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 1733677[0m
+Main : 2026-09-28 13:15:28.742323 : 406 : FINER : [34mSarno : selectStream yielding table chunk with 433404 rows[0m
+Main : 2026-09-28 13:15:28.742997 : 673 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 13:15:28.746053 : 3057 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.ci] relation=SimpleRelation(id=4bb40345-a269-4919-b003-b4e0d02b8a44,nCols=3)[0m
+Main : 2026-09-28 13:15:28.760278 : 14225 : WARNING : [34msarno : [2026-09-28T13:15:28.555Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 13:15:28.760292 : 13 : WARNING : [34msarno : [2026-09-28T13:15:28.555Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 13:15:28.760296 : 4 : WARNING : [34msarno : [2026-09-28T13:15:28.556Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 13:15:28.760301 : 5 : WARNING : [34msarno : [W:15002] [2026-09-28T13:15:28.578Z INFO ] sarno blob store: backend=gcs bucket=tercen-ring-tercen-stage-data cache_dir=/tmp/sarno-blobs[0m
+Main : 2026-09-28 13:15:28.760304 : 3 : WARNING : [34msarno : [2026-09-28T13:15:28.654Z INFO ] Created new worker on port 15003 (threads 1, total: 2)[0m
+Main : 2026-09-28 13:15:28.760309 : 5 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] LimitedAlloc: Memory limit enforcement is DISABLED (tracking only)[0m
+Main : 2026-09-28 13:15:28.760311 : 2 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] rayon thread pool -- num_threads: 1 (requested: 1, host cores: 4)[0m
+Main : 2026-09-28 13:15:28.760315 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] worker started -- listening on socket /tmp/sarno-worker-15003.sock[0m
+Main : 2026-09-28 13:15:28.760317 : 2 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] === Sarno Configuration ===[0m
+Main : 2026-09-28 13:15:28.760321 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] Config file path: /home/sarno/.config/sarno/sarno.toml[0m
+Main : 2026-09-28 13:15:28.760325 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] table_dir: /var/lib/tercen/data/sarno/[0m
+Main : 2026-09-28 13:15:28.760328 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] file_dir: /var/lib/tercen/data/upload/[0m
+Main : 2026-09-28 13:15:28.760332 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] grpc_host: 127.0.0.1[0m
+Main : 2026-09-28 13:15:28.760334 : 2 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] grpc_port: 50051[0m
+Main : 2026-09-28 13:15:28.760337 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] grpc_username: admin[0m
+Main : 2026-09-28 13:15:28.760340 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] storage_backend: gcs[0m
+Main : 2026-09-28 13:15:28.760344 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] storage_bucket: tercen-ring-tercen-stage-data[0m
+Main : 2026-09-28 13:15:28.760348 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] blob_cache_dir: /tmp/sarno-blobs[0m
+Main : 2026-09-28 13:15:28.760352 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] blob_cache_budget_bytes: 21474836480[0m
+Main : 2026-09-28 13:15:28.760356 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] ===========================[0m
+Main : 2026-09-28 13:15:28.760359 : 3 : WARNING : [34msarno : [W:15003] [2026-09-28T13:15:28.655Z INFO ] Worker attempting to bind to Unix socket: /tmp/sarno-worker-15003.sock[0m
+Main : 2026-09-28 13:15:28.760364 : 5 : WARNING : [34msarno : [W:15002] [2026-09-28T13:15:28.735Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=11086142|limit=6645728|peak_percent=166.8|sent=1750122|received=0|sent_per_sec=9.3 MiB|received_per_sec=0 B|duration_secs=0.179|start=100472[0m
+Main : 2026-09-28 13:15:28.760380 : 16 : WARNING : [34msarno : [2026-09-28T13:15:28.736Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 13:15:28.760385 : 5 : WARNING : [34msarno : [2026-09-28T13:15:28.737Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 13:15:28.760389 : 4 : WARNING : [34msarno : [2026-09-28T13:15:28.752Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 13:15:28.760393 : 4 : WARNING : [34msarno : [2026-09-28T13:15:28.752Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 13:15:28.760397 : 4 : WARNING : [34msarno : [2026-09-28T13:15:28.753Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 13:15:28.775615 : 15219 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 16445[0m
+Main : 2026-09-28 13:15:28.775652 : 36 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 13:15:28.782408 : 6757 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 1733677[0m
+Main : 2026-09-28 13:15:28.782833 : 425 : FINER : [34mSarno : selectStream yielding table chunk with 433404 rows[0m
+Main : 2026-09-28 13:15:28.783508 : 675 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 13:15:28.784287 : 778 : FINER : [34mSarno : Starting selectStream() domain=<empty> split=1000000 attrs=[.y] relation=SimpleRelation(id=4bb40345-a269-4919-b003-b4e0d02b8a44,nCols=3)[0m
+Main : 2026-09-28 13:15:28.816315 : 32029 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 32828[0m
+Main : 2026-09-28 13:15:28.816365 : 49 : FINER : [34mSarno : selectStream yielding table chunk with 4096 rows[0m
+Main : 2026-09-28 13:15:28.830168 : 13804 : FINER : [34mSarno : selectStream receiving table chunk : bytes.length 3467292[0m
+Main : 2026-09-28 13:15:28.830839 : 671 : FINER : [34mSarno : selectStream yielding table chunk with 433404 rows[0m
+Main : 2026-09-28 13:15:28.832173 : 1334 : FINER : [34mSarno : selectStream completed for domain [0m
+Main : 2026-09-28 13:15:28.855478 : 23306 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:28.855501 : 21 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:28.855543 : 42 : FINEST : [34mHTTP : 2026-09-28T13:15:28.652171  0:00:00.203364 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:29.010449 : 154908 : WARNING : [34msarno : [W:15002] [2026-09-28T13:15:28.775Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=5907104|limit=6645728|peak_percent=88.9|sent=1750122|received=0|sent_per_sec=73.4 MiB|received_per_sec=0 B|duration_secs=0.023|start=535873[0m
+Main : 2026-09-28 13:15:29.010493 : 42 : WARNING : [34msarno : [2026-09-28T13:15:28.776Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 13:15:29.010498 : 6 : WARNING : [34msarno : [2026-09-28T13:15:28.777Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 13:15:29.010502 : 3 : WARNING : [34msarno : [2026-09-28T13:15:28.791Z INFO ] exec_task: Acquired worker on port 15002 (threads 1)[0m
+Main : 2026-09-28 13:15:29.010506 : 4 : WARNING : [34msarno : [2026-09-28T13:15:28.791Z INFO ] exec_task: Forwarding task [SelectRelation(domain=, chunk=1000000)] to worker on port 15002[0m
+Main : 2026-09-28 13:15:29.010510 : 4 : WARNING : [34msarno : [2026-09-28T13:15:28.791Z INFO ] exec_task: Started stream processing [SelectRelation(domain=, chunk=1000000)] for worker on port 15002[0m
+Main : 2026-09-28 13:15:29.010514 : 4 : WARNING : [34msarno : [W:15002] [2026-09-28T13:15:28.817Z INFO ] TASK_STATS|task=SelectRelation(domain=, chunk=1000000)|peak=11140715|limit=10145728|peak_percent=109.8|sent=3500120|received=0|sent_per_sec=128.1 MiB|received_per_sec=0 B|duration_secs=0.026|start=535874[0m
+Main : 2026-09-28 13:15:29.010521 : 7 : WARNING : [34msarno : [2026-09-28T13:15:28.819Z INFO ] exec_task: Stream ended [SelectRelation(domain=, chunk=1000000)] for worker on port 15002, performing health check[0m
+Main : 2026-09-28 13:15:29.010527 : 6 : WARNING : [34msarno : [2026-09-28T13:15:28.820Z INFO ] exec_task: Returning healthy worker on port 15002 to pool [SelectRelation(domain=, chunk=1000000)][0m
+Main : 2026-09-28 13:15:31.678041 : 2667516 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:15:31.686173 : 8130 : FINEST : [34mHTTP : 2026-09-28T13:15:31.676790  0:00:00.009375 GET     [200] -- {null} -- /api/v1/file?id=d2d10f45-a896-4e8d-9b19-5a46dd09da62&useFactory=true[0m
+Main : 2026-09-28 13:15:36.596373 : 4910203 : WARNING : [34msarno : [2026-09-28T13:15:32.870Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 13:15:42.350698 : 5754325 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:42.350725 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:42.351305 : 581 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:42.351317 : 11 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:48.100909 : 5749594 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:48.100934 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:48.101678 : 746 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:48.101693 : 13 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:48.102633 : 941 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:48.102644 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:52.117037 : 4014395 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:52.117062 : 23 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:52.117101 : 39 : FINEST : [34mHTTP : 2026-09-28T13:15:42.350586  0:00:09.766508 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:52.117511 : 411 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:52.117523 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:52.117550 : 27 : FINEST : [34mHTTP : 2026-09-28T13:15:42.351216  0:00:09.766327 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:52.118246 : 696 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:52.118255 : 9 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:52.544544 : 426291 : FINE : [34mCouchService : upload : collectTaskStats error: Instance of 'TaskService' -- collectTaskStats -- not impl[0m
+Main : 2026-09-28 13:15:52.545924 : 1380 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:52.545940 : 15 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:52.547139 : 1198 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:52.547152 : 13 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:52.547520 : 369 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:15:52.548013 : 492 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:52.548018 : 5 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:52.548044 : 26 : FINEST : [34mHTTP : 2026-09-28T13:15:48.100799  0:00:04.447238 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:52.548618 : 575 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:52.548624 : 6 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:52.549814 : 1189 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:52.549820 : 6 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:52.549843 : 23 : FINEST : [34mHTTP : 2026-09-28T13:15:52.118144  0:00:00.431693 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:52.550366 : 524 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:52.550372 : 5 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:52.551463 : 1092 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:52.551470 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:52.551491 : 21 : FINEST : [34mHTTP : 2026-09-28T13:15:52.547030  0:00:00.004456 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:52.593385 : 41895 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/56/3a/563a8b91-8ffc-4aa7-ae92-e42cd53ed054[0m
+Main : 2026-09-28 13:15:52.657662 : 64278 : FINE : [34mGcsResumableUpload : Initiated resumable upload: https://storage.googleapis.com/upload/storage/v1/b/tercen-ring-tercen-stage-data/o?uploadType=resumable&upload_id=AP6rU82wMHMpgYEu7gjc0L2FK8AI5UR5hH27ek3C37kZ5bbRuKcU_MLiGgcHFB8wiEHEmsky0jcZGKh7zvYyoMjOZxtl_-jiMsD13sKVQ4ZIVa0[0m
+Main : 2026-09-28 13:15:53.053487 : 395824 : FINE : [34mGcsResumableUpload : Chunk uploaded: 0-16777215, total: 16777216 bytes[0m
+Main : 2026-09-28 13:15:53.435878 : 382392 : FINE : [34mGcsResumableUpload : Chunk uploaded: 16777216-33554431, total: 33554432 bytes[0m
+Main : 2026-09-28 13:15:53.824265 : 388386 : FINE : [34mGcsResumableUpload : Chunk uploaded: 33554432-50331647, total: 50331648 bytes[0m
+Main : 2026-09-28 13:15:54.240787 : 416523 : FINE : [34mGcsResumableUpload : Chunk uploaded: 50331648-67108863, total: 67108864 bytes[0m
+Main : 2026-09-28 13:15:54.744493 : 503705 : FINE : [34mGcsResumableUpload : Chunk uploaded: 67108864-83886079, total: 83886080 bytes[0m
+Main : 2026-09-28 13:15:55.129134 : 384642 : FINE : [34mGcsResumableUpload : Chunk uploaded: 83886080-100663295, total: 100663296 bytes[0m
+Main : 2026-09-28 13:15:55.528459 : 399325 : FINE : [34mGcsResumableUpload : Chunk uploaded: 100663296-117440511, total: 117440512 bytes[0m
+Main : 2026-09-28 13:15:55.902967 : 374507 : FINE : [34mGcsResumableUpload : Chunk uploaded: 117440512-134217727, total: 134217728 bytes[0m
+Main : 2026-09-28 13:15:56.298725 : 395759 : FINE : [34mGcsResumableUpload : Chunk uploaded: 134217728-150994943, total: 150994944 bytes[0m
+Main : 2026-09-28 13:15:56.660688 : 361962 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:15:56.660712 : 23 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:15:56.661795 : 1083 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:15:56.661807 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:15:56.663069 : 1263 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:15:56.663077 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:15:56.663103 : 26 : FINEST : [34mHTTP : 2026-09-28T13:15:56.660586  0:00:00.002510 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:15:56.756057 : 92956 : FINE : [34mGcsResumableUpload : Chunk uploaded: 150994944-167772159, total: 167772160 bytes[0m
+Main : 2026-09-28 13:15:57.150993 : 394936 : FINE : [34mGcsResumableUpload : Chunk uploaded: 167772160-184549375, total: 184549376 bytes[0m
+Main : 2026-09-28 13:15:57.538719 : 387726 : FINE : [34mGcsResumableUpload : Chunk uploaded: 184549376-201326591, total: 201326592 bytes[0m
+Main : 2026-09-28 13:15:57.914336 : 375617 : FINE : [34mGcsResumableUpload : Chunk uploaded: 201326592-218103807, total: 218103808 bytes[0m
+Main : 2026-09-28 13:15:58.340453 : 426116 : FINE : [34mGcsResumableUpload : Chunk uploaded: 218103808-234881023, total: 234881024 bytes[0m
+Main : 2026-09-28 13:15:58.648498 : 308045 : FINEST : [34mHTTP : 2026-09-28T13:15:58.648350  0:00:00.000136 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 13:15:58.722156 : 73658 : FINE : [34mGcsResumableUpload : Chunk uploaded: 234881024-251658239, total: 251658240 bytes[0m
+Main : 2026-09-28 13:15:59.151942 : 429787 : FINE : [34mGcsResumableUpload : Chunk uploaded: 251658240-268435455, total: 268435456 bytes[0m
+Main : 2026-09-28 13:15:59.535313 : 383370 : FINE : [34mGcsResumableUpload : Chunk uploaded: 268435456-285212671, total: 285212672 bytes[0m
+Main : 2026-09-28 13:15:59.920646 : 385333 : FINE : [34mGcsResumableUpload : Chunk uploaded: 285212672-301989887, total: 301989888 bytes[0m
+Main : 2026-09-28 13:16:00.306646 : 386001 : FINE : [34mGcsResumableUpload : Chunk uploaded: 301989888-318767103, total: 318767104 bytes[0m
+Main : 2026-09-28 13:16:00.693824 : 387177 : FINE : [34mGcsResumableUpload : Chunk uploaded: 318767104-335544319, total: 335544320 bytes[0m
+Main : 2026-09-28 13:16:01.087662 : 393838 : FINE : [34mGcsResumableUpload : Chunk uploaded: 335544320-352321535, total: 352321536 bytes[0m
+Main : 2026-09-28 13:16:01.509158 : 421496 : FINE : [34mGcsResumableUpload : Chunk uploaded: 352321536-369098751, total: 369098752 bytes[0m
+Main : 2026-09-28 13:16:01.719644 : 210487 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:01.719668 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:01.720740 : 1074 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:01.720751 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:01.722024 : 1274 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:01.722032 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:01.722058 : 26 : FINEST : [34mHTTP : 2026-09-28T13:16:01.719546  0:00:00.002505 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:01.918848 : 196793 : FINE : [34mGcsResumableUpload : Chunk uploaded: 369098752-385875967, total: 385875968 bytes[0m
+Main : 2026-09-28 13:16:02.298977 : 380128 : FINE : [34mGcsResumableUpload : Chunk uploaded: 385875968-402653183, total: 402653184 bytes[0m
+Main : 2026-09-28 13:16:02.678894 : 379917 : FINE : [34mGcsResumableUpload : Chunk uploaded: 402653184-419430399, total: 419430400 bytes[0m
+Main : 2026-09-28 13:16:03.068009 : 389115 : FINE : [34mGcsResumableUpload : Chunk uploaded: 419430400-436207615, total: 436207616 bytes[0m
+Main : 2026-09-28 13:16:03.278579 : 210570 : WARNING : [34msarno : [2026-09-28T13:16:02.871Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 13:16:03.715285 : 436707 : FINE : [34mGcsResumableUpload : Chunk uploaded: 436207616-452984831, total: 452984832 bytes[0m
+Main : 2026-09-28 13:16:04.124648 : 409362 : FINE : [34mGcsResumableUpload : Chunk uploaded: 452984832-469762047, total: 469762048 bytes[0m
+Main : 2026-09-28 13:16:04.522919 : 398271 : FINE : [34mGcsResumableUpload : Chunk uploaded: 469762048-486539263, total: 486539264 bytes[0m
+Main : 2026-09-28 13:16:04.947742 : 424824 : FINE : [34mGcsResumableUpload : Chunk uploaded: 486539264-503316479, total: 503316480 bytes[0m
+Main : 2026-09-28 13:16:05.329147 : 381404 : FINE : [34mGcsResumableUpload : Chunk uploaded: 503316480-520093695, total: 520093696 bytes[0m
+Main : 2026-09-28 13:16:05.742483 : 413337 : FINE : [34mGcsResumableUpload : Chunk uploaded: 520093696-536870911, total: 536870912 bytes[0m
+Main : 2026-09-28 13:16:06.130114 : 387630 : FINE : [34mGcsResumableUpload : Chunk uploaded: 536870912-553648127, total: 553648128 bytes[0m
+Main : 2026-09-28 13:16:06.515720 : 385606 : FINE : [34mGcsResumableUpload : Chunk uploaded: 553648128-570425343, total: 570425344 bytes[0m
+Main : 2026-09-28 13:16:06.726960 : 211241 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:06.726982 : 19 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:06.728170 : 1189 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:06.728182 : 11 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:06.729468 : 1287 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:06.729477 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:06.729503 : 26 : FINEST : [34mHTTP : 2026-09-28T13:16:06.726857  0:00:00.002640 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:06.916611 : 187110 : FINE : [34mGcsResumableUpload : Chunk uploaded: 570425344-587202559, total: 587202560 bytes[0m
+Main : 2026-09-28 13:16:07.356050 : 439439 : FINE : [34mGcsResumableUpload : Chunk uploaded: 587202560-603979775, total: 603979776 bytes[0m
+Main : 2026-09-28 13:16:07.748342 : 392293 : FINE : [34mGcsResumableUpload : Chunk uploaded: 603979776-620756991, total: 620756992 bytes[0m
+Main : 2026-09-28 13:16:08.128046 : 379703 : FINE : [34mGcsResumableUpload : Chunk uploaded: 620756992-637534207, total: 637534208 bytes[0m
+Main : 2026-09-28 13:16:08.508368 : 380322 : FINE : [34mGcsResumableUpload : Chunk uploaded: 637534208-654311423, total: 654311424 bytes[0m
+Main : 2026-09-28 13:16:08.901323 : 392955 : FINE : [34mGcsResumableUpload : Chunk uploaded: 654311424-671088639, total: 671088640 bytes[0m
+Main : 2026-09-28 13:16:09.290072 : 388749 : FINE : [34mGcsResumableUpload : Chunk uploaded: 671088640-687865855, total: 687865856 bytes[0m
+Main : 2026-09-28 13:16:09.748381 : 458309 : FINE : [34mGcsResumableUpload : Chunk uploaded: 687865856-704643071, total: 704643072 bytes[0m
+Main : 2026-09-28 13:16:10.129401 : 381021 : FINE : [34mGcsResumableUpload : Chunk uploaded: 704643072-721420287, total: 721420288 bytes[0m
+Main : 2026-09-28 13:16:10.513034 : 383632 : FINE : [34mGcsResumableUpload : Chunk uploaded: 721420288-738197503, total: 738197504 bytes[0m
+Main : 2026-09-28 13:16:10.925380 : 412347 : FINE : [34mGcsResumableUpload : Chunk uploaded: 738197504-754974719, total: 754974720 bytes[0m
+Main : 2026-09-28 13:16:11.313989 : 388608 : FINE : [34mGcsResumableUpload : Chunk uploaded: 754974720-771751935, total: 771751936 bytes[0m
+Main : 2026-09-28 13:16:11.661442 : 347454 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:11.661466 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:11.662432 : 967 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:11.662443 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:11.663668 : 1226 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:11.663676 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:11.663702 : 26 : FINEST : [34mHTTP : 2026-09-28T13:16:11.661340  0:00:00.002356 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:11.706472 : 42771 : FINE : [34mGcsResumableUpload : Chunk uploaded: 771751936-788529151, total: 788529152 bytes[0m
+Main : 2026-09-28 13:16:12.619336 : 912865 : FINE : [34mGcsResumableUpload : Chunk uploaded: 788529152-805306367, total: 805306368 bytes[0m
+Main : 2026-09-28 13:16:12.994972 : 375636 : FINE : [34mGcsResumableUpload : Chunk uploaded: 805306368-822083583, total: 822083584 bytes[0m
+Main : 2026-09-28 13:16:13.377423 : 382451 : FINE : [34mGcsResumableUpload : Chunk uploaded: 822083584-838860799, total: 838860800 bytes[0m
+Main : 2026-09-28 13:16:13.758067 : 380644 : FINE : [34mGcsResumableUpload : Chunk uploaded: 838860800-855638015, total: 855638016 bytes[0m
+Main : 2026-09-28 13:16:14.151628 : 393561 : FINE : [34mGcsResumableUpload : Chunk uploaded: 855638016-872415231, total: 872415232 bytes[0m
+Main : 2026-09-28 13:16:14.557920 : 406292 : FINE : [34mGcsResumableUpload : Chunk uploaded: 872415232-889192447, total: 889192448 bytes[0m
+Main : 2026-09-28 13:16:14.974043 : 416123 : FINE : [34mGcsResumableUpload : Chunk uploaded: 889192448-905969663, total: 905969664 bytes[0m
+Main : 2026-09-28 13:16:15.362405 : 388363 : FINE : [34mGcsResumableUpload : Chunk uploaded: 905969664-922746879, total: 922746880 bytes[0m
+Main : 2026-09-28 13:16:15.741084 : 378679 : FINE : [34mGcsResumableUpload : Chunk uploaded: 922746880-939524095, total: 939524096 bytes[0m
+Main : 2026-09-28 13:16:16.154101 : 413017 : FINE : [34mGcsResumableUpload : Chunk uploaded: 939524096-956301311, total: 956301312 bytes[0m
+Main : 2026-09-28 13:16:16.540122 : 386020 : FINE : [34mGcsResumableUpload : Chunk uploaded: 956301312-973078527, total: 973078528 bytes[0m
+Main : 2026-09-28 13:16:16.751851 : 211729 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:16.751875 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:16.753421 : 1547 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:16.753436 : 15 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:16.754971 : 1535 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:16.754983 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:16.755011 : 28 : FINEST : [34mHTTP : 2026-09-28T13:16:16.751714  0:00:00.003291 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:16.981638 : 226629 : FINE : [34mGcsResumableUpload : Chunk uploaded: 973078528-989855743, total: 989855744 bytes[0m
+Main : 2026-09-28 13:16:17.374652 : 393014 : FINE : [34mGcsResumableUpload : Chunk uploaded: 989855744-1006632959, total: 1006632960 bytes[0m
+Main : 2026-09-28 13:16:18.190682 : 816031 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1006632960-1023410175, total: 1023410176 bytes[0m
+Main : 2026-09-28 13:16:18.577872 : 387189 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1023410176-1040187391, total: 1040187392 bytes[0m
+Main : 2026-09-28 13:16:18.956225 : 378353 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1040187392-1056964607, total: 1056964608 bytes[0m
+Main : 2026-09-28 13:16:19.362688 : 406463 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1056964608-1073741823, total: 1073741824 bytes[0m
+Main : 2026-09-28 13:16:19.755539 : 392851 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1073741824-1090519039, total: 1090519040 bytes[0m
+Main : 2026-09-28 13:16:20.145518 : 389980 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1090519040-1107296255, total: 1107296256 bytes[0m
+Main : 2026-09-28 13:16:20.554361 : 408842 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1107296256-1124073471, total: 1124073472 bytes[0m
+Main : 2026-09-28 13:16:20.941807 : 387446 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1124073472-1140850687, total: 1140850688 bytes[0m
+Main : 2026-09-28 13:16:21.537096 : 595289 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1140850688-1157627903, total: 1157627904 bytes[0m
+Main : 2026-09-28 13:16:21.747731 : 210635 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:21.747752 : 19 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:21.748808 : 1057 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:21.748819 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:21.750213 : 1395 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:21.750220 : 6 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:21.750244 : 24 : FINEST : [34mHTTP : 2026-09-28T13:16:21.747633  0:00:00.002605 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:21.924484 : 174242 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1157627904-1174405119, total: 1174405120 bytes[0m
+Main : 2026-09-28 13:16:22.303210 : 378726 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1174405120-1191182335, total: 1191182336 bytes[0m
+Main : 2026-09-28 13:16:22.699630 : 396420 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1191182336-1207959551, total: 1207959552 bytes[0m
+Main : 2026-09-28 13:16:23.099134 : 399504 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1207959552-1224736767, total: 1224736768 bytes[0m
+Main : 2026-09-28 13:16:23.494173 : 395039 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1224736768-1241513983, total: 1241513984 bytes[0m
+Main : 2026-09-28 13:16:23.880509 : 386336 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1241513984-1258291199, total: 1258291200 bytes[0m
+Main : 2026-09-28 13:16:24.302477 : 421969 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1258291200-1275068415, total: 1275068416 bytes[0m
+Main : 2026-09-28 13:16:24.702386 : 399908 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1275068416-1291845631, total: 1291845632 bytes[0m
+Main : 2026-09-28 13:16:25.098820 : 396435 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1291845632-1308622847, total: 1308622848 bytes[0m
+Main : 2026-09-28 13:16:25.482460 : 383639 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1308622848-1325400063, total: 1325400064 bytes[0m
+Main : 2026-09-28 13:16:25.879387 : 396927 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1325400064-1342177279, total: 1342177280 bytes[0m
+Main : 2026-09-28 13:16:26.260943 : 381557 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1342177280-1358954495, total: 1358954496 bytes[0m
+Main : 2026-09-28 13:16:26.645952 : 385008 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1358954496-1375731711, total: 1375731712 bytes[0m
+Main : 2026-09-28 13:16:26.860232 : 214280 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:26.860255 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:26.861318 : 1064 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:26.861331 : 12 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:26.862589 : 1259 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:26.862598 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:26.862627 : 29 : FINEST : [34mHTTP : 2026-09-28T13:16:26.860118  0:00:00.002502 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:27.343507 : 480882 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1375731712-1392508927, total: 1392508928 bytes[0m
+Main : 2026-09-28 13:16:27.749696 : 406189 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1392508928-1409286143, total: 1409286144 bytes[0m
+Main : 2026-09-28 13:16:28.170308 : 420612 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1409286144-1426063359, total: 1426063360 bytes[0m
+Main : 2026-09-28 13:16:28.593319 : 423011 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1426063360-1442840575, total: 1442840576 bytes[0m
+Main : 2026-09-28 13:16:28.804683 : 211364 : FINEST : [34mHTTP : 2026-09-28T13:16:28.804544  0:00:00.000127 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 13:16:28.987813 : 183130 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1442840576-1459617791, total: 1459617792 bytes[0m
+Main : 2026-09-28 13:16:29.384059 : 396247 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1459617792-1476395007, total: 1476395008 bytes[0m
+Main : 2026-09-28 13:16:29.775534 : 391474 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1476395008-1493172223, total: 1493172224 bytes[0m
+Main : 2026-09-28 13:16:30.157090 : 381556 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1493172224-1509949439, total: 1509949440 bytes[0m
+Main : 2026-09-28 13:16:30.553946 : 396856 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1509949440-1526726655, total: 1526726656 bytes[0m
+Main : 2026-09-28 13:16:30.937795 : 383849 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1526726656-1543503871, total: 1543503872 bytes[0m
+Main : 2026-09-28 13:16:31.321507 : 383712 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1543503872-1560281087, total: 1560281088 bytes[0m
+Main : 2026-09-28 13:16:31.660888 : 339381 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:31.660911 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:31.661988 : 1078 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:31.661996 : 7 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:31.663286 : 1290 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:31.663292 : 6 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:31.663314 : 23 : FINEST : [34mHTTP : 2026-09-28T13:16:31.660786  0:00:00.002522 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:31.711575 : 48261 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1560281088-1577058303, total: 1577058304 bytes[0m
+Main : 2026-09-28 13:16:32.093562 : 381988 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1577058304-1593835519, total: 1593835520 bytes[0m
+Main : 2026-09-28 13:16:32.471015 : 377453 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1593835520-1610612735, total: 1610612736 bytes[0m
+Main : 2026-09-28 13:16:32.918432 : 447417 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1610612736-1627389951, total: 1627389952 bytes[0m
+Main : 2026-09-28 13:16:33.129040 : 210608 : WARNING : [34msarno : [2026-09-28T13:16:32.873Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 13:16:33.335257 : 206218 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1627389952-1644167167, total: 1644167168 bytes[0m
+Main : 2026-09-28 13:16:33.722148 : 386890 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1644167168-1660944383, total: 1660944384 bytes[0m
+Main : 2026-09-28 13:16:34.108023 : 385875 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1660944384-1677721599, total: 1677721600 bytes[0m
+Main : 2026-09-28 13:16:34.755661 : 647638 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1677721600-1694498815, total: 1694498816 bytes[0m
+Main : 2026-09-28 13:16:35.147240 : 391579 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1694498816-1711276031, total: 1711276032 bytes[0m
+Main : 2026-09-28 13:16:35.541251 : 394011 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1711276032-1728053247, total: 1728053248 bytes[0m
+Main : 2026-09-28 13:16:35.950056 : 408806 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1728053248-1744830463, total: 1744830464 bytes[0m
+Main : 2026-09-28 13:16:36.361021 : 410964 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1744830464-1761607679, total: 1761607680 bytes[0m
+Main : 2026-09-28 13:16:36.661069 : 300049 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:36.661093 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:36.662230 : 1138 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:36.662240 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:36.663532 : 1292 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:36.663539 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:36.663562 : 24 : FINEST : [34mHTTP : 2026-09-28T13:16:36.660967  0:00:00.002589 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:36.743085 : 79524 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1761607680-1778384895, total: 1778384896 bytes[0m
+Main : 2026-09-28 13:16:37.124366 : 381281 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1778384896-1795162111, total: 1795162112 bytes[0m
+Main : 2026-09-28 13:16:37.698553 : 574187 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1795162112-1811939327, total: 1811939328 bytes[0m
+Main : 2026-09-28 13:16:38.283708 : 585155 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1811939328-1828716543, total: 1828716544 bytes[0m
+Main : 2026-09-28 13:16:38.667194 : 383487 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1828716544-1845493759, total: 1845493760 bytes[0m
+Main : 2026-09-28 13:16:39.054185 : 386990 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1845493760-1862270975, total: 1862270976 bytes[0m
+Main : 2026-09-28 13:16:39.432355 : 378170 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1862270976-1879048191, total: 1879048192 bytes[0m
+Main : 2026-09-28 13:16:39.817611 : 385257 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1879048192-1895825407, total: 1895825408 bytes[0m
+Main : 2026-09-28 13:16:40.229340 : 411728 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1895825408-1912602623, total: 1912602624 bytes[0m
+Main : 2026-09-28 13:16:40.616530 : 387191 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1912602624-1929379839, total: 1929379840 bytes[0m
+Main : 2026-09-28 13:16:41.009815 : 393284 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1929379840-1946157055, total: 1946157056 bytes[0m
+Main : 2026-09-28 13:16:41.513557 : 503742 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1946157056-1962934271, total: 1962934272 bytes[0m
+Main : 2026-09-28 13:16:41.725560 : 212004 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:41.725584 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:41.726798 : 1215 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:41.726814 : 15 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:41.728234 : 1421 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:41.728249 : 14 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:41.728282 : 34 : FINEST : [34mHTTP : 2026-09-28T13:16:41.725462  0:00:00.002813 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:41.905110 : 176829 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1962934272-1979711487, total: 1979711488 bytes[0m
+Main : 2026-09-28 13:16:42.438988 : 533878 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1979711488-1996488703, total: 1996488704 bytes[0m
+Main : 2026-09-28 13:16:42.850050 : 411062 : FINE : [34mGcsResumableUpload : Chunk uploaded: 1996488704-2013265919, total: 2013265920 bytes[0m
+Main : 2026-09-28 13:16:43.241531 : 391481 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2013265920-2030043135, total: 2030043136 bytes[0m
+Main : 2026-09-28 13:16:43.646218 : 404687 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2030043136-2046820351, total: 2046820352 bytes[0m
+Main : 2026-09-28 13:16:44.030551 : 384333 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2046820352-2063597567, total: 2063597568 bytes[0m
+Main : 2026-09-28 13:16:44.443245 : 412694 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2063597568-2080374783, total: 2080374784 bytes[0m
+Main : 2026-09-28 13:16:44.833909 : 390664 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2080374784-2097151999, total: 2097152000 bytes[0m
+Main : 2026-09-28 13:16:45.229203 : 395295 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2097152000-2113929215, total: 2113929216 bytes[0m
+Main : 2026-09-28 13:16:45.642011 : 412808 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2113929216-2130706431, total: 2130706432 bytes[0m
+Main : 2026-09-28 13:16:46.038049 : 396037 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2130706432-2147483647, total: 2147483648 bytes[0m
+Main : 2026-09-28 13:16:46.430212 : 392163 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2147483648-2164260863, total: 2164260864 bytes[0m
+Main : 2026-09-28 13:16:46.660816 : 230604 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:46.660839 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:46.661889 : 1051 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:46.661898 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:46.663317 : 1419 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:46.663324 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:46.663345 : 21 : FINEST : [34mHTTP : 2026-09-28T13:16:46.660714  0:00:00.002625 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:46.828878 : 165535 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2164260864-2181038079, total: 2181038080 bytes[0m
+Main : 2026-09-28 13:16:47.221694 : 392816 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2181038080-2197815295, total: 2197815296 bytes[0m
+Main : 2026-09-28 13:16:47.614615 : 392921 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2197815296-2214592511, total: 2214592512 bytes[0m
+Main : 2026-09-28 13:16:48.003096 : 388481 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2214592512-2231369727, total: 2231369728 bytes[0m
+Main : 2026-09-28 13:16:48.395210 : 392114 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2231369728-2248146943, total: 2248146944 bytes[0m
+Main : 2026-09-28 13:16:48.789618 : 394408 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2248146944-2264924159, total: 2264924160 bytes[0m
+Main : 2026-09-28 13:16:49.175431 : 385813 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2264924160-2281701375, total: 2281701376 bytes[0m
+Main : 2026-09-28 13:16:49.568834 : 393404 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2281701376-2298478591, total: 2298478592 bytes[0m
+Main : 2026-09-28 13:16:49.950629 : 381794 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2298478592-2315255807, total: 2315255808 bytes[0m
+Main : 2026-09-28 13:16:50.344404 : 393776 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2315255808-2332033023, total: 2332033024 bytes[0m
+Main : 2026-09-28 13:16:50.842328 : 497923 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2332033024-2348810239, total: 2348810240 bytes[0m
+Main : 2026-09-28 13:16:51.308034 : 465707 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2348810240-2365587455, total: 2365587456 bytes[0m
+Main : 2026-09-28 13:16:51.660699 : 352664 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:51.660722 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:51.661695 : 973 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:51.661702 : 7 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:51.662965 : 1263 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:51.662974 : 9 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:51.662996 : 22 : FINEST : [34mHTTP : 2026-09-28T13:16:51.660599  0:00:00.002391 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:51.706086 : 43091 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2365587456-2382364671, total: 2382364672 bytes[0m
+Main : 2026-09-28 13:16:52.103003 : 396918 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2382364672-2399141887, total: 2399141888 bytes[0m
+Main : 2026-09-28 13:16:52.502739 : 399736 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2399141888-2415919103, total: 2415919104 bytes[0m
+Main : 2026-09-28 13:16:52.899182 : 396443 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2415919104-2432696319, total: 2432696320 bytes[0m
+Main : 2026-09-28 13:16:53.289507 : 390326 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2432696320-2449473535, total: 2449473536 bytes[0m
+Main : 2026-09-28 13:16:53.681859 : 392351 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2449473536-2466250751, total: 2466250752 bytes[0m
+Main : 2026-09-28 13:16:54.068606 : 386748 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2466250752-2483027967, total: 2483027968 bytes[0m
+Main : 2026-09-28 13:16:54.478372 : 409765 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2483027968-2499805183, total: 2499805184 bytes[0m
+Main : 2026-09-28 13:16:54.866566 : 388194 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2499805184-2516582399, total: 2516582400 bytes[0m
+Main : 2026-09-28 13:16:55.265074 : 398509 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2516582400-2533359615, total: 2533359616 bytes[0m
+Main : 2026-09-28 13:16:55.650001 : 384926 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2533359616-2550136831, total: 2550136832 bytes[0m
+Main : 2026-09-28 13:16:56.043494 : 393494 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2550136832-2566914047, total: 2566914048 bytes[0m
+Main : 2026-09-28 13:16:56.428218 : 384723 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2566914048-2583691263, total: 2583691264 bytes[0m
+Main : 2026-09-28 13:16:56.661147 : 232929 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:16:56.661170 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:16:56.662217 : 1047 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:16:56.662225 : 7 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:16:56.663427 : 1203 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:16:56.663433 : 5 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:16:56.663453 : 20 : FINEST : [34mHTTP : 2026-09-28T13:16:56.661033  0:00:00.002413 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:16:56.826236 : 162785 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2583691264-2600468479, total: 2600468480 bytes[0m
+Main : 2026-09-28 13:16:57.225343 : 399108 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2600468480-2617245695, total: 2617245696 bytes[0m
+Main : 2026-09-28 13:16:57.947090 : 721747 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2617245696-2634022911, total: 2634022912 bytes[0m
+Main : 2026-09-28 13:16:58.336551 : 389460 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2634022912-2650800127, total: 2650800128 bytes[0m
+Main : 2026-09-28 13:16:58.648480 : 311929 : FINEST : [34mHTTP : 2026-09-28T13:16:58.648329  0:00:00.000139 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 13:16:58.790564 : 142084 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2650800128-2667577343, total: 2667577344 bytes[0m
+Main : 2026-09-28 13:16:59.180201 : 389637 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2667577344-2684354559, total: 2684354560 bytes[0m
+Main : 2026-09-28 13:16:59.595359 : 415159 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2684354560-2701131775, total: 2701131776 bytes[0m
+Main : 2026-09-28 13:16:59.973152 : 377792 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2701131776-2717908991, total: 2717908992 bytes[0m
+Main : 2026-09-28 13:17:00.365488 : 392337 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2717908992-2734686207, total: 2734686208 bytes[0m
+Main : 2026-09-28 13:17:00.754050 : 388561 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2734686208-2751463423, total: 2751463424 bytes[0m
+Main : 2026-09-28 13:17:01.144819 : 390769 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2751463424-2768240639, total: 2768240640 bytes[0m
+Main : 2026-09-28 13:17:01.557704 : 412885 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2768240640-2785017855, total: 2785017856 bytes[0m
+Main : 2026-09-28 13:17:01.768778 : 211074 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:01.768800 : 20 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:01.769931 : 1133 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:01.769949 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:01.771235 : 1287 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:01.771247 : 11 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:01.771276 : 29 : FINEST : [34mHTTP : 2026-09-28T13:17:01.768673  0:00:00.002596 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:01.959699 : 188426 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2785017856-2801795071, total: 2801795072 bytes[0m
+Main : 2026-09-28 13:17:02.344669 : 384969 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2801795072-2818572287, total: 2818572288 bytes[0m
+Main : 2026-09-28 13:17:02.730796 : 386127 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2818572288-2835349503, total: 2835349504 bytes[0m
+Main : 2026-09-28 13:17:02.995986 : 265191 : WARNING : [34msarno : [2026-09-28T13:17:02.875Z INFO ] Health monitor: 2 workers healthy[0m
+Main : 2026-09-28 13:17:03.136525 : 140538 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2835349504-2852126719, total: 2852126720 bytes[0m
+Main : 2026-09-28 13:17:03.528721 : 392197 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2852126720-2868903935, total: 2868903936 bytes[0m
+Main : 2026-09-28 13:17:03.911826 : 383104 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2868903936-2885681151, total: 2885681152 bytes[0m
+Main : 2026-09-28 13:17:04.320145 : 408320 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2885681152-2902458367, total: 2902458368 bytes[0m
+Main : 2026-09-28 13:17:04.717359 : 397214 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2902458368-2919235583, total: 2919235584 bytes[0m
+Main : 2026-09-28 13:17:05.106623 : 389263 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2919235584-2936012799, total: 2936012800 bytes[0m
+Main : 2026-09-28 13:17:05.496738 : 390115 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2936012800-2952790015, total: 2952790016 bytes[0m
+Main : 2026-09-28 13:17:05.888658 : 391920 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2952790016-2969567231, total: 2969567232 bytes[0m
+Main : 2026-09-28 13:17:06.293929 : 405271 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2969567232-2986344447, total: 2986344448 bytes[0m
+Main : 2026-09-28 13:17:06.661321 : 367392 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:06.661344 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:06.662262 : 918 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:06.662271 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:06.663569 : 1298 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:06.663576 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:06.663602 : 26 : FINEST : [34mHTTP : 2026-09-28T13:17:06.661220  0:00:00.002375 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:06.693201 : 29600 : FINE : [34mGcsResumableUpload : Chunk uploaded: 2986344448-3003121663, total: 3003121664 bytes[0m
+Main : 2026-09-28 13:17:07.083037 : 389837 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3003121664-3019898879, total: 3019898880 bytes[0m
+Main : 2026-09-28 13:17:07.475109 : 392072 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3019898880-3036676095, total: 3036676096 bytes[0m
+Main : 2026-09-28 13:17:07.858840 : 383732 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3036676096-3053453311, total: 3053453312 bytes[0m
+Main : 2026-09-28 13:17:08.253742 : 394902 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3053453312-3070230527, total: 3070230528 bytes[0m
+Main : 2026-09-28 13:17:08.656970 : 403227 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3070230528-3087007743, total: 3087007744 bytes[0m
+Main : 2026-09-28 13:17:09.067170 : 410200 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3087007744-3103784959, total: 3103784960 bytes[0m
+Main : 2026-09-28 13:17:10.043725 : 976555 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3103784960-3120562175, total: 3120562176 bytes[0m
+Main : 2026-09-28 13:17:10.438926 : 395201 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3120562176-3137339391, total: 3137339392 bytes[0m
+Main : 2026-09-28 13:17:10.829956 : 391030 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3137339392-3154116607, total: 3154116608 bytes[0m
+Main : 2026-09-28 13:17:11.220158 : 390202 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3154116608-3170893823, total: 3170893824 bytes[0m
+Main : 2026-09-28 13:17:11.607731 : 387573 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3170893824-3187671039, total: 3187671040 bytes[0m
+Main : 2026-09-28 13:17:11.820407 : 212676 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:11.820428 : 19 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:11.821497 : 1070 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:11.821508 : 10 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:11.822862 : 1355 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:11.822871 : 8 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:11.822895 : 24 : FINEST : [34mHTTP : 2026-09-28T13:17:11.820308  0:00:00.002582 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:11.996621 : 173729 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3187671040-3204448255, total: 3204448256 bytes[0m
+Main : 2026-09-28 13:17:12.385556 : 388934 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3204448256-3221225471, total: 3221225472 bytes[0m
+Main : 2026-09-28 13:17:12.777876 : 392320 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3221225472-3238002687, total: 3238002688 bytes[0m
+Main : 2026-09-28 13:17:13.161688 : 383813 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3238002688-3254779903, total: 3254779904 bytes[0m
+Main : 2026-09-28 13:17:13.549559 : 387870 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3254779904-3271557119, total: 3271557120 bytes[0m
+Main : 2026-09-28 13:17:13.974772 : 425213 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3271557120-3288334335, total: 3288334336 bytes[0m
+Main : 2026-09-28 13:17:14.374873 : 400101 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3288334336-3305111551, total: 3305111552 bytes[0m
+Main : 2026-09-28 13:17:14.772069 : 397197 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3305111552-3321888767, total: 3321888768 bytes[0m
+Main : 2026-09-28 13:17:15.164360 : 392290 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3321888768-3338665983, total: 3338665984 bytes[0m
+Main : 2026-09-28 13:17:15.568990 : 404630 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3338665984-3355443199, total: 3355443200 bytes[0m
+Main : 2026-09-28 13:17:16.660872 : 1091883 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:16.660897 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:16.661887 : 991 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:16.661896 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:16.663202 : 1307 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:16.663210 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:16.663233 : 24 : FINEST : [34mHTTP : 2026-09-28T13:17:16.660765  0:00:00.002462 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:18.118688 : 1455456 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3355443200-3372220415, total: 3372220416 bytes[0m
+Main : 2026-09-28 13:17:18.499246 : 380558 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3372220416-3388997631, total: 3388997632 bytes[0m
+Main : 2026-09-28 13:17:18.890749 : 391504 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3388997632-3405774847, total: 3405774848 bytes[0m
+Main : 2026-09-28 13:17:19.320902 : 430153 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3405774848-3422552063, total: 3422552064 bytes[0m
+Main : 2026-09-28 13:17:19.716256 : 395353 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3422552064-3439329279, total: 3439329280 bytes[0m
+Main : 2026-09-28 13:17:20.111179 : 394924 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3439329280-3456106495, total: 3456106496 bytes[0m
+Main : 2026-09-28 13:17:20.614714 : 503534 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3456106496-3472883711, total: 3472883712 bytes[0m
+Main : 2026-09-28 13:17:21.002614 : 387900 : FINE : [34mGcsResumableUpload : Chunk uploaded: 3472883712-3489660927, total: 3489660928 bytes[0m
+Main : 2026-09-28 13:17:21.240793 : 238179 : FINE : [34mGcsResumableUpload : Upload finalized: gcs/56/3a/563a8b91-8ffc-4aa7-ae92-e42cd53ed054, total: 3494941881 bytes[0m
+Main : 2026-09-28 13:17:21.240821 : 26 : FINE : [34mGcsStorageService : Uploaded object via resumable: gcs/56/3a/563a8b91-8ffc-4aa7-ae92-e42cd53ed054, size: 3494941881 bytes[0m
+Main : 2026-09-28 13:17:21.240846 : 25 : FINE : [34mCouchService : upload -- GCS direct streaming: 39.42519035407591 MB/s, size: 3494941881 bytes[0m
+Main : 2026-09-28 13:17:21.443258 : 202414 : FINE : [34mGcsStorageService : Copied object: gcs/56/3a/563a8b91-8ffc-4aa7-ae92-e42cd53ed054 -> upload/lfs/68/91/c32fc1d8bd6dabc6798721573c920d1618cc472ac35224ca455edbe22045[0m
+Main : 2026-09-28 13:17:21.527192 : 83934 : FINE : [34mGcsStorageService : Deleted object: gcs/56/3a/563a8b91-8ffc-4aa7-ae92-e42cd53ed054[0m
+Main : 2026-09-28 13:17:21.528692 : 1499 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:17:21.543513 : 14821 : FINEST : [34mHTTP : 2026-09-28T13:15:31.693638  0:01:49.849867 POST    [200] -- {null} -- /api/v1/file/upload[0m
+Main : 2026-09-28 13:17:21.545782 : 2269 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Main : 2026-09-28 13:17:21.661176 : 115395 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:21.661200 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:21.662305 : 1105 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:21.662314 : 9 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:21.663610 : 1297 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:21.663618 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:21.663642 : 24 : FINEST : [34mHTTP : 2026-09-28T13:17:21.661059  0:00:00.002576 GET     [200] -- {null} -- /_health[0m
+Worker : 2026-09-28 13:17:22.235782 : 129034505 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/67/eb/67eb3f7e-daef-4723-b3b8-eaa983ca0323[0m
+Worker : 2026-09-28 13:17:22.432427 : 196646 : FINE : [34mCouchService : upload -- GCS direct streaming: 0.0048571588418092025 MB/s, size: 955 bytes[0m
+Worker : 2026-09-28 13:17:22.632852 : 200423 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:22.632906 : 53 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 13:17:22.673102 : 40198 : FINEST : [34mCouchService : upload -- GCS direct upload (streaming): gcs/c1/8e/c18ecf44-be8d-44a0-add1-cd7c11bc92ba[0m
+Worker : 2026-09-28 13:17:22.761237 : 88135 : FINE : [34mCouchService : upload -- GCS direct streaming: 0.000737705848304979 MB/s, size: 65 bytes[0m
+Worker : 2026-09-28 13:17:22.903125 : 141896 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:22.903192 : 57 : FINE : [34mRedisCacheByDomain : Marked cache entry as invalid: :admin[0m
+Worker : 2026-09-28 13:17:22.913556 : 10365 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:22.922678 : 9122 : FINER : [34mStdOperator : Child runner completed for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:22.922715 : 36 : FINEST : [34mCouchService : sendChannel -- bd7b2744-81ca-4f03-86fb-3cedc36275f0 -- evt TaskProgressEvent()[0m
+Worker : 2026-09-28 13:17:22.923624 : 910 : FINEST : [34mEventService : Published TSON event to Redis channel bd7b2744-81ca-4f03-86fb-3cedc36275f0 (233 bytes)[0m
+Worker : 2026-09-28 13:17:22.926354 : 2730 : FINEST : [34mStdOperator : File result -- {kind: FileDocument, id: d2d10f45-a896-4e8d-9b19-5a46dd09da62, isDeleted: true, rev: 2-5e5a565a-667e-40bf-973c-8a1a547cba80, description: , name: a249fb80-bb3e-11f1-aedf-e7caf3dacc44, acl: {kind: Acl, owner: admin, aces: []}, createdDate: {kind: Date, value: 2026-09-28T13:15:11.036316Z}, lastModifiedDate: {kind: Date, value: 2026-09-28T13:17:21.537406Z}, urls: [], tags: [], meta: [{kind: Pair, key: hidden, value: true}, {kind: Pair, key: temp.file, value: true}, {kind: Pair, key: result.task.id, value: a830c762-2eef-4454-9972-ab1e326aa34e}], url: {kind: Url, uri: }, version: , isPublic: false, projectId: 1878c5a2-4d9d-4c8a-81db-8e55938b67ab, folderId: , dataUri: lfs/68/91/c32fc1d8bd6dabc6798721573c920d1618cc472ac35224ca455edbe22045, metadata: {kind: FileMetadata, contentType: , cacheControl: , contentEncoding: , contentLanguage: , md5Hash: }, size: 0, storageSize: 3494941881.0}[0m
+Worker : 2026-09-28 13:17:22.926362 : 7 : FINER : [34mStdOperator : Saving computation result for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:22.926368 : 6 : FINER : [34mSaveComputationResult : saveTaskResult: Starting for task a830c762-2eef-4454-9972-ab1e326aa34e, fileResultId: d2d10f45-a896-4e8d-9b19-5a46dd09da62[0m
+Worker : 2026-09-28 13:17:22.926372 : 4 : FINER : [34mSaveComputationResult : saveTaskResult: fileResultId is not empty, retrieving file document d2d10f45-a896-4e8d-9b19-5a46dd09da62[0m
+Worker : 2026-09-28 13:17:22.929724 : 3352 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Starting for task a830c762-2eef-4454-9972-ab1e326aa34e with dataUri: lfs/68/91/c32fc1d8bd6dabc6798721573c920d1618cc472ac35224ca455edbe22045[0m
+Worker : 2026-09-28 13:17:22.939643 : 9919 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Executing sarno task for file: /var/lib/tercen/data/upload/lfs/68/91/c32fc1d8bd6dabc6798721573c920d1618cc472ac35224ca455edbe22045[0m
+Main : 2026-09-28 13:17:23.046917 : 1383278 : WARNING : [34msarno : [2026-09-28T13:17:22.960Z INFO ] exec_task: Acquired worker on port 15003 (threads 1)[0m
+Main : 2026-09-28 13:17:23.046949 : 29 : WARNING : [34msarno : [2026-09-28T13:17:22.960Z INFO ] exec_task: Forwarding task [ComputationResult(task_id=a830c762-2eef-4454-9972-ab1e326aa34e)] to worker on port 15003[0m
+Main : 2026-09-28 13:17:23.046955 : 6 : WARNING : [34msarno : [2026-09-28T13:17:22.960Z INFO ] exec_task: Started stream processing [ComputationResult(task_id=a830c762-2eef-4454-9972-ab1e326aa34e)] for worker on port 15003[0m
+Main : 2026-09-28 13:17:23.046959 : 4 : WARNING : [34msarno : [W:15003] [2026-09-28T13:17:22.960Z INFO ] ProcessResultQueryProcessor::process_query -- task_id: a830c762-2eef-4454-9972-ab1e326aa34e -- file: /var/lib/tercen/data/upload/lfs/68/91/c32fc1d8bd6dabc6798721573c920d1618cc472ac35224ca455edbe22045[0m
+Main : 2026-09-28 13:17:23.046964 : 5 : WARNING : [34msarno : [W:15003] [2026-09-28T13:17:22.962Z INFO ] sarno blob store: backend=gcs bucket=tercen-ring-tercen-stage-data cache_dir=/tmp/sarno-blobs[0m
+Main : 2026-09-28 13:17:26.660832 : 3613870 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:26.660859 : 26 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:26.662168 : 1309 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:26.662185 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:26.663514 : 1329 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:26.663527 : 13 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:26.663553 : 26 : FINEST : [34mHTTP : 2026-09-28T13:17:26.660709  0:00:00.002838 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:28.648573 : 1985022 : FINEST : [34mHTTP : 2026-09-28T13:17:28.648410  0:00:00.000150 GET     [200] -- {null} -- /_alive[0m
+Main : 2026-09-28 13:17:31.661051 : 3012479 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:31.661078 : 24 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:31.662257 : 1180 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:31.662277 : 19 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:31.663675 : 1399 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:31.663692 : 16 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:31.663723 : 31 : FINEST : [34mHTTP : 2026-09-28T13:17:31.660944  0:00:00.002772 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:33.070188 : 1406468 : WARNING : [34msarno : [2026-09-28T13:17:32.877Z INFO ] Health monitor: 1 workers healthy[0m
+Main : 2026-09-28 13:17:36.661004 : 3590816 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:36.661029 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:36.661996 : 968 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:36.662011 : 14 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:36.663293 : 1283 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:36.663306 : 12 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:36.663337 : 31 : FINEST : [34mHTTP : 2026-09-28T13:17:36.660899  0:00:00.002431 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:41.660794 : 4997459 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:41.660817 : 22 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:41.661812 : 994 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:41.661820 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:41.663064 : 1245 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:41.663072 : 7 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:41.663093 : 21 : FINEST : [34mHTTP : 2026-09-28T13:17:41.660686  0:00:00.002402 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:45.097596 : 3434506 : WARNING : [34msarno : [W:15003] [2026-09-28T13:17:45.088Z INFO ] process_query -- operator result via object store: /tmp/sarno-blobs/3f/25/3f25df2bb87d87816575cef47a22a3f56647e244e0184872045145360376b40e[0m
+Main : 2026-09-28 13:17:46.661493 : 1563897 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:46.661521 : 25 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:46.662859 : 1340 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:46.662877 : 16 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:46.664617 : 1741 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:46.664632 : 14 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:46.664666 : 34 : FINEST : [34mHTTP : 2026-09-28T13:17:46.661341  0:00:00.003317 GET     [200] -- {null} -- /_health[0m
+Worker : 2026-09-28 13:17:50.250885 : 27311244 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Received sarno result with 1 computed relations[0m
+Worker : 2026-09-28 13:17:50.250929 : 43 : FINER : [34mSaveComputationResult : _createComputedTableSchema: Creating schema with 998 columns, 437500 rows[0m
+Main : 2026-09-28 13:17:50.359914 : 3695251 : WARNING : [34msarno : [2026-09-28T13:17:50.258Z WARN ] exec_task: Cancel signal received [ComputationResult(task_id=a830c762-2eef-4454-9972-ab1e326aa34e)] for worker on port 15003, forwarded to worker; awaiting cooperative abort (grace 5s)[0m
+Main : 2026-09-28 13:17:50.359947 : 30 : WARNING : [34msarno : [W:15003] [2026-09-28T13:17:50.260Z INFO ] TASK_STATS|task=ComputationResult(task_id=a830c762-2eef-4454-9972-ab1e326aa34e)|peak=3499963748|limit=9437184000|peak_percent=37.1|sent=53032|received=0|sent_per_sec=1.9 KiB|received_per_sec=0 B|duration_secs=27.300|start=107383[0m
+Main : 2026-09-28 13:17:50.359965 : 18 : WARNING : [34msarno : [2026-09-28T13:17:50.260Z INFO ] exec_task: Stream ended [ComputationResult(task_id=a830c762-2eef-4454-9972-ab1e326aa34e)] for worker on port 15003, performing health check[0m
+Main : 2026-09-28 13:17:50.359969 : 4 : WARNING : [34msarno : [2026-09-28T13:17:50.260Z INFO ] exec_task: Returning healthy worker on port 15003 to pool [ComputationResult(task_id=a830c762-2eef-4454-9972-ab1e326aa34e)][0m
+Worker : 2026-09-28 13:17:50.400695 : 149766 : FINER : [34mSaveComputationResult : _createComputedTableSchema: Created schema efda2b25-4dd5-40d7-b629-f9c957af71ea with name "013377c0-bb3f-11f1-9c14-8b0d0f3b040c"[0m
+Worker : 2026-09-28 13:17:50.400727 : 31 : FINER : [34m_SaveResult : saveOperatorResult: Starting with 1 schemas and 0 join operators[0m
+Worker : 2026-09-28 13:17:50.400733 : 6 : FINER : [34m_SaveResult : saveOperatorResult: Converting 1 schemas by row/col[0m
+Worker : 2026-09-28 13:17:50.400784 : 51 : FINER : [34m_SaveResult : _convertResultByRowCol: Converting schema efda2b25-4dd5-40d7-b629-f9c957af71ea with namespace ds2b[0m
+Worker : 2026-09-28 13:17:50.400869 : 85 : FINER : [34m_SaveResult : saveOperatorResult: Processing derived factors for namespace ds2b[0m
+Worker : 2026-09-28 13:17:50.401732 : 863 : FINER : [34m_SaveResult : saveOperatorResult: Returning CompositeRelation with 1 join operators[0m
+Worker : 2026-09-28 13:17:50.401741 : 9 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Validating generated relation for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:17:50.407026 : 47058 : FINEST : [34mHTTP : 2026-09-28T13:17:50.402297  0:00:00.004723 GET     [200] -- {null} -- /api/v1/schema?id=4c307d2f-8aaa-4b57-b5ee-a0b43a6c8b93&useFactory=true[0m
+Worker : 2026-09-28 13:17:50.407271 : 5531 : FINEST : [34mHttpClientService : Instance of 'TableSchemaService' -- get 4c307d2f-8aaa-4b57-b5ee-a0b43a6c8b93 -- 5 ms[0m
+Main : 2026-09-28 13:17:50.421235 : 14208 : FINEST : [34mHTTP : 2026-09-28T13:17:50.407463  0:00:00.013764 GET     [200] -- {null} -- /api/v1/schema?id=efda2b25-4dd5-40d7-b629-f9c957af71ea&useFactory=true[0m
+Worker : 2026-09-28 13:17:50.423169 : 15898 : FINEST : [34mHttpClientService : Instance of 'TableSchemaService' -- get efda2b25-4dd5-40d7-b629-f9c957af71ea -- 15 ms[0m
+Worker : 2026-09-28 13:17:50.423564 : 394 : FINER : [34mSaveComputationResult : basicSaveTaskResult: Relation validation successful for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:50.425501 : 1938 : FINER : [34mStdOperator : Computation result saved for task a830c762-2eef-4454-9972-ab1e326aa34e: success[0m
+Worker : 2026-09-28 13:17:50.427312 : 1811 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:50.438369 : 11057 : FINER : [34mStdOperator : StdOperator.run() completed successfully for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:50.438388 : 18 : FINER : [34mTaskRunnerInstance : EnsureTaskCompletion -- task RunComputationTask(a830c762-2eef-4454-9972-ab1e326aa34e, 9-33e16c5b-21cd-47b7-b060-09420703beae, Instance of 'RunningState') -- state {kind: RunningState}[0m
+Worker : 2026-09-28 13:17:50.438403 : 15 : FINER : [34mTaskRunnerInstance : TaskRunnerInstance -- setTaskState -- state {kind: DoneState} -- duration 0:02:39.430373[0m
+Worker : 2026-09-28 13:17:50.439258 : 855 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Worker : 2026-09-28 13:17:50.461226 : 21969 : FINEST : [34mCouchService : sendChannel -- bd7b2744-81ca-4f03-86fb-3cedc36275f0 -- evt TaskStateEvent(2026-09-28T13:17:50.461215Z, a830c762-2eef-4454-9972-ab1e326aa34e, Instance of 'DoneState')[0m
+Worker : 2026-09-28 13:17:50.462249 : 1022 : FINEST : [34mEventService : Published TSON event to Redis channel bd7b2744-81ca-4f03-86fb-3cedc36275f0 (205 bytes)[0m
+Worker : 2026-09-28 13:17:50.464213 : 1964 : SEVERE : [34mTaskRunnerInstance : RunRunner -- Task completed in 2.66min --owner admin --user /admin --runtimeType RunComputationTask --id a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:17:50.464263 : 43028 : FINEST : [34mCouchService : isolateRunner complete -- releasing memory and cpus[0m
+Main : 2026-09-28 13:17:50.465603 : 1341 : FINE : [34mTaskService : Cache MISS for task a830c762-2eef-4454-9972-ab1e326aa34e[0m
+Main : 2026-09-28 13:17:50.469787 : 4184 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-78bfb8fd46-s9tng] [Tenant: ] Reporting task a830c762-2eef-4454-9972-ab1e326aa34e completion to scheduler (state: TASK_STATE_DONE)[0m
+Main : 2026-09-28 13:17:50.514184 : 44397 : INFO : [34mWorkerServiceImpl : [Worker tercen-worker-worker-16-78bfb8fd46-s9tng] [Tenant: ] Task a830c762-2eef-4454-9972-ab1e326aa34e completion reported successfully[0m
+Main : 2026-09-28 13:17:51.661155 : 1146972 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:51.661178 : 21 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:51.662113 : 935 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:51.662121 : 8 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:51.663354 : 1233 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:51.663360 : 6 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:51.663381 : 21 : FINEST : [34mHTTP : 2026-09-28T13:17:51.661036  0:00:00.002339 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:56.660754 : 4997375 : FINEST : [34mHttpServerFactory : Health check started[0m
+Main : 2026-09-28 13:17:56.660788 : 32 : FINEST : [34mHttpServerFactory : Checking podman health...[0m
+Main : 2026-09-28 13:17:56.661721 : 934 : FINEST : [34mHttpServerFactory : Podman health check passed[0m
+Main : 2026-09-28 13:17:56.661728 : 6 : FINEST : [34mHttpServerFactory : Checking sarno health...[0m
+Main : 2026-09-28 13:17:56.662998 : 1271 : FINEST : [34mHttpServerFactory : Sarno health check passed[0m
+Main : 2026-09-28 13:17:56.663005 : 6 : FINEST : [34mHttpServerFactory : Health check completed successfully[0m
+Main : 2026-09-28 13:17:56.663028 : 24 : FINEST : [34mHTTP : 2026-09-28T13:17:56.660646  0:00:00.002375 GET     [200] -- {null} -- /_health[0m
+Main : 2026-09-28 13:17:58.648520 : 1985493 : FINEST : [34mHTTP : 2026-09-28T13:17:58.648359  0:00:00.000149 GET     [200] -- {null} -- /_alive[0m
