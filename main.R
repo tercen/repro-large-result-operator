@@ -7,10 +7,10 @@
 #
 # Platform cap: 1000 columns per table (schema.limit.columns) — output
 # width is capped there, so the point size is driven by INPUT ROWS:
-#   dry-check: 125k rows x 1000 cols = ~1.0 GB (worker-8: 5.07 GB booking
+#   dry-check: 125k rows x 999 cols = ~1.0 GB (worker-8: 5.07 GB booking
 #     ceiling, measured via `system workers` 2026-09-28 — operator peak
 #     must stay well under ~5 GB)
-#   real point: 437.5k rows x 1000 cols = ~3.5 GB (worker-16 post-roll)
+#   real point: 437.5k rows x 999 cols = ~3.5 GB (worker-16 post-roll)
 suppressPackageStartupMessages({
   library(tercen)
   library(dplyr)
@@ -19,6 +19,8 @@ suppressPackageStartupMessages({
 ctx <- tercenCtx()
 
 nCols <- as.integer(ctx$op.value('n_cols'))
+# 1000-col table limit INCLUDES .ci
+if (nCols > 999) stop("n_cols capped at 999 (1000-col table limit includes .ci)")
 if (is.na(nCols) || nCols < 1) {
   stop("n_cols must be a positive integer, got ", nCols)
 }

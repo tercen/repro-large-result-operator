@@ -15,8 +15,8 @@
     {
       "kind": "DoubleProperty",
       "name": "n_cols",
-      "defaultValue": 1000.0,
-      "description": "Number of double output columns (platform cap: 1000). Point size is driven by input rows: bytes ~= 8 * n_rows * n_cols."
+      "defaultValue": 999.0,
+      "description": "Number of double output columns; cap is 999 \u2014 the 1000-column table limit includes the .ci column. Point size is driven by input rows: bytes ~= 8 * n_rows * n_cols."
     }
   ],
   "operatorSpec": {
