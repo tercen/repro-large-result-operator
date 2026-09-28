@@ -1,6 +1,6 @@
 {
   "name": "Large Result Repro (sci#1685)",
-  "description": "sci#1685 stage repro harness: emits an OperatorResult of n_cols double columns per input row (8 bytes/cell). Size the point with n_cols: dry-check 1880 (~1.5 GB), real 4375 (~3.5 GB). No analysis value.",
+  "description": "sci#1685 stage repro harness: emits an OperatorResult of up to 1000 double columns per input row; point size driven by input rows (8 bytes/cell). No analysis value.",
   "tags": [
     "repro",
     "harness"
