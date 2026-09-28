@@ -5,10 +5,12 @@
 # it through the ComputationResult path (where the #1690 sizing +
 # fail-fast wiring lives).
 #
-# Size points (n_cols): 1250 -> ~1.0 GB on 100k input rows (dry-check,
-# worker-8: 5.07 GB booking ceiling — measured via `system workers`,
-# 2026-09-28 — so the operator peak must stay well under ~5 GB);
-# 4375 -> ~3.5 GB (real point, worker-16 post-roll).
+# Platform cap: 1000 columns per table (schema.limit.columns) — output
+# width is capped there, so the point size is driven by INPUT ROWS:
+#   dry-check: 125k rows x 1000 cols = ~1.0 GB (worker-8: 5.07 GB booking
+#     ceiling, measured via `system workers` 2026-09-28 — operator peak
+#     must stay well under ~5 GB)
+#   real point: 437.5k rows x 1000 cols = ~3.5 GB (worker-16 post-roll)
 suppressPackageStartupMessages({
   library(tercen)
   library(dplyr)

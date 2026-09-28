@@ -1,15 +1,22 @@
 {
   "name": "Large Result Repro (sci#1685)",
   "description": "sci#1685 stage repro harness: emits an OperatorResult of n_cols double columns per input row (8 bytes/cell). Size the point with n_cols: dry-check 1880 (~1.5 GB), real 4375 (~3.5 GB). No analysis value.",
-  "tags": ["repro", "harness"],
-  "authors": ["tercen"],
-  "urls": ["https://github.com/tercen/repro-large-result-operator"],
+  "tags": [
+    "repro",
+    "harness"
+  ],
+  "authors": [
+    "tercen"
+  ],
+  "urls": [
+    "https://github.com/tercen/repro-large-result-operator"
+  ],
   "properties": [
     {
       "kind": "DoubleProperty",
       "name": "n_cols",
-      "defaultValue": 1880.0,
-      "description": "Number of double output columns per input row. Output bytes ~= 8 * n_rows * n_cols."
+      "defaultValue": 1000.0,
+      "description": "Number of double output columns (platform cap: 1000). Point size is driven by input rows: bytes ~= 8 * n_rows * n_cols."
     }
   ],
   "operatorSpec": {
@@ -59,8 +66,12 @@
             "joinType": "left",
             "leftPair": {
               "kind": "ColumnPair",
-              "lColumns": ["Observation identifier"],
-              "rColumns": ["Observation identifier"]
+              "lColumns": [
+                "Observation identifier"
+              ],
+              "rColumns": [
+                "Observation identifier"
+              ]
             },
             "rightRelation": {
               "kind": "TableRelation",
